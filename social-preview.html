@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="id" class="scroll-smooth overflow-x-hidden">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,24 +31,24 @@
     }
   </script>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans antialiased overflow-x-hidden">
+<body class="bg-gray-100 text-gray-800 font-sans antialiased overflow-x-hidden w-full max-w-[100vw]">
 
   <!-- Top Bar Navigation -->
   <header class="w-full sticky top-0 z-50 bg-brand-tealDark text-white shadow-sm border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between gap-4">
-      <div class="flex items-center gap-3 shrink-0">
-        <img src="assets/images/logo-avatar.png?v=2" alt="Logo WB" class="w-9 h-9 rounded bg-white p-0.5 object-contain" />
-        <div>
-          <span class="font-heading font-bold text-sm sm:text-base block leading-tight">
-            Preview Profil Digital &amp; Google Search
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 h-16 flex items-center justify-between gap-2.5">
+      <div class="flex items-center gap-2.5 min-w-0 flex-1">
+        <img src="assets/images/logo-avatar.png?v=2" alt="Logo WB" class="w-8 h-8 sm:w-9 sm:h-9 rounded bg-white p-0.5 object-contain shrink-0" />
+        <div class="min-w-0">
+          <span class="font-heading font-bold text-xs sm:text-base block leading-tight truncate">
+            Preview Profil Digital &amp; Google
           </span>
-          <span class="text-xs text-brand-tealLight block">
+          <span class="text-[10px] sm:text-xs text-brand-tealLight block truncate">
             PT. Wirasena Maju Bersama Rayya
           </span>
         </div>
       </div>
 
-      <nav class="hidden md:flex items-center gap-6 text-xs font-semibold">
+      <nav class="hidden lg:flex items-center gap-6 text-xs font-semibold shrink-0">
         <a href="#google-search" class="hover:text-brand-tealLight transition">1. Google Search &amp; Maps</a>
         <a href="#linkedin-page" class="hover:text-brand-tealLight transition">2. LinkedIn PT</a>
         <a href="#instagram-page" class="hover:text-brand-tealLight transition">3. Instagram &amp; 6 Desain Feed</a>
@@ -56,8 +56,8 @@
       </nav>
 
       <div class="shrink-0">
-        <a href="index.html" class="bg-brand-green hover:bg-brand-greenDark text-white font-heading font-semibold text-xs px-4 py-2.5 rounded shadow-sm transition inline-block">
-          Lihat Website Utama
+        <a href="index.html" class="bg-brand-green hover:bg-brand-greenDark text-white font-heading font-semibold text-[11px] sm:text-xs px-3 py-2 sm:px-4 sm:py-2.5 rounded shadow-sm transition inline-block whitespace-nowrap">
+          Website Utama
         </a>
       </div>
     </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="id" class="scroll-smooth overflow-x-hidden">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -72,40 +72,43 @@
     }
   </script>
 </head>
-<body class="bg-white text-gray-700 font-sans antialiased overflow-x-hidden">
+<body class="bg-white text-gray-700 font-sans antialiased overflow-x-hidden w-full max-w-[100vw]">
 
-  <!-- Top Bar (Standar Website Supplier B2B Cikarang) -->
-  <div class="w-full bg-brand-tealDark text-white text-xs py-2.5">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col sm:flex-row justify-between items-center gap-2">
-      <div class="flex items-center gap-4 truncate">
-        <span>Jl. Bah Kilong Kp. Kandang RT.004/002, Sukadami, Cikarang Selatan, Bekasi 17530</span>
+  <!-- Top Bar (Responsif Mobile & Desktop) -->
+  <div class="w-full bg-brand-tealDark text-white text-[11px] sm:text-xs py-2">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 flex justify-between items-center gap-2">
+      <div class="hidden lg:block truncate text-white/90">
+        Jl. Bah Kilong Kp. Kandang RT.004/002, Sukadami, Cikarang Selatan, Bekasi 17530
       </div>
-      <div class="flex items-center gap-4 font-medium shrink-0">
-        <a href="tel:02184990200" class="hover:text-brand-tealLight transition">Telp/Fax: (021) 8499 0200</a>
-        <span class="opacity-40">|</span>
-        <a href="mailto:wiramajubersama@gmail.com" class="hover:text-brand-tealLight transition">wiramajubersama@gmail.com</a>
-        <span class="opacity-40">|</span>
-        <a href="social-preview.html" class="text-brand-tealLight hover:text-white underline font-semibold">Preview Sosmed &amp; Google</a>
+      <div class="flex items-center justify-between lg:justify-end w-full lg:w-auto gap-3 font-medium">
+        <div class="flex items-center gap-2.5 truncate">
+          <a href="tel:02184990200" class="hover:text-brand-tealLight transition whitespace-nowrap">(021) 8499 0200</a>
+          <span class="opacity-40 hidden sm:inline">|</span>
+          <a href="mailto:wiramajubersama@gmail.com" class="hover:text-brand-tealLight transition hidden sm:inline truncate">wiramajubersama@gmail.com</a>
+        </div>
+        <a href="social-preview.html" class="bg-white/15 hover:bg-white/25 text-white px-2.5 py-1 rounded text-[11px] font-semibold whitespace-nowrap shrink-0 transition">
+          Preview Sosmed &amp; Google →
+        </a>
       </div>
     </div>
   </div>
 
   <!-- Main Navbar -->
   <header class="w-full sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between gap-6">
-      <a href="#beranda" class="flex items-center gap-3 shrink-0">
-        <img src="assets/images/logo-trans.png?v=2" alt="Logo PT. Wirasena Maju Bersama Rayya" class="h-11 w-auto object-contain" />
-        <div>
-          <span class="block font-heading font-bold text-gray-900 text-[15px] leading-tight">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 h-16 sm:h-20 flex items-center justify-between gap-3">
+      <a href="#beranda" class="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1 lg:flex-initial">
+        <img src="assets/images/logo-trans.png?v=2" alt="Logo PT. Wirasena Maju Bersama Rayya" class="h-9 sm:h-11 w-auto object-contain shrink-0" />
+        <div class="min-w-0">
+          <span class="block font-heading font-bold text-gray-900 text-xs sm:text-[15px] leading-tight truncate">
             PT. Wirasena Maju Bersama Rayya
           </span>
-          <span class="block text-xs text-brand-teal font-semibold">
+          <span class="block text-[10px] sm:text-xs text-brand-teal font-semibold truncate">
             General Supplies &amp; Fabrication
           </span>
         </div>
       </a>
 
-      <nav class="hidden lg:flex items-center gap-7 text-[13px] font-semibold text-gray-700">
+      <nav class="hidden lg:flex items-center gap-7 text-[13px] font-semibold text-gray-700 shrink-0">
         <a href="#beranda" class="text-brand-green hover:text-brand-greenDark transition">Beranda</a>
         <a href="#tentang-kami" class="hover:text-brand-green transition">Tentang Kami</a>
         <a href="#produk-kami" class="hover:text-brand-green transition">Produk &amp; Layanan</a>
@@ -114,7 +117,7 @@
       </nav>
 
       <div class="shrink-0">
-        <a href="#hubungi-kami" class="bg-brand-green hover:bg-brand-greenDark text-white font-heading font-semibold text-xs px-5 py-2.5 rounded shadow-sm transition inline-block">
+        <a href="#hubungi-kami" class="bg-brand-green hover:bg-brand-greenDark text-white font-heading font-semibold text-[11px] sm:text-xs px-3.5 py-2 sm:px-5 sm:py-2.5 rounded shadow-sm transition inline-block whitespace-nowrap">
           Hubungi Kami
         </a>
       </div>
@@ -126,25 +129,25 @@
     <!-- Aksen Segitiga Diagonal kanan bawah persis sampul Company Profile PDF -->
     <div class="hidden lg:block absolute right-0 bottom-0 w-5/12 h-full bg-brand-tealLight/25 [clip-path:polygon(35%_0,100%_0,100%_100%,0%_100%)] pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-14 lg:py-20 relative z-10 grid lg:grid-cols-12 gap-10 items-center">
-      <div class="lg:col-span-7 space-y-5">
-        <p class="uppercase tracking-wider text-xs font-bold text-brand-tealLight">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-14 lg:py-20 relative z-10 grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+      <div class="lg:col-span-7 space-y-4 sm:space-y-5">
+        <p class="uppercase tracking-wider text-[11px] sm:text-xs font-bold text-brand-tealLight">
           Selamat Datang di Website Resmi
         </p>
-        <h1 class="font-heading text-3xl sm:text-4xl lg:text-[40px] font-extrabold leading-tight">
+        <h1 class="font-heading text-2xl sm:text-4xl lg:text-[40px] font-extrabold leading-tight">
           PT. Wirasena Maju Bersama Rayya
         </h1>
-        <p class="text-lg font-semibold text-white/95">
+        <p class="text-sm sm:text-lg font-semibold text-white/95">
           General Supplies, Carton Box Packaging &amp; Industrial Fabrication
         </p>
-        <p class="text-sm sm:text-base text-white/85 leading-relaxed max-w-xl">
+        <p class="text-xs sm:text-base text-white/85 leading-relaxed max-w-xl">
           Perusahaan yang bergerak di bidang <strong>Trading dan Manufaktur</strong> di Cikarang Selatan, Kabupaten Bekasi. Kami mengutamakan kepuasan pelanggan dalam hal kualitas produk terbaik, ketepatan waktu pengiriman, dan harga yang bersaing.
         </p>
-        <div class="pt-2 flex flex-wrap gap-3">
-          <a href="#produk-kami" class="bg-brand-green hover:bg-brand-greenDark text-white font-heading font-bold text-sm px-6 py-3 rounded shadow transition">
+        <div class="pt-2 grid grid-cols-2 sm:flex sm:flex-wrap gap-3">
+          <a href="#produk-kami" class="bg-brand-green hover:bg-brand-greenDark text-white font-heading font-bold text-xs sm:text-sm px-4 sm:px-6 py-3 rounded shadow text-center transition">
             Lihat Produk Kami
           </a>
-          <a href="#hubungi-kami" class="bg-white hover:bg-gray-100 text-brand-tealDark font-heading font-bold text-sm px-6 py-3 rounded shadow transition">
+          <a href="#hubungi-kami" class="bg-white hover:bg-gray-100 text-brand-tealDark font-heading font-bold text-xs sm:text-sm px-4 sm:px-6 py-3 rounded shadow text-center transition">
             Hubungi Marketing
           </a>
         </div>
@@ -164,7 +167,7 @@
 
   <!-- 4 Komitmen Misi (Strip Bar seperti karyahasiloptima.co.id / berlian-ap.com) -->
   <section class="bg-gray-50 border-b border-gray-200 py-8">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-2 md:grid-cols-4 gap-6">
       <div class="flex items-start gap-3.5">
         <div class="w-11 h-11 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center shrink-0 mt-0.5">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -209,7 +212,7 @@
 
   <!-- Tentang Kami, Visi Misi & Profil Perusahaan (Halaman 2 & 3 PDF) -->
   <section id="tentang-kami" class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
       <div class="grid lg:grid-cols-12 gap-10 items-start">
 
         <!-- Kiri: Penjelasan, Visi & Misi -->
@@ -266,37 +269,37 @@
             </div>
           </div>
 
-          <table class="w-full text-sm">
+          <table class="w-full text-xs sm:text-sm break-words">
             <tbody class="divide-y divide-gray-200">
               <tr>
-                <td class="py-2.5 pr-3 font-semibold text-gray-600 w-36">Nama Perusahaan</td>
+                <td class="py-2.5 pr-2 font-semibold text-gray-600 w-28 sm:w-36 align-top">Nama Perusahaan</td>
                 <td class="py-2.5 font-bold text-gray-900">: PT. Wirasena Maju Bersama Rayya</td>
               </tr>
               <tr>
-                <td class="py-2.5 pr-3 font-semibold text-gray-600">Direktur</td>
+                <td class="py-2.5 pr-2 font-semibold text-gray-600 align-top">Direktur</td>
                 <td class="py-2.5 text-gray-800">: Rony Yuniawan</td>
               </tr>
               <tr>
-                <td class="py-2.5 pr-3 font-semibold text-gray-600">NPWP</td>
+                <td class="py-2.5 pr-2 font-semibold text-gray-600 align-top">NPWP</td>
                 <td class="py-2.5 text-gray-800">: 96.434.539.2-447.000</td>
               </tr>
               <tr>
-                <td class="py-2.5 pr-3 font-semibold text-gray-600 align-top">Alamat</td>
+                <td class="py-2.5 pr-2 font-semibold text-gray-600 align-top">Alamat</td>
                 <td class="py-2.5 text-gray-800 leading-relaxed">
                   : Jl. Bah Kilong Kp. Kandang, RT.004 RW.002, Sukadami, Cikarang Selatan, Kabupaten Bekasi, Jawa Barat 17530
                 </td>
               </tr>
               <tr>
-                <td class="py-2.5 pr-3 font-semibold text-gray-600">Telp</td>
+                <td class="py-2.5 pr-2 font-semibold text-gray-600 align-top">Telp</td>
                 <td class="py-2.5 text-gray-800">: (021) 8499 0200</td>
               </tr>
               <tr>
-                <td class="py-2.5 pr-3 font-semibold text-gray-600">Fax</td>
+                <td class="py-2.5 pr-2 font-semibold text-gray-600 align-top">Fax</td>
                 <td class="py-2.5 text-gray-800">: (021) 8499 0200</td>
               </tr>
               <tr>
-                <td class="py-2.5 pr-3 font-semibold text-gray-600">Email</td>
-                <td class="py-2.5 text-brand-teal font-semibold">: wiramajubersama@gmail.com</td>
+                <td class="py-2.5 pr-2 font-semibold text-gray-600 align-top">Email</td>
+                <td class="py-2.5 text-brand-teal font-semibold break-all">: wiramajubersama@gmail.com</td>
               </tr>
             </tbody>
           </table>
@@ -308,7 +311,7 @@
 
   <!-- Produk & Layanan Kami (Menggabungkan Packaging, General Trading & Fabrication seperti website pesaing) -->
   <section id="produk-kami" class="py-16 bg-gray-50 border-t border-gray-200">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10 space-y-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 space-y-14">
 
       <div class="text-center max-w-2xl mx-auto">
         <span class="text-brand-teal font-heading font-bold text-xs uppercase tracking-wider">Katalog Produk &amp; Layanan</span>
@@ -464,7 +467,7 @@
 
   <!-- Fasilitas Mesin Produksi Carton Box (Persis Halaman 6 PDF) -->
   <section id="mesin-produksi" class="py-16 bg-white border-t border-gray-200">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
       <div class="text-center max-w-2xl mx-auto mb-10">
         <span class="text-brand-teal font-heading font-bold text-xs uppercase tracking-wider">Fasilitas Workshop</span>
         <h2 class="font-heading text-2xl sm:text-3xl font-bold text-brand-green mt-1">
@@ -517,7 +520,7 @@
 
   <!-- Daftar Customer (Halaman 5 PDF) -->
   <section id="pelanggan" class="py-14 bg-brand-teal text-white">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
       <div class="text-center max-w-2xl mx-auto mb-8">
         <h2 class="font-heading text-2xl sm:text-3xl font-bold">Daftar Pelanggan (Customer) Kami</h2>
         <p class="text-sm text-white/85 mt-1">
@@ -564,7 +567,7 @@
 
   <!-- Hubungi Kami -->
   <section id="hubungi-kami" class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
       <div class="grid lg:grid-cols-12 gap-8 items-stretch border border-gray-200 rounded-lg overflow-hidden shadow-sm">
         <div class="lg:col-span-6 p-8 space-y-5">
           <div>
@@ -623,7 +626,7 @@
 
   <!-- Footer -->
   <footer class="bg-brand-tealDark text-white py-8 text-xs">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-3">
         <img src="assets/images/logo-avatar.png?v=2" alt="Logo WB" class="w-8 h-8 rounded bg-white p-0.5 object-contain" />
         <span class="font-heading font-bold text-sm">PT. Wirasena Maju Bersama Rayya</span>
