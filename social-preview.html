@@ -1,149 +1,175 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Preview Digital Presence (Google, LinkedIn, IG, FB) — PT. Wirasena Maju Bersama Rayya</title>
+  <title>Preview Tampilan Google Search, LinkedIn, Instagram &amp; Facebook — PT. Wirasena Maju Bersama Rayya</title>
+  <link rel="icon" type="image/png" href="assets/images/logo-avatar.png" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+          fontFamily: {
+            heading: ['Montserrat', 'sans-serif'],
+            sans: ['"Open Sans"', 'sans-serif']
+          },
           colors: {
-            wb: { dark: '#112A26', teal: '#4F7770', green: '#3C9A43' }
+            brand: {
+              teal: '#4F7770',
+              tealDark: '#3A5A54',
+              tealLight: '#B8C8C5',
+              green: '#38983E',
+              greenDark: '#2B7A30'
+            }
           }
         }
       }
     }
   </script>
 </head>
-<body class="bg-slate-100 text-slate-800 antialiased">
+<body class="bg-gray-100 text-gray-800 font-sans antialiased overflow-x-hidden">
 
-  <!-- Top Navigation -->
-  <header class="bg-wb-dark text-white sticky top-0 z-50 shadow-md">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <img src="assets/images/logo-avatar.png" alt="Logo WB" class="w-9 h-9 rounded-lg bg-white p-0.5" />
+  <!-- Top Bar Navigation -->
+  <header class="w-full sticky top-0 z-50 bg-brand-tealDark text-white shadow-sm border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3 shrink-0">
+        <img src="assets/images/logo-avatar.png" alt="Logo WB" class="w-9 h-9 rounded bg-white p-0.5 object-contain" />
         <div>
-          <span class="font-extrabold text-sm sm:text-base block leading-tight">PREVIEW DIGITAL PRESENCE KIT</span>
-          <span class="text-xs text-green-300 block">PT. Wirasena Maju Bersama Rayya</span>
+          <span class="font-heading font-bold text-sm sm:text-base block leading-tight">
+            Preview Profil Digital &amp; Google Search
+          </span>
+          <span class="text-xs text-brand-tealLight block">
+            PT. Wirasena Maju Bersama Rayya
+          </span>
         </div>
       </div>
-      <div class="flex items-center gap-3 text-xs sm:text-sm font-semibold">
-        <a href="#google" class="hover:text-green-300 px-2 py-1">1. Google Search</a>
-        <a href="#linkedin" class="hover:text-green-300 px-2 py-1">2. LinkedIn</a>
-        <a href="#instagram" class="hover:text-green-300 px-2 py-1">3. Instagram</a>
-        <a href="#facebook" class="hover:text-green-300 px-2 py-1">4. Facebook</a>
-        <a href="index.html" class="bg-wb-green hover:bg-green-600 text-white px-4 py-2 rounded-lg transition">Lihat Website Utama →</a>
+
+      <nav class="hidden md:flex items-center gap-6 text-xs font-semibold">
+        <a href="#google-search" class="hover:text-brand-tealLight transition">1. Google Search &amp; Maps</a>
+        <a href="#linkedin-page" class="hover:text-brand-tealLight transition">2. LinkedIn PT</a>
+        <a href="#instagram-page" class="hover:text-brand-tealLight transition">3. Instagram &amp; 6 Desain Feed</a>
+        <a href="#facebook-page" class="hover:text-brand-tealLight transition">4. Facebook Page</a>
+      </nav>
+
+      <div class="shrink-0">
+        <a href="index.html" class="bg-brand-green hover:bg-brand-greenDark text-white font-heading font-semibold text-xs px-4 py-2.5 rounded shadow-sm transition inline-block">
+          Lihat Website Utama
+        </a>
       </div>
     </div>
   </header>
 
   <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-14">
 
-    <!-- 1. GOOGLE SEARCH & KNOWLEDGE PANEL PREVIEW -->
-    <section id="google" class="space-y-4">
-      <div class="flex items-center justify-between">
+    <!-- 1. GOOGLE SEARCH & GOOGLE BUSINESS PROFILE -->
+    <section id="google-search" class="space-y-4">
+      <div class="border-b border-gray-300 pb-3 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
         <div>
-          <span class="text-xs font-extrabold uppercase tracking-wider text-wb-green">Preview 01 • Target Pencarian Google</span>
-          <h2 class="text-2xl font-extrabold text-wb-dark">Simulasi Hasil Pencarian #1 di Google &amp; Google Bisnis</h2>
+          <span class="text-xs font-heading font-bold uppercase tracking-wider text-brand-teal">Bagian 01 • Pencarian Google</span>
+          <h1 class="font-heading text-xl sm:text-2xl font-bold text-gray-900 mt-0.5">
+            Tampilan Saat Nama PT Dicari di Google Search &amp; Google Maps
+          </h1>
         </div>
+        <span class="text-xs text-gray-500">Target Halaman 1 Peringkat Atas Google</span>
       </div>
 
-      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
-        <!-- Fake Google Search Bar -->
-        <div class="flex items-center gap-3 max-w-2xl bg-white border border-slate-300 rounded-full px-5 py-3 shadow-sm mb-8">
-          <span class="font-extrabold text-lg tracking-tight">
-            <span class="text-blue-600">G</span><span class="text-red-500">o</span><span class="text-yellow-500">o</span><span class="text-blue-600">g</span><span class="text-green-600">l</span><span class="text-red-500">e</span>
-          </span>
-          <span class="text-slate-300">|</span>
-          <span class="font-medium text-slate-800 text-sm sm:text-base flex-1">PT Wirasena Maju Bersama Rayya</span>
-          <span class="text-blue-600 font-bold">🔍</span>
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8">
+        <!-- Google Search Bar Mockup -->
+        <div class="flex items-center justify-between max-w-2xl bg-white border border-gray-300 rounded-full px-5 py-2.5 shadow-sm mb-8">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="font-heading font-extrabold text-base tracking-tight shrink-0">
+              <span class="text-[#4285F4]">G</span><span class="text-[#EA4335]">o</span><span class="text-[#FBBC05]">o</span><span class="text-[#4285F4]">g</span><span class="text-[#34A853]">l</span><span class="text-[#EA4335]">e</span>
+            </span>
+            <span class="text-gray-300">|</span>
+            <span class="font-semibold text-gray-900 text-sm truncate">PT Wirasena Maju Bersama Rayya</span>
+          </div>
+          <svg class="w-4 h-4 text-[#4285F4] shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
         </div>
 
-        <div class="grid lg:grid-cols-12 gap-8">
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
           <!-- Left: Organic Search Results -->
           <div class="lg:col-span-7 space-y-6">
             <!-- Result 1: Official Website -->
-            <div>
-              <div class="flex items-center gap-2.5 text-xs text-slate-600 mb-1">
-                <img src="assets/images/logo-avatar.png" class="w-6 h-6 rounded-full border border-slate-200" alt="" />
+            <div class="pb-5 border-b border-gray-100">
+              <div class="flex items-center gap-2.5 text-xs text-gray-600 mb-1.5">
+                <img src="assets/images/logo-avatar.png" class="w-6 h-6 rounded-full border border-gray-200 object-contain bg-white" alt="Logo" />
                 <div>
-                  <span class="font-semibold text-slate-800 block leading-none">PT. Wirasena Maju Bersama Rayya</span>
-                  <span class="text-slate-500">https://wirasenamajubersama.com</span>
+                  <span class="font-semibold text-gray-900 block leading-tight">PT. Wirasena Maju Bersama Rayya</span>
+                  <span class="text-gray-500 text-[11px]">https://wirasenamajubersama.com</span>
                 </div>
               </div>
-              <a href="index.html" class="text-lg sm:text-xl text-blue-700 hover:underline font-semibold block">
-                PT. Wirasena Maju Bersama Rayya | General Supplies &amp; Fabrication
+              <a href="index.html" class="text-lg text-[#1a0dab] hover:underline font-semibold block leading-snug">
+                PT. Wirasena Maju Bersama Rayya - General Supplies &amp; Fabrication Cikarang
               </a>
-              <p class="text-sm text-slate-600 mt-1 leading-relaxed">
-                <strong>PT. Wirasena Maju Bersama Rayya</strong> adalah perusahaan Trading dan Manufaktur di Cikarang Selatan, Bekasi. Spesialis produksi Carton Box, Impraboard, Heavy Duty Shelving, Rubber, dan General Supplies B2B.
+              <p class="text-xs sm:text-sm text-gray-600 mt-1.5 leading-relaxed">
+                <strong>PT. Wirasena Maju Bersama Rayya</strong> adalah perusahaan yang bergerak di bidang Trading dan Manufaktur di Cikarang Selatan, Kabupaten Bekasi. Spesialis produksi Carton Box, Impraboard, Rubber, Fabrikasi Rak Industri, dan General Supplies.
               </p>
               <!-- Sitelinks -->
-              <div class="grid grid-cols-2 gap-3 mt-3 pl-4 border-l-2 border-slate-200 text-xs">
+              <div class="grid sm:grid-cols-2 gap-3 mt-3 pl-3.5 border-l-2 border-gray-200 text-xs">
                 <div>
-                  <a href="index.html#produk" class="text-blue-700 font-semibold hover:underline">Katalog Produk &amp; Carton Box</a>
-                  <p class="text-slate-500">Carton Box, Impraboard, PE Foam, Plastic Packing &amp; Rubber.</p>
+                  <a href="index.html#produk-kami" class="text-[#1a0dab] font-semibold hover:underline">Katalog Produk &amp; Kemasan</a>
+                  <p class="text-gray-500 mt-0.5">Carton Box, Impraboard, PE Foam, Plastic Packing &amp; Rubber.</p>
                 </div>
                 <div>
-                  <a href="index.html#mesin" class="text-blue-700 font-semibold hover:underline">Fasilitas Mesin Produksi</a>
-                  <p class="text-slate-500">Automatic Folder Glue, Rotary Sloter, Die Cut &amp; Creasing.</p>
+                  <a href="index.html#mesin-produksi" class="text-[#1a0dab] font-semibold hover:underline">Fasilitas Mesin Carton Box</a>
+                  <p class="text-gray-500 mt-0.5">Cutting &amp; Creasing, Automatic Folder Glue, Rotary Sloter &amp; Die Cut.</p>
                 </div>
               </div>
             </div>
 
             <!-- Result 2: LinkedIn -->
-            <div>
-              <div class="flex items-center gap-2 text-xs text-slate-600 mb-1">
+            <div class="pb-5 border-b border-gray-100">
+              <div class="flex items-center gap-2 text-xs text-gray-600 mb-1">
                 <span class="w-5 h-5 rounded bg-[#0A66C2] text-white flex items-center justify-center font-bold text-[10px]">in</span>
                 <span>LinkedIn · PT. Wirasena Maju Bersama Rayya</span>
               </div>
-              <a href="#linkedin" class="text-lg text-blue-700 hover:underline font-semibold block">
+              <a href="#linkedin-page" class="text-base sm:text-lg text-[#1a0dab] hover:underline font-semibold block">
                 PT. Wirasena Maju Bersama Rayya | LinkedIn
               </a>
-              <p class="text-sm text-slate-600 mt-1">
-                PT. Wirasena Maju Bersama Rayya | Perusahaan Manufaktur Kemasan (Carton Box &amp; Impraboard), Fabrikasi Rak Industri, dan General Trading di Cikarang Selatan, Kabupaten Bekasi.
+              <p class="text-xs sm:text-sm text-gray-600 mt-1 leading-relaxed">
+                PT. Wirasena Maju Bersama Rayya | Perusahaan Trading &amp; Manufaktur Kemasan Industri (Carton Box &amp; Impraboard), Fabrikasi Rak Gudang, dan General Supplies di Cikarang Selatan, Bekasi.
               </p>
             </div>
 
             <!-- Result 3: Instagram -->
             <div>
-              <div class="flex items-center gap-2 text-xs text-slate-600 mb-1">
+              <div class="flex items-center gap-2 text-xs text-gray-600 mb-1">
                 <span class="w-5 h-5 rounded bg-gradient-to-tr from-amber-500 via-pink-500 to-purple-600 text-white flex items-center justify-center font-bold text-[10px]">IG</span>
                 <span>Instagram · @wirasenamajubersama</span>
               </div>
-              <a href="#instagram" class="text-lg text-blue-700 hover:underline font-semibold block">
+              <a href="#instagram-page" class="text-base sm:text-lg text-[#1a0dab] hover:underline font-semibold block">
                 PT. Wirasena Maju Bersama Rayya (@wirasenamajubersama)
               </a>
-              <p class="text-sm text-slate-600 mt-1">
-                General Supplies &amp; Fabrication Partner | Carton Box Manufacturing, Impraboard, Heavy Duty Shelving &amp; Industrial Trading — Cikarang Selatan, Bekasi.
+              <p class="text-xs sm:text-sm text-gray-600 mt-1 leading-relaxed">
+                General Supplies &amp; Fabrication — Manufaktur Carton Box, Impraboard, Heavy Duty Shelving &amp; Pengadaan Kebutuhan Pabrik di Cikarang Selatan, Kabupaten Bekasi.
               </p>
             </div>
           </div>
 
-          <!-- Right: Google Business Knowledge Panel -->
-          <div class="lg:col-span-5 border border-slate-200 rounded-2xl overflow-hidden shadow-sm bg-white">
-            <div class="grid grid-cols-2 gap-0.5 bg-slate-200 h-36">
-              <img src="assets/images/machine-2b-auto-folder-glue.png" class="w-full h-36 object-cover" alt="" />
-              <img src="assets/images/logo-avatar.png" class="w-full h-36 object-contain bg-white p-3" alt="" />
+          <!-- Right: Google Business Profile Card -->
+          <div class="lg:col-span-5 border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm">
+            <div class="grid grid-cols-2 gap-0.5 bg-gray-200 h-36">
+              <img src="assets/images/hero-warehouse-shelving.png" class="w-full h-36 object-cover" alt="Workshop" />
+              <img src="assets/images/logo-avatar.png" class="w-full h-36 object-contain bg-white p-3" alt="Logo PT" />
             </div>
             <div class="p-5 space-y-3">
               <div>
-                <h3 class="text-lg font-extrabold text-slate-900">PT. Wirasena Maju Bersama Rayya</h3>
-                <p class="text-xs text-slate-500">Perusahaan Manufaktur &amp; Supplier Industri di Kabupaten Bekasi</p>
-                <div class="flex items-center gap-1 text-amber-500 text-xs font-bold mt-1">
-                  <span>★★★★★</span>
-                  <span class="text-slate-600 font-normal">(Profil Bisnis Terverifikasi)</span>
-                </div>
+                <span class="inline-block text-[10px] font-bold uppercase tracking-wider bg-green-50 text-brand-green border border-green-200 px-2 py-0.5 rounded mb-1">
+                  Profil Google Bisnis Resmi
+                </span>
+                <h2 class="font-heading text-lg font-bold text-gray-900">PT. Wirasena Maju Bersama Rayya</h2>
+                <p class="text-xs text-gray-500 mt-0.5">Perusahaan Manufaktur &amp; Supplier Industri di Kab. Bekasi</p>
               </div>
-              <hr class="border-slate-200" />
-              <div class="space-y-2 text-xs text-slate-700">
-                <p><strong>Alamat:</strong> Jl. Bah Kilong Kp. Kandang, RT.004/RW.002, Sukadami, Cikarang Sel., Kabupaten Bekasi, Jawa Barat 17530</p>
-                <p><strong>Jam Buka:</strong> <span class="text-green-700 font-semibold">Buka</span> · Tutup pukul 17.00</p>
-                <p><strong>Telepon:</strong> (021) 8499 0200</p>
-                <p><strong>Provinsi:</strong> Jawa Barat</p>
+              <hr class="border-gray-200" />
+              <div class="space-y-2 text-xs text-gray-700 leading-relaxed">
+                <p><strong>Alamat:</strong> Jl. Bah Kilong Kp. Kandang, RT.004/RW.002, Sukadami, Cikarang Selatan, Kabupaten Bekasi, Jawa Barat 17530</p>
+                <p><strong>Jam Operasional:</strong> <span class="text-brand-green font-semibold">Buka</span> · Senin – Sabtu (08.00 – 17.00)</p>
+                <p><strong>Telepon / Fax:</strong> (021) 8499 0200</p>
+                <p><strong>Email:</strong> wiramajubersama@gmail.com</p>
               </div>
             </div>
           </div>
@@ -151,105 +177,169 @@
       </div>
     </section>
 
-    <!-- 2. LINKEDIN COMPANY PAGE PREVIEW -->
-    <section id="linkedin" class="space-y-4">
-      <div>
-        <span class="text-xs font-extrabold uppercase tracking-wider text-[#0A66C2]">Preview 02 • LinkedIn Company Page</span>
-        <h2 class="text-2xl font-extrabold text-wb-dark">Tampilan Profil LinkedIn Resmi Perusahaan</h2>
+    <!-- 2. LINKEDIN COMPANY PAGE -->
+    <section id="linkedin-page" class="space-y-4">
+      <div class="border-b border-gray-300 pb-3">
+        <span class="text-xs font-heading font-bold uppercase tracking-wider text-[#0A66C2]">Bagian 02 • LinkedIn Company Page</span>
+        <h2 class="font-heading text-xl sm:text-2xl font-bold text-gray-900 mt-0.5">
+          Tampilan Halaman Resmi LinkedIn Perusahaan
+        </h2>
       </div>
 
-      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-        <img src="assets/social-media-kit/banner-linkedin-cover.png" alt="LinkedIn Cover" class="w-full h-36 sm:h-48 object-cover" />
-        <div class="px-6 sm:px-8 pb-6 relative">
-          <img src="assets/images/logo-avatar.png" alt="Logo WB" class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl border-4 border-white shadow-md bg-white -mt-12 sm:-mt-14 object-contain" />
-          <div class="mt-3 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div>
-              <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900">PT. Wirasena Maju Bersama Rayya</h3>
-              <p class="text-sm text-slate-600 mt-0.5">
-                General Supplies, Packaging Manufacturing (Carton Box &amp; Impraboard) &amp; Industrial Fabrication
-              </p>
-              <p class="text-xs text-slate-500 mt-1">
-                Manufaktur Kemasan &amp; Pengadaan Industri • Cikarang Selatan, Kabupaten Bekasi, Jawa Barat • 11-50 Karyawan
-              </p>
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+        <!-- Banner Full -->
+        <div class="w-full bg-brand-teal">
+          <img src="assets/social-media-kit/banner-linkedin-cover.png" alt="LinkedIn Banner" class="w-full h-auto block" />
+        </div>
+
+        <!-- Profile Info Bar (Cleanly separated below banner so avatar never overlaps banner text) -->
+        <div class="p-6 sm:p-8">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-gray-200">
+            <div class="flex items-center gap-4">
+              <img src="assets/images/logo-avatar.png" alt="Logo WB" class="w-20 h-20 rounded-lg border border-gray-200 shadow-sm bg-white p-1 object-contain shrink-0" />
+              <div>
+                <h3 class="font-heading text-xl sm:text-2xl font-bold text-gray-900">PT. Wirasena Maju Bersama Rayya</h3>
+                <p class="text-xs sm:text-sm text-gray-600 mt-0.5">
+                  General Supplies, Packaging Manufacturing (Carton Box &amp; Impraboard) &amp; Industrial Fabrication
+                </p>
+                <p class="text-xs text-gray-500 mt-1">
+                  Manufaktur &amp; Pengadaan Industri • Cikarang Selatan, Kabupaten Bekasi, Jawa Barat • 25+ Karyawan
+                </p>
+              </div>
             </div>
-            <div class="flex gap-2">
-              <span class="bg-[#0A66C2] text-white text-xs font-bold px-4 py-2.5 rounded-full">+ Ikuti Halaman</span>
-              <a href="index.html" class="border border-[#0A66C2] text-[#0A66C2] text-xs font-bold px-4 py-2.5 rounded-full">Kunjungi Situs Web ↗</a>
+            <div class="flex items-center gap-2.5 shrink-0">
+              <span class="bg-[#0A66C2] text-white text-xs font-semibold px-4 py-2 rounded-full">+ Ikuti Halaman</span>
+              <a href="index.html" class="border border-[#0A66C2] text-[#0A66C2] hover:bg-blue-50 text-xs font-semibold px-4 py-2 rounded-full transition">
+                Kunjungi Website
+              </a>
             </div>
           </div>
 
-          <div class="mt-6 pt-5 border-t border-slate-200 text-sm text-slate-700 space-y-2">
-            <h4 class="font-bold text-slate-900">Tentang Kami (Overview)</h4>
-            <p class="leading-relaxed text-xs sm:text-sm">
-              <strong>PT. Wirasena Maju Bersama Rayya</strong> adalah perusahaan yang bergerak di bidang Trading dan Manufaktur di Cikarang Selatan, Kabupaten Bekasi. Kami memproduksi Carton Box, Impraboard Box, Rubber Molded, serta melayani jasa Fabrikasi Industri (Heavy Duty Shelving, Storage Trolley, Welding) dan General Supplies untuk berbagai perusahaan manufaktur multinasional di Indonesia.
+          <div class="mt-5 space-y-2 text-xs sm:text-sm text-gray-700 leading-relaxed">
+            <h4 class="font-heading font-bold text-gray-900 text-sm">Tentang Kami (Overview)</h4>
+            <p>
+              <strong>PT. Wirasena Maju Bersama Rayya</strong> adalah perusahaan yang bergerak di bidang Trading dan Manufaktur yang berlokasi di Cikarang Selatan, Kabupaten Bekasi. Kami memproduksi Carton Box, Impraboard Box, dan Rubber Molded, serta melayani jasa Fabrikasi Industri (Heavy Duty Shelving, Storage Trolley, Welding) dan General Supplies untuk berbagai perusahaan manufaktur terkemuka di Indonesia.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 3. INSTAGRAM BUSINESS PROFILE & 6-GRID FEED PREVIEW -->
-    <section id="instagram" class="space-y-4">
-      <div>
-        <span class="text-xs font-extrabold uppercase tracking-wider text-pink-600">Preview 03 • Instagram Business Profile &amp; 6 Starter Feeds</span>
-        <h2 class="text-2xl font-extrabold text-wb-dark">Tampilan Akun Instagram Bisnis &amp; Desain Feed Awal</h2>
+    <!-- 3. INSTAGRAM BUSINESS & 6 DESAIN POSTINGAN AWAL -->
+    <section id="instagram-page" class="space-y-4">
+      <div class="border-b border-gray-300 pb-3 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+        <div>
+          <span class="text-xs font-heading font-bold uppercase tracking-wider text-pink-600">Bagian 03 • Instagram Bisnis &amp; 6 Desain Konten</span>
+          <h2 class="font-heading text-xl sm:text-2xl font-bold text-gray-900 mt-0.5">
+            Tampilan Profil Instagram &amp; 6 Desain Postingan Awal
+          </h2>
+        </div>
+        <span class="text-xs text-gray-500">Seluruh gambar ukuran 1080×1080 px siap upload ke IG, FB, &amp; LinkedIn</span>
       </div>
 
-      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
-        <!-- IG Header -->
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 pb-8 border-b border-slate-200">
-          <img src="assets/images/logo-avatar.png" alt="Avatar IG" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full p-1 border-2 border-pink-500 object-contain bg-white" />
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8">
+        <!-- IG Bio Header -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 pb-7 border-b border-gray-200">
+          <img src="assets/images/logo-avatar.png" alt="Avatar IG" class="w-24 h-24 rounded-full p-1 border-2 border-brand-green object-contain bg-white shrink-0" />
           <div class="space-y-2 flex-1">
             <div class="flex flex-wrap items-center gap-3">
-              <span class="text-lg font-bold text-slate-900">wirasenamajubersama</span>
-              <span class="bg-slate-100 text-slate-800 text-xs font-semibold px-3 py-1 rounded-lg">ikuti</span>
-              <span class="bg-slate-100 text-slate-800 text-xs font-semibold px-3 py-1 rounded-lg">Kirim Pesan</span>
+              <span class="font-heading text-base sm:text-lg font-bold text-gray-900">wirasenamajubersama</span>
+              <span class="bg-brand-green text-white text-xs font-semibold px-3.5 py-1 rounded">Ikuti</span>
+              <span class="bg-gray-100 text-gray-800 text-xs font-semibold px-3.5 py-1 rounded border border-gray-200">Kontak</span>
             </div>
-            <div class="text-xs sm:text-sm space-y-0.5">
-              <strong class="block text-slate-900">PT. Wirasena Maju Bersama Rayya</strong>
-              <span class="text-slate-500 block text-xs">Perusahaan Manufaktur &amp; Industri</span>
-              <p class="text-slate-700 pt-1">
-                📦 Manufaktur Carton Box, Impraboard &amp; Kemasan Industri<br />
-                🏗️ Industrial Fabrication (Heavy Duty Shelving, Trolley &amp; Welding)<br />
-                ⚙️ General Trading &amp; Factory Supplies (Pneumatics, K3, Tools)<br />
-                📍 Cikarang Selatan, Kab. Bekasi | 📞 (021) 8499 0200
+            <div class="text-xs sm:text-sm space-y-1 text-gray-700">
+              <strong class="block font-heading text-gray-900">PT. Wirasena Maju Bersama Rayya</strong>
+              <span class="text-gray-500 block text-xs">Perusahaan Manufaktur &amp; Supplier Industri (B2B)</span>
+              <p class="leading-relaxed pt-1">
+                • Manufaktur Carton Box, Impraboard &amp; Kemasan Industri<br />
+                • Industrial Fabrication (Heavy Duty Shelving, Trolley &amp; Welding)<br />
+                • General Trading &amp; Kebutuhan Operasional Pabrik<br />
+                • Jl. Bah Kilong Kp. Kandang, Sukadami, Cikarang Selatan, Bekasi | Telp: (021) 8499 0200
               </p>
             </div>
           </div>
         </div>
 
         <!-- 6 Square Feeds Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 pt-6">
-          <img src="assets/social-media-kit/post-01-company-profile.png" alt="Feed 1" class="w-full aspect-square object-cover rounded-xl border border-slate-200 shadow-sm hover:scale-[1.01] transition" />
-          <img src="assets/social-media-kit/post-02-packaging-products.png" alt="Feed 2" class="w-full aspect-square object-cover rounded-xl border border-slate-200 shadow-sm hover:scale-[1.01] transition" />
-          <img src="assets/social-media-kit/post-03-production-machines.png" alt="Feed 3" class="w-full aspect-square object-cover rounded-xl border border-slate-200 shadow-sm hover:scale-[1.01] transition" />
-          <img src="assets/social-media-kit/post-04-industrial-fabrication.png" alt="Feed 4" class="w-full aspect-square object-cover rounded-xl border border-slate-200 shadow-sm hover:scale-[1.01] transition" />
-          <img src="assets/social-media-kit/post-05-general-trading.png" alt="Feed 5" class="w-full aspect-square object-cover rounded-xl border border-slate-200 shadow-sm hover:scale-[1.01] transition" />
-          <img src="assets/social-media-kit/post-06-clients-and-contact.png" alt="Feed 6" class="w-full aspect-square object-cover rounded-xl border border-slate-200 shadow-sm hover:scale-[1.01] transition" />
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 pt-7">
+          <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm bg-gray-50">
+            <img src="assets/social-media-kit/post-01-company-profile.png" alt="Post 01 Visi Misi" class="w-full aspect-square object-cover block" />
+            <div class="p-3 bg-white border-t border-gray-100 text-xs font-semibold text-gray-700">
+              Post 01 — Profil, Visi &amp; Misi Perusahaan
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm bg-gray-50">
+            <img src="assets/social-media-kit/post-02-packaging-products.png" alt="Post 02 Kemasan" class="w-full aspect-square object-cover block" />
+            <div class="p-3 bg-white border-t border-gray-100 text-xs font-semibold text-gray-700">
+              Post 02 — Produk Kemasan, Carton Box &amp; Impraboard
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm bg-gray-50">
+            <img src="assets/social-media-kit/post-03-production-machines.png" alt="Post 03 Mesin" class="w-full aspect-square object-cover block" />
+            <div class="p-3 bg-white border-t border-gray-100 text-xs font-semibold text-gray-700">
+              Post 03 — Fasilitas 5 Mesin Produksi Carton Box
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm bg-gray-50">
+            <img src="assets/social-media-kit/post-04-industrial-fabrication.png" alt="Post 04 Fabrikasi" class="w-full aspect-square object-cover block" />
+            <div class="p-3 bg-white border-t border-gray-100 text-xs font-semibold text-gray-700">
+              Post 04 — Jasa Fabrikasi Rak Gudang &amp; Trolley
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm bg-gray-50">
+            <img src="assets/social-media-kit/post-05-general-trading.png" alt="Post 05 Trading" class="w-full aspect-square object-cover block" />
+            <div class="p-3 bg-white border-t border-gray-100 text-xs font-semibold text-gray-700">
+              Post 05 — General Trading Kebutuhan Pabrik
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm bg-gray-50">
+            <img src="assets/social-media-kit/post-06-clients-and-contact.png" alt="Post 06 Pelanggan" class="w-full aspect-square object-cover block" />
+            <div class="p-3 bg-white border-t border-gray-100 text-xs font-semibold text-gray-700">
+              Post 06 — Daftar Pelanggan &amp; Kontak Resmi
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 4. FACEBOOK BUSINESS PAGE PREVIEW -->
-    <section id="facebook" class="space-y-4">
-      <div>
-        <span class="text-xs font-extrabold uppercase tracking-wider text-blue-600">Preview 04 • Facebook Business Page</span>
-        <h2 class="text-2xl font-extrabold text-wb-dark">Tampilan Halaman Resmi Facebook Bisnis</h2>
+    <!-- 4. FACEBOOK BUSINESS PAGE -->
+    <section id="facebook-page" class="space-y-4">
+      <div class="border-b border-gray-300 pb-3">
+        <span class="text-xs font-heading font-bold uppercase tracking-wider text-blue-600">Bagian 04 • Facebook Business Page</span>
+        <h2 class="font-heading text-xl sm:text-2xl font-bold text-gray-900 mt-0.5">
+          Tampilan Halaman Resmi Facebook Perusahaan
+        </h2>
       </div>
 
-      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-        <img src="assets/social-media-kit/banner-facebook-cover.png" alt="Facebook Cover" class="w-full h-48 sm:h-64 object-cover" />
-        <div class="px-6 sm:px-8 pb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-          <div class="flex items-end gap-4 -mt-10 sm:-mt-12">
-            <img src="assets/images/logo-avatar.png" alt="Avatar FB" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-4 border-white shadow-md bg-white object-contain" />
-            <div class="pb-1">
-              <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900">PT. Wirasena Maju Bersama Rayya</h3>
-              <p class="text-xs sm:text-sm text-slate-500">Perusahaan Industri &amp; Manufaktur • Cikarang Selatan, Bekasi</p>
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+        <div class="w-full bg-brand-teal">
+          <img src="assets/social-media-kit/banner-facebook-cover.png" alt="Facebook Cover" class="w-full h-auto block" />
+        </div>
+        <div class="p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="flex items-center gap-4">
+            <img src="assets/images/logo-avatar.png" alt="Avatar FB" class="w-20 h-20 rounded-full border border-gray-200 shadow-sm bg-white p-1 object-contain shrink-0" />
+            <div>
+              <h3 class="font-heading text-xl sm:text-2xl font-bold text-gray-900">PT. Wirasena Maju Bersama Rayya</h3>
+              <p class="text-xs sm:text-sm text-gray-600 mt-0.5">
+                Perusahaan Manufaktur &amp; General Supplies • Sukadami, Cikarang Selatan, Kab. Bekasi
+              </p>
+              <p class="text-xs text-gray-500 mt-0.5">
+                Telp/Fax: (021) 8499 0200 • Email: wiramajubersama@gmail.com
+              </p>
             </div>
           </div>
-          <div class="flex gap-2">
-            <span class="bg-blue-600 text-white text-xs font-bold px-4 py-2.5 rounded-lg">📞 Hubungi Sekarang</span>
-            <span class="bg-slate-100 text-slate-800 text-xs font-bold px-4 py-2.5 rounded-lg">✉️ Kirim Email</span>
+          <div class="flex items-center gap-2.5 shrink-0">
+            <a href="tel:02184990200" class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-2.5 rounded-lg transition">
+              Telepon Kantor
+            </a>
+            <a href="mailto:wiramajubersama@gmail.com" class="bg-gray-100 hover:bg-gray-200 text-gray-800 border border-gray-200 text-xs font-semibold px-4 py-2.5 rounded-lg transition">
+              Kirim Email
+            </a>
           </div>
         </div>
       </div>
@@ -257,6 +347,12 @@
 
   </main>
 
+  <footer class="bg-brand-tealDark text-white py-6 text-xs mt-10">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <span class="font-heading font-bold">PT. Wirasena Maju Bersama Rayya — Digital Presence Preview</span>
+      <a href="index.html" class="text-brand-tealLight hover:underline font-semibold">← Kembali ke Halaman Website Utama</a>
+    </div>
+  </footer>
+
 </body>
 </html>
-
