@@ -1,0 +1,1297 @@
+#!/usr/bin/env python3
+import os
+import json
+
+BASE_DIR = "/home/naufalhzh/.gemini/antigravity/scratch/pt-wirasena-maju-bersama-rayya"
+DOMAIN = "https://wirasenasupplier.com"
+
+def build_head(title, description, keywords, slug, faq_items, breadcrumb_name):
+    canonical = f"{DOMAIN}/{slug}" if slug != "index.html" else f"{DOMAIN}/"
+    faq_entities = []
+    for q, a in faq_items:
+        faq_entities.append({
+            "@type": "Question",
+            "name": q,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": a
+            }
+        })
+
+    schema_graph = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": f"{DOMAIN}/#website",
+                "url": f"{DOMAIN}/",
+                "name": "PT. Wirasena Maju Bersama Rayya — Supplier Pabrik Cikarang & Bekasi",
+                "description": "Supplier Kebutuhan Pabrik Terdekat di Cikarang & Bekasi: Electrical, Mechanical, Pneumatics, Pabrik Carton Box, Impraboard Custom & Jasa Fabrikasi Trolley.",
+                "inLanguage": "id-ID"
+            },
+            {
+                "@type": "WebPage",
+                "@id": f"{canonical}#webpage",
+                "url": canonical,
+                "name": title,
+                "description": description,
+                "isPartOf": {"@id": f"{DOMAIN}/#website"},
+                "inLanguage": "id-ID"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": f"{canonical}#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Beranda",
+                        "item": f"{DOMAIN}/"
+                    }
+                ] + ([{
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": breadcrumb_name,
+                    "item": canonical
+                }] if slug != "index.html" else [])
+            },
+            {
+                "@type": ["Organization", "Manufacturer", "LocalBusiness"],
+                "@id": f"{DOMAIN}/#organization",
+                "name": "PT. Wirasena Maju Bersama Rayya - Supplier Pabrik & Carton Box Cikarang",
+                "legalName": "PT. Wirasena Maju Bersama Rayya",
+                "url": f"{DOMAIN}/",
+                "logo": f"{DOMAIN}/assets/images/logo-avatar.png?v=5",
+                "image": f"{DOMAIN}/assets/social-media-kit/banner-facebook-cover.png?v=5",
+                "telephone": "+62-21-84990200",
+                "faxNumber": "+62-21-84990200",
+                "email": "info@wirasenasupplier.com",
+                "taxID": "96.434.539.2-447.000",
+                "priceRange": "$$",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Jl. Bah Kilong Kp. Kandang, RT.004 RW.002, Sukadami, Cikarang Selatan",
+                    "addressLocality": "Kabupaten Bekasi",
+                    "addressRegion": "Jawa Barat",
+                    "postalCode": "17530",
+                    "addressCountry": "ID"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": -6.3425,
+                    "longitude": 107.1264
+                },
+                "openingHoursSpecification": [
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                        "opens": "08:00",
+                        "closes": "17:00"
+                    }
+                ],
+                "areaServed": ["Cikarang", "Bekasi", "Jababeka", "MM2100", "EJIP", "Delta Silicon", "Lippo Cikarang", "GIIC", "Pondok Gede", "Jakarta", "Karawang"]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": f"{canonical}#faq",
+                "mainEntity": faq_entities
+            }
+        ]
+    }
+
+    schema_json = json.dumps(schema_graph, ensure_ascii=False, indent=2)
+    return f"""<!DOCTYPE html>
+<html lang="id" class="scroll-smooth overflow-x-hidden">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content="{description}" />
+  <meta name="keywords" content="{keywords}" />
+  <meta name="author" content="PT. Wirasena Maju Bersama Rayya" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="{canonical}" />
+  <meta name="geo.region" content="ID-JB" />
+  <meta name="geo.placename" content="Cikarang Selatan, Kabupaten Bekasi" />
+  <meta name="geo.position" content="-6.3425;107.1264" />
+  <meta name="ICBM" content="-6.3425, 107.1264" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="id_ID" />
+  <meta property="og:site_name" content="PT. Wirasena Maju Bersama Rayya" />
+  <meta property="og:title" content="{title}" />
+  <meta property="og:description" content="{description}" />
+  <meta property="og:url" content="{canonical}" />
+  <meta property="og:image" content="assets/social-media-kit/banner-facebook-cover.png?v=5" />
+  <link rel="icon" type="image/png" href="assets/images/logo-avatar.png?v=5" />
+
+  <script type="application/ld+json">
+{schema_json}
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {{
+      theme: {{
+        extend: {{
+          fontFamily: {{
+            heading: ['Montserrat', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }},
+          colors: {{
+            brand: {{
+              teal: '#4F7770',
+              tealDark: '#1E3531',
+              tealLight: '#B8C8C5',
+              green: '#289E3E',
+              greenDark: '#1E7E30'
+            }}
+          }}
+        }}
+      }}
+    }}
+  </script>
+</head>
+"""
+
+def build_navbar(active_slug):
+    return f"""<body class="bg-slate-50 text-slate-800 font-sans antialiased overflow-x-hidden w-full max-w-[100vw]">
+
+  <!-- Top Bar (Responsif & Padat Informasi B2B) -->
+  <div class="w-full bg-brand-tealDark text-white text-[11px] sm:text-xs py-2 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 flex justify-between items-center gap-2">
+      <div class="hidden lg:flex items-center gap-2 truncate text-white/90">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Supplier Kebutuhan Pabrik Terdekat — Sukadami, Cikarang Selatan, Kab. Bekasi</span>
+      </div>
+      <div class="flex items-center justify-between lg:justify-end w-full lg:w-auto gap-3 font-medium">
+        <div class="flex items-center gap-2.5 truncate">
+          <a href="tel:02184990200" class="hover:text-brand-tealLight transition whitespace-nowrap">(021) 8499 0200</a>
+          <span class="opacity-40 hidden sm:inline">|</span>
+          <a href="mailto:marketing@wirasenasupplier.com" class="hover:text-brand-tealLight transition hidden sm:inline truncate">marketing@wirasenasupplier.com</a>
+        </div>
+        <a href="social-preview.html?v=5" class="bg-brand-green hover:bg-brand-greenDark text-white px-3 py-1 rounded-full text-[11px] font-bold whitespace-nowrap shrink-0 transition shadow-sm">
+          Preview Sosmed &amp; SEO →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Glassmorphism Navbar with Dropdown Menu (Lebih Modern dari Trimitra) -->
+  <header class="w-full sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 h-16 sm:h-20 flex items-center justify-between gap-3">
+      <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1 lg:flex-initial">
+        <img src="assets/images/logo-trans.png?v=5" alt="Logo PT. Wirasena Maju Bersama Rayya" class="h-9 sm:h-11 w-auto object-contain shrink-0" />
+        <div class="min-w-0">
+          <span class="block font-heading font-extrabold text-slate-900 text-xs sm:text-[15px] leading-tight truncate">
+            PT. Wirasena Maju Bersama Rayya
+          </span>
+          <span class="block text-[10px] sm:text-xs text-brand-green font-bold truncate">
+            Supplier Pabrik • Electrical Mechanical • Carton Box &amp; Fabrikasi
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation with Mega Dropdown -->
+      <nav class="hidden lg:flex items-center gap-6 text-[13px] font-bold text-slate-700 shrink-0">
+        <a href="index.html" class="{'text-brand-green' if active_slug=='index.html' else 'hover:text-brand-green'} transition">Beranda</a>
+
+        <!-- Dropdown Produk & Layanan -->
+        <div class="relative group py-6">
+          <button type="button" class="flex items-center gap-1 {'text-brand-green' if active_slug in ['supplier-electrical-mechanical.html','pabrik-carton-box-impraboard.html','jasa-fabrikasi-trolley.html'] else 'hover:text-brand-green'} transition">
+            <span>Produk &amp; Layanan</span>
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="absolute left-0 top-full w-80 bg-white rounded-2xl shadow-xl border border-slate-200 p-2.5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="supplier-electrical-mechanical.html" class="block p-3 rounded-xl hover:bg-emerald-50 transition">
+              <span class="text-[10px] font-extrabold uppercase text-brand-green block">Divisi 01 • General Supplier</span>
+              <span class="font-heading font-bold text-slate-900 text-xs block mt-0.5">Electrical, Mechanical, Pneumatik &amp; K3</span>
+              <span class="text-[11px] text-slate-500 block">Alat listrik industri, sparepart mesin, tools &amp; safety</span>
+            </a>
+            <a href="pabrik-carton-box-impraboard.html" class="block p-3 rounded-xl hover:bg-emerald-50 transition mt-1">
+              <span class="text-[10px] font-extrabold uppercase text-brand-green block">Divisi 02 • Packaging Factory</span>
+              <span class="font-heading font-bold text-slate-900 text-xs block mt-0.5">Carton Box, Impraboard &amp; Rubber</span>
+              <span class="text-[11px] text-slate-500 block">Pabrik kardus custom, box impraboard sekat &amp; karet</span>
+            </a>
+            <a href="jasa-fabrikasi-trolley.html" class="block p-3 rounded-xl hover:bg-emerald-50 transition mt-1">
+              <span class="text-[10px] font-extrabold uppercase text-brand-green block">Divisi 03 • Industrial Workshop</span>
+              <span class="font-heading font-bold text-slate-900 text-xs block mt-0.5">Jasa Fabrikasi Trolley &amp; Las Besi</span>
+              <span class="text-[11px] text-slate-500 block">Trolley stainless/besi custom &amp; pengelasan pagar</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="index.html#mesin-produksi" class="hover:text-brand-green transition">Mesin Pabrik</a>
+        <a href="artikel-seo.html" class="{'text-brand-green' if active_slug=='artikel-seo.html' else 'hover:text-brand-green'} transition">Info &amp; Artikel</a>
+        <a href="index.html#hubungi-kami" class="hover:text-brand-green transition">Kontak Divisi</a>
+      </nav>
+
+      <div class="shrink-0 flex items-center gap-2">
+        <a href="index.html#hubungi-kami" class="bg-brand-green hover:bg-brand-greenDark text-white font-heading font-bold text-[11px] sm:text-xs px-3.5 py-2.5 sm:px-5 sm:py-3 rounded-xl shadow-sm transition inline-flex items-center gap-1.5 whitespace-nowrap">
+          <span>Minta Penawaran</span>
+        </a>
+        <!-- Mobile Menu Toggle -->
+        <button type="button" onclick="document.getElementById('mobile-nav').classList.toggle('hidden')" class="lg:hidden p-2 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100" aria-label="Buka Menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 py-4 space-y-2 text-xs font-bold">
+      <a href="index.html" class="block py-2 px-3 rounded-lg bg-slate-50 text-slate-900">Beranda Utama</a>
+      <div class="px-3 py-1 text-[10px] font-extrabold uppercase text-brand-green">Halaman Spesialis Produk (SEO):</div>
+      <a href="supplier-electrical-mechanical.html" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800">⚡ 1. Supplier Electrical, Mechanical &amp; K3</a>
+      <a href="pabrik-carton-box-impraboard.html" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800">📦 2. Pabrik Carton Box, Impraboard &amp; Rubber</a>
+      <a href="jasa-fabrikasi-trolley.html" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800">🔧 3. Jasa Fabrikasi Trolley &amp; Bengkel Las</a>
+      <a href="artikel-seo.html" class="block py-2 px-3 rounded-lg hover:bg-emerald-50 text-slate-800">📰 Info &amp; Artikel Pengadaan Pabrik</a>
+      <a href="index.html#hubungi-kami" class="block py-2 px-3 rounded-lg bg-brand-green text-white text-center mt-2">Hubungi 4 Email Divisi &amp; WA Business</a>
+    </div>
+  </header>
+"""
+
+def build_faq_and_footer(faq_items):
+    faq_html = ""
+    for idx, (q, a) in enumerate(faq_items):
+        open_attr = "open" if idx == 0 else ""
+        faq_html += f"""
+        <details {open_attr} class="group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm">
+          <summary class="font-heading font-bold text-slate-900 text-sm sm:text-base cursor-pointer list-none flex items-center justify-between gap-4">
+            <span>{q}</span>
+            <span class="w-7 h-7 rounded-full bg-emerald-50 text-brand-green flex items-center justify-center shrink-0 font-extrabold group-open:rotate-45 transition">+</span>
+          </summary>
+          <p class="text-xs sm:text-sm text-slate-600 mt-3 leading-relaxed border-t border-slate-100 pt-3">
+            {a}
+          </p>
+        </details>"""
+
+    return f"""
+  <!-- FAQ Interaktif (Mendongkrak Rich Snippet Google Search) -->
+  <section class="py-14 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-10">
+      <div class="text-center mb-8">
+        <span class="text-xs font-heading font-bold uppercase tracking-wider text-brand-green">Tanya Jawab Pengadaan Pabrik (FAQ)</span>
+        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">
+          Pertanyaan yang Sering Diajukan Tim Purchasing &amp; Engineering
+        </h2>
+      </div>
+      <div class="space-y-3.5">
+        {faq_html}
+      </div>
+    </div>
+  </section>
+
+  <!-- Hubungi Kami (4 Email Divisi & Lokasi Cikarang) -->
+  <section id="hubungi-kami" class="py-16 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+      <div class="grid lg:grid-cols-12 gap-8 items-stretch border border-slate-200 rounded-2xl overflow-hidden shadow-sm bg-slate-50">
+        <div class="lg:col-span-7 p-6 sm:p-8 space-y-6">
+          <div>
+            <span class="text-brand-green font-heading font-bold text-xs uppercase tracking-wider">Fast Response B2B Contact</span>
+            <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">
+              Hubungi Divisi PT. Wirasena Maju Bersama Rayya
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1.5 leading-relaxed">
+              Kirimkan daftar kebutuhan barang pabrik (*PR/RFQ*), spesifikasi ukuran *carton box / impraboard*, atau gambar teknik (*drawing*) fabrikasi trolley ke email divisi resmi kami:
+            </p>
+          </div>
+
+          <!-- 4 Official Division Emails Grid -->
+          <div class="grid sm:grid-cols-2 gap-3">
+            <a href="mailto:info@wirasenasupplier.com" class="bg-white p-3.5 rounded-xl border border-slate-200 hover:border-brand-green transition group">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">1. Email Utama Perusahaan</span>
+              <span class="font-heading font-bold text-xs sm:text-sm text-slate-900 group-hover:text-brand-green break-all">info@wirasenasupplier.com</span>
+            </a>
+
+            <a href="mailto:marketing@wirasenasupplier.com" class="bg-white p-3.5 rounded-xl border border-slate-200 hover:border-brand-green transition group">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-green block">2. Divisi Marketing &amp; Penawaran (RFQ)</span>
+              <span class="font-heading font-bold text-xs sm:text-sm text-slate-900 group-hover:text-brand-green break-all">marketing@wirasenasupplier.com</span>
+            </a>
+
+            <a href="mailto:quality@wirasenasupplier.com" class="bg-white p-3.5 rounded-xl border border-slate-200 hover:border-brand-green transition group">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">3. Divisi Quality Control (QC)</span>
+              <span class="font-heading font-bold text-xs sm:text-sm text-slate-900 group-hover:text-brand-green break-all">quality@wirasenasupplier.com</span>
+            </a>
+
+            <a href="mailto:delivery@wirasenasupplier.com" class="bg-white p-3.5 rounded-xl border border-slate-200 hover:border-brand-green transition group">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">4. Divisi Pengiriman (Delivery)</span>
+              <span class="font-heading font-bold text-xs sm:text-sm text-slate-900 group-hover:text-brand-green break-all">delivery@wirasenasupplier.com</span>
+            </a>
+          </div>
+
+          <div class="space-y-2 text-xs sm:text-sm pt-2 border-t border-slate-200">
+            <p><strong class="text-slate-900 font-heading">Alamat Workshop &amp; Kantor:</strong> Jl. Bah Kilong Kp. Kandang, RT.004 RW.002, Sukadami, Cikarang Selatan, Kabupaten Bekasi, Jawa Barat 17530</p>
+            <p><strong class="text-slate-900 font-heading">Telepon / Fax Kantor:</strong> <a href="tel:02184990200" class="text-brand-green font-bold hover:underline">(021) 8499 0200</a> &nbsp;|&nbsp; <strong class="text-slate-900 font-heading">NPWP:</strong> 96.434.539.2-447.000</p>
+          </div>
+
+          <div class="pt-1 flex flex-wrap gap-3">
+            <button type="button" onclick="document.getElementById('wa-popup').classList.remove('hidden')" class="bg-brand-green hover:bg-brand-greenDark text-white font-heading font-bold text-xs px-5 py-3.5 rounded-xl shadow-sm transition">
+              Chat WhatsApp Business Sekarang
+            </button>
+            <a href="mailto:marketing@wirasenasupplier.com?subject=Permintaan%20Penawaran%20Harga%20(RFQ)%20-%20PT.%20Wirasena%20Maju%20Bersama%20Rayya" class="bg-brand-tealDark hover:bg-slate-800 text-white font-heading font-bold text-xs px-5 py-3.5 rounded-xl shadow-sm transition">
+              Kirim Email RFQ Marketing
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 min-h-[340px] bg-slate-200">
+          <iframe
+            title="Lokasi Workshop PT. Wirasena Maju Bersama Rayya di Cikarang Selatan"
+            src="https://www.google.com/maps?q=Jl.+Bah+Kilong+Sukadami+Cikarang+Selatan+Bekasi&output=embed"
+            class="w-full h-full min-h-[340px] border-0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Multi-Link untuk Internal Linking SEO Kuat -->
+  <footer class="bg-brand-tealDark text-white pt-12 pb-8 text-xs border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-white/10">
+      <div class="space-y-3">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/logo-avatar.png?v=5" alt="Logo WB" class="w-9 h-9 rounded-lg bg-white p-0.5 object-contain" />
+          <span class="font-heading font-extrabold text-sm leading-tight">PT. Wirasena Maju Bersama Rayya</span>
+        </div>
+        <p class="text-slate-300 leading-relaxed">
+          Mitra General Supplier Kebutuhan Pabrik, Produsen Carton Box &amp; Impraboard Custom, Sparepart Electrical Mechanical, serta Jasa Fabrikasi Trolley di Cikarang Selatan, Bekasi.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-heading font-bold text-white text-sm mb-3">Layanan Spesialis Kami</h3>
+        <ul class="space-y-2 text-slate-300">
+          <li><a href="supplier-electrical-mechanical.html" class="hover:text-emerald-300 transition">→ Supplier Electrical &amp; Mechanical Pabrik</a></li>
+          <li><a href="pabrik-carton-box-impraboard.html" class="hover:text-emerald-300 transition">→ Pabrik Carton Box &amp; Box Impraboard</a></li>
+          <li><a href="jasa-fabrikasi-trolley.html" class="hover:text-emerald-300 transition">→ Jasa Fabrikasi Trolley &amp; Bengkel Las</a></li>
+          <li><a href="artikel-seo.html" class="hover:text-emerald-300 transition">→ Artikel &amp; Panduan Pengadaan Pabrik</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-heading font-bold text-white text-sm mb-3">Area Layanan Kawasan Industri</h3>
+        <ul class="space-y-1.5 text-slate-300">
+          <li>• Kawasan Industri Jababeka &amp; EJIP Cikarang</li>
+          <li>• Kawasan Industri MM2100 Cibitung Bekasi</li>
+          <li>• Delta Silicon, Lippo Cikarang &amp; GIIC Deltamas</li>
+          <li>• Bekasi, Pondok Gede, Jakarta &amp; Karawang</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-heading font-bold text-white text-sm mb-3">Kontak Cepat B2B</h3>
+        <ul class="space-y-2 text-slate-300">
+          <li>Telp/Fax: (021) 8499 0200</li>
+          <li>Marketing: marketing@wirasenasupplier.com</li>
+          <li>Info Utama: info@wirasenasupplier.com</li>
+          <li>QC &amp; Delivery: quality@ / delivery@</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400">
+      <p>&copy; 2026 PT. Wirasena Maju Bersama Rayya. All Rights Reserved.</p>
+      <a href="social-preview.html?v=5" class="text-emerald-300 hover:underline font-bold">Lihat Preview Google Search, WA Business &amp; Sosmed →</a>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Business Interactive Widget (Seperti Trimitra / Brenson tapi Jauh Lebih Modern) -->
+  <div class="fixed bottom-5 right-5 z-50">
+    <div id="wa-popup" class="hidden mb-3 w-80 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden">
+      <div class="bg-brand-green text-white p-4 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <img src="assets/images/logo-avatar.png?v=5" alt="WA" class="w-9 h-9 rounded-full bg-white p-0.5 object-contain" />
+          <div>
+            <span class="font-heading font-bold text-xs block">WhatsApp Business Resmi</span>
+            <span class="text-[11px] text-emerald-100 block">PT. Wirasena Maju Bersama Rayya</span>
+          </div>
+        </div>
+        <button type="button" onclick="document.getElementById('wa-popup').classList.add('hidden')" class="text-white/80 hover:text-white text-lg font-bold leading-none">&times;</button>
+      </div>
+      <div class="p-3.5 bg-slate-50 space-y-2 text-xs">
+        <p class="text-slate-600 text-[11px] mb-2">Pilih topik kebutuhan pabrik Anda untuk terhubung langsung dengan tim kami:</p>
+        <a href="mailto:marketing@wirasenasupplier.com?subject=Tanya%20Barang%20Electrical%20%26%20Mechanical%20Pabrik" class="block bg-white hover:bg-emerald-50 border border-slate-200 p-2.5 rounded-xl font-bold text-slate-800 transition">
+          ⚡ 1. Tanya Sparepart Electrical / Mechanical
+        </a>
+        <a href="mailto:marketing@wirasenasupplier.com?subject=Penawaran%20Harga%20Carton%20Box%20%2F%20Impraboard" class="block bg-white hover:bg-emerald-50 border border-slate-200 p-2.5 rounded-xl font-bold text-slate-800 transition">
+          📦 2. Pesan Custom Carton Box / Impraboard
+        </a>
+        <a href="mailto:marketing@wirasenasupplier.com?subject=Konsultasi%20Jasa%20Fabrikasi%20Trolley%20%2F%20Las" class="block bg-white hover:bg-emerald-50 border border-slate-200 p-2.5 rounded-xl font-bold text-slate-800 transition">
+          🔧 3. Jasa Fabrikasi Trolley / Las Industri
+        </a>
+        <a href="tel:02184990200" class="block bg-brand-tealDark text-white text-center p-2.5 rounded-xl font-bold transition">
+          📞 Telepon Langsung: (021) 8499 0200
+        </a>
+      </div>
+    </div>
+
+    <button type="button" onclick="document.getElementById('wa-popup').classList.toggle('hidden')" class="bg-brand-green hover:bg-brand-greenDark text-white font-heading font-bold text-xs sm:text-sm px-4 py-3.5 rounded-full shadow-xl flex items-center gap-2.5 transition transform hover:scale-105">
+      <span class="w-2.5 h-2.5 rounded-full bg-white animate-ping"></span>
+      <span>Chat WA Business / RFQ</span>
+    </button>
+  </div>
+
+</body>
+</html>
+"""
+
+# ---------------------------------------------------------
+# 1. GENERATE INDEX.HTML (HOME + INTERACTIVE CATALOG FILTER)
+# ---------------------------------------------------------
+home_faqs = [
+    ("Apa saja barang yang disuplai oleh PT. Wirasena Maju Bersama Rayya?",
+     "Kami melayani 3 divisi utama untuk pabrik di Cikarang, Bekasi, dan Jabodetabek: (1) General Supplier kebutuhan pabrik meliputi komponen Electrical, Mechanical, Pneumatic fittings/valve, Cutting Tools, alat Safety K3, kain majun, & cleaning supplies; (2) Pabrik manufaktur Carton Box custom, Box Impraboard bersekat, PE Foam, Lakban, & Karet Industri; serta (3) Jasa Fabrikasi Trolley Stainless/Besi & pengelasan pagar pabrik."),
+    ("Apakah menerima pesanan Carton Box dan Box Impraboard ukuran custom?",
+     "Ya, kami memiliki workshop dengan 5 lini mesin produksi Carton Box sendiri di Sukadami, Cikarang Selatan (Cutting & Creasing, Automatic Folder Glue, Semi Folder Glue, Rotary Sloter, dan Rotary Die Cut) sehingga ukuran, ketebalan (Single/Double Wall), dan partisi sekat Impraboard dapat disesuaikan 100% dengan produk pabrik Anda."),
+    ("Apakah bisa menyuplai barang Electrical, Mechanical, dan Sparepart sesuai permintaan (Request Buyer)?",
+     "Bisa. Divisi General Trading kami menerapkan sistem 'All items are as requested by the buyer'. Tim Purchasing atau Engineering pabrik cukup mengirimkan daftar spesifikasi barang electrical, mechanical, pneumatik, atau consumable yang dibutuhkan ke marketing@wirasenasupplier.com untuk segera kami berikan penawaran harga bersaing."),
+    ("Kawasan industri mana saja yang dilayani pengirimannya?",
+     "Berpusat di Cikarang Selatan (Kabupaten Bekasi), armada pengiriman kami menjangkau cepat seluruh kawasan industri di Cikarang (Jababeka, EJIP, MM2100, Delta Silicon, Lippo Cikarang, GIIC Deltamas), Bekasi, Pondok Gede, Jakarta, hingga Karawang dengan komitmen On-Time Delivery.")
+]
+
+home_body = """
+  <!-- Interactive Hero Section with Quick Category Switcher (Gen-Z B2B Experience) -->
+  <section id="beranda" class="w-full relative bg-gradient-to-br from-brand-tealDark via-[#26433E] to-brand-teal text-white overflow-hidden">
+    <div class="hidden lg:block absolute right-0 bottom-0 w-5/12 h-full bg-white/5 [clip-path:polygon(30%_0,100%_0,100%_100%,0%_100%)] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-16 lg:py-20 relative z-10 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      <div class="lg:col-span-7 space-y-5">
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-3.5 py-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span class="uppercase tracking-wider text-[10px] sm:text-xs font-extrabold text-emerald-200">
+            One-Stop Factory Supplier Cikarang &amp; Bekasi
+          </span>
+        </div>
+
+        <h1 class="font-heading text-2xl sm:text-4xl lg:text-[42px] font-extrabold leading-[1.18] tracking-tight">
+          Supplier Kebutuhan Pabrik, Electrical Mechanical, Carton Box &amp; Fabrikasi
+        </h1>
+
+        <p class="text-xs sm:text-base text-slate-200 leading-relaxed max-w-2xl">
+          Cari vendor pabrik terdekat yang responsif, punya mesin sendiri, dan harga bersaing? <strong>PT. Wirasena Maju Bersama Rayya</strong> siap menyuplai kebutuhan <strong>Alat Listrik &amp; Sparepart Mechanical/Pneumatik</strong>, produksi <strong>Kardus Carton Box &amp; Box Impraboard Custom</strong>, hingga <strong>Pembuatan Trolley Stainless &amp; Las Industri</strong>.
+        </p>
+
+        <!-- 3 Pillar Quick Links (Mirip Menu Produk Trimitra tapi Langsung Terlihat) -->
+        <div class="grid sm:grid-cols-3 gap-2.5 pt-1">
+          <a href="supplier-electrical-mechanical.html" class="bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl p-3 transition">
+            <span class="text-[10px] font-extrabold uppercase text-emerald-300 block">01 • General Supplier</span>
+            <span class="font-heading font-bold text-xs sm:text-sm text-white block mt-0.5">Electrical &amp; Mechanical →</span>
+          </a>
+          <a href="pabrik-carton-box-impraboard.html" class="bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl p-3 transition">
+            <span class="text-[10px] font-extrabold uppercase text-emerald-300 block">02 • In-House Factory</span>
+            <span class="font-heading font-bold text-xs sm:text-sm text-white block mt-0.5">Carton Box &amp; Impraboard →</span>
+          </a>
+          <a href="jasa-fabrikasi-trolley.html" class="bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl p-3 transition">
+            <span class="text-[10px] font-extrabold uppercase text-emerald-300 block">03 • Custom Workshop</span>
+            <span class="font-heading font-bold text-xs sm:text-sm text-white block mt-0.5">Fabrikasi Trolley &amp; Las →</span>
+          </a>
+        </div>
+
+        <div class="pt-2 grid grid-cols-2 sm:flex sm:flex-wrap gap-3">
+          <a href="#cari-katalog" class="bg-brand-green hover:bg-brand-greenDark text-white font-heading font-bold text-xs sm:text-sm px-5 sm:px-7 py-3.5 rounded-xl shadow-lg text-center transition">
+            Cari Barang di Katalog
+          </a>
+          <a href="#hubungi-kami" class="bg-white hover:bg-slate-100 text-brand-tealDark font-heading font-bold text-xs sm:text-sm px-5 sm:px-7 py-3.5 rounded-xl shadow-lg text-center transition">
+            Hubungi Marketing (RFQ)
+          </a>
+        </div>
+      </div>
+
+      <!-- Bento Grid Visual Showcase -->
+      <div class="lg:col-span-5">
+        <div class="bg-white/10 backdrop-blur-md border border-white/20 p-3.5 rounded-2xl shadow-2xl grid grid-cols-2 gap-3">
+          <a href="supplier-electrical-mechanical.html" class="bg-white rounded-xl overflow-hidden shadow-sm group block">
+            <img src="assets/images/trading-electrical-mechanical.png?v=5" alt="Supplier Alat Listrik Industri & Mechanical" class="w-full h-32 sm:h-36 object-cover group-hover:scale-105 transition duration-300" />
+            <div class="px-2.5 py-1.5 bg-slate-900 text-white text-[11px] font-bold truncate">
+              ⚡ Electrical &amp; Mechanical
+            </div>
+          </a>
+
+          <a href="pabrik-carton-box-impraboard.html" class="bg-white rounded-xl overflow-hidden shadow-sm group block">
+            <img src="assets/images/product-carton-box.png?v=5" alt="Pabrik Kardus Carton Box Cikarang" class="w-full h-32 sm:h-36 object-cover group-hover:scale-105 transition duration-300" />
+            <div class="px-2.5 py-1.5 bg-slate-900 text-white text-[11px] font-bold truncate">
+              📦 Carton Box &amp; Impraboard
+            </div>
+          </a>
+
+          <a href="#mesin-produksi" class="bg-white rounded-xl overflow-hidden shadow-sm group block">
+            <img src="assets/images/machine-2b-auto-folder-glue.png?v=5" alt="Mesin Produksi Carton Box" class="w-full h-32 sm:h-36 object-cover group-hover:scale-105 transition duration-300" />
+            <div class="px-2.5 py-1.5 bg-slate-900 text-white text-[11px] font-bold truncate">
+              🏭 5 Mesin Produksi Sendiri
+            </div>
+          </a>
+
+          <a href="jasa-fabrikasi-trolley.html" class="bg-white rounded-xl overflow-hidden shadow-sm group block">
+            <img src="assets/images/fabrication-trolley-stainless.png?v=5" alt="Jasa Fabrikasi Trolley Stainless Pabrik" class="w-full h-32 sm:h-36 object-cover group-hover:scale-105 transition duration-300" />
+            <div class="px-2.5 py-1.5 bg-slate-900 text-white text-[11px] font-bold truncate">
+              🔧 Fabrikasi Trolley &amp; Las
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE LIVE SEARCH & PRODUCT FILTER (Fitur Gen-Z Purchasing Sat-Set!) -->
+  <section id="cari-katalog" class="py-16 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 space-y-8">
+      <div class="text-center max-w-3xl mx-auto space-y-2">
+        <span class="inline-block bg-emerald-100 text-brand-green font-heading font-bold text-xs uppercase tracking-wider px-3.5 py-1 rounded-full">
+          Katalog Interaktif Kebutuhan Pabrik
+        </span>
+        <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900">
+          Cari Barang Apa buat Pabrik Hari Ini?
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600">
+          Ketik nama barang yang ada di daftar *Purchase Requisition (PR)* Anda (misal: <strong>listrik, pneumatic, kardus, impraboard, trolley, majun, lakban, karet</strong>) atau klik filter kategori di bawah:
+        </p>
+      </div>
+
+      <!-- Search Box & Category Filter Pills -->
+      <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+        <div class="relative">
+          <input
+            id="catalog-search"
+            type="text"
+            oninput="filterCatalog()"
+            placeholder="Ketik nama barang: alat listrik, pneumatic, sparepart, kardus, impraboard, trolley, las, K3, lakban..."
+            class="w-full pl-11 pr-4 py-3.5 rounded-xl border border-slate-300 focus:border-brand-green focus:ring-2 focus:ring-emerald-100 outline-none text-xs sm:text-sm font-medium"
+          />
+          <svg class="w-5 h-5 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
+        </div>
+
+        <div class="flex flex-wrap gap-2" id="category-pills">
+          <button type="button" onclick="setCat('all', this)" class="cat-btn bg-brand-tealDark text-white text-xs font-bold px-4 py-2 rounded-xl transition">Semua Barang (9)</button>
+          <button type="button" onclick="setCat('me', this)" class="cat-btn bg-slate-100 hover:bg-emerald-50 text-slate-700 text-xs font-bold px-4 py-2 rounded-xl transition">⚡ Electrical, Mechanical &amp; Umum</button>
+          <button type="button" onclick="setCat('pack', this)" class="cat-btn bg-slate-100 hover:bg-emerald-50 text-slate-700 text-xs font-bold px-4 py-2 rounded-xl transition">📦 Carton Box, Impraboard &amp; Rubber</button>
+          <button type="button" onclick="setCat('fab', this)" class="cat-btn bg-slate-100 hover:bg-emerald-50 text-slate-700 text-xs font-bold px-4 py-2 rounded-xl transition">🔧 Fabrikasi Trolley &amp; Las</button>
+        </div>
+      </div>
+
+      <!-- 9 Interactive Product Cards -->
+      <div id="catalog-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Card 1: Electrical & Alat Listrik -->
+        <div class="catalog-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col" data-cat="me" data-keywords="electrical alat listrik industri kabel sensor panel relay lampu tang isolasi me">
+          <img src="assets/images/trading-electrical-mechanical.png?v=5" alt="Supplier Alat Listrik Industri Terdekat" class="w-full h-48 object-cover border-b border-slate-100" />
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-green bg-emerald-50 px-2.5 py-1 rounded-full">Electrical &amp; ME Supply</span>
+              <h3 class="font-heading font-bold text-slate-900 text-base mt-2">Alat Listrik Industri &amp; Komponen Electrical</h3>
+              <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                Pengadaan alat listrik pabrik, perkakas kerja berisolasi, komponen panel, sensor, kabel industri, dan perlengkapan maintenance elektrikal.
+              </p>
+            </div>
+            <div class="flex items-center justify-between gap-2 pt-2 border-t border-slate-100">
+              <a href="supplier-electrical-mechanical.html" class="text-xs font-bold text-brand-tealDark hover:underline">Lihat Detail →</a>
+              <a href="mailto:marketing@wirasenasupplier.com?subject=RFQ%20Alat%20Listrik%20%26%20Electrical%20Pabrik" class="bg-brand-green hover:bg-brand-greenDark text-white text-xs font-bold px-3.5 py-2 rounded-lg transition">Minta Harga</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Mechanical & Pneumatics -->
+        <div class="catalog-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col" data-cat="me" data-keywords="mechanical sparepart mesin pneumatic fitting selang angin pu valve cylinder kompresor">
+          <div class="w-full h-48 bg-white p-4 flex items-center justify-center border-b border-slate-100">
+            <img src="assets/images/trading-pneumatics.png?v=5" alt="Supplier Sparepart Mesin & Pneumatic Pabrik" class="max-h-full max-w-full object-contain" />
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-green bg-emerald-50 px-2.5 py-1 rounded-full">Mechanical &amp; Pneumatics</span>
+              <h3 class="font-heading font-bold text-slate-900 text-base mt-2">Sparepart Mesin &amp; Komponen Pneumatik</h3>
+              <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                Suplai fitting angin pneumatik, solenoid valve, air cylinder, selang PU tubing, pressure gauge, dan sparepart mekanikal mesin produksi.
+              </p>
+            </div>
+            <div class="flex items-center justify-between gap-2 pt-2 border-t border-slate-100">
+              <a href="supplier-electrical-mechanical.html" class="text-xs font-bold text-brand-tealDark hover:underline">Lihat Detail →</a>
+              <a href="mailto:marketing@wirasenasupplier.com?subject=RFQ%20Sparepart%20Mechanical%20%26%20Pneumatic" class="bg-brand-green hover:bg-brand-greenDark text-white text-xs font-bold px-3.5 py-2 rounded-lg transition">Minta Harga</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Cutting Tools & Perkakas -->
+        <div class="catalog-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col" data-cat="me" data-keywords="tools cutting tools perkakas teknik bengkel mata bor gerinda kunci pas obeng workshop">
+          <img src="assets/images/trading-tools.png?v=5" alt="Supplier Hand Tools & Cutting Tools Pabrik" class="w-full h-48 object-cover border-b border-slate-100" />
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-green bg-emerald-50 px-2.5 py-1 rounded-full">Workshop &amp; Tools</span>
+              <h3 class="font-heading font-bold text-slate-900 text-base mt-2">Hand Tools, Cutting Tools &amp; Alat Teknik</h3>
+              <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                Penyediaan mata bor industri, batu gerinda potong/poles, hand tools mekanik, alat ukur presisi, dan perkakas teknik pabrik.
+              </p>
+            </div>
+            <div class="flex items-center justify-between gap-2 pt-2 border-t border-slate-100">
+              <a href="supplier-electrical-mechanical.html" class="text-xs font-bold text-brand-tealDark hover:underline">Lihat Detail →</a>
+              <a href="mailto:marketing@wirasenasupplier.com?subject=RFQ%20Tools%20%26%20Cutting%20Tools%20Pabrik" class="bg-brand-green hover:bg-brand-greenDark text-white text-xs font-bold px-3.5 py-2 rounded-lg transition">Minta Harga</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Safety K3, Cleaning & Consumable -->
+        <div class="catalog-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col" data-cat="me" data-keywords="safety k3 osh apd sarung tangan kain majun cleaning kebersihan atk office consumable">
+          <img src="assets/images/trading-cleaning-k3.png?v=5" alt="Supplier Alat Safety K3 & Cleaning Pabrik" class="w-full h-48 object-cover border-b border-slate-100" />
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-green bg-emerald-50 px-2.5 py-1 rounded-full">Safety K3 &amp; Consumables</span>
+              <h3 class="font-heading font-bold text-slate-900 text-base mt-2">Alat Safety K3 (APD), Cleaning &amp; ATK Pabrik</h3>
+              <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                Pengadaan rutin barang habis pakai (*consumable*): sarung tangan kerja, kacamata &amp; sepatu safety K3, kain majun, chemical kebersihan, &amp; ATK.
+              </p>
+            </div>
+            <div class="flex items-center justify-between gap-2 pt-2 border-t border-slate-100">
+              <a href="supplier-electrical-mechanical.html" class="text-xs font-bold text-brand-tealDark hover:underline">Lihat Detail →</a>
+              <a href="mailto:marketing@wirasenasupplier.com?subject=RFQ%20Alat%20Safety%20K3%20%26%20Cleaning%20Pabrik" class="bg-brand-green hover:bg-brand-greenDark text-white text-xs font-bold px-3.5 py-2 rounded-lg transition">Minta Harga</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Carton Box Custom -->
+        <div class="catalog-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col" data-cat="pack" data-keywords="kardus carton box corrugated box karton boks single wall double wall die cut kaca safety glass">
+          <img src="assets/images/product-carton-box.png?v=5" alt="Pabrik Carton Box & Kardus Custom Cikarang" class="w-full h-48 object-cover border-b border-slate-100" />
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-green bg-emerald-50 px-2.5 py-1 rounded-full">In-House Packaging Factory</span>
+              <h3 class="font-heading font-bold text-slate-900 text-base mt-2">Pabrik Carton Box &amp; Kardus Industri Custom</h3>
+              <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                Produksi langsung kardus *corrugated carton box* (Single Wall, Double Wall, Die Cut) cetak logo &amp; ukuran custom, serta *Safety/Tempered Glass*.
+              </p>
+            </div>
+            <div class="flex items-center justify-between gap-2 pt-2 border-t border-slate-100">
+              <a href="pabrik-carton-box-impraboard.html" class="text-xs font-bold text-brand-tealDark hover:underline">Lihat Detail →</a>
+              <a href="mailto:marketing@wirasenasupplier.com?subject=RFQ%20Custom%20Carton%20Box%20Pabrik" class="bg-brand-green hover:bg-brand-greenDark text-white text-xs font-bold px-3.5 py-2 rounded-lg transition">Minta Harga</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: Box Impraboard Custom & PE Foam -->
+        <div class="catalog-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col" data-cat="pack" data-keywords="impraboard box plastik berongga sekat partisi layer pad pe foam plastik wrapping hdpe ldpe antistatic">
+          <div class="w-full h-48 bg-white p-4 flex items-center justify-center border-b border-slate-100">
+            <img src="assets/images/product-impraboard-box.png?v=5" alt="Supplier Box Impraboard Custom Bekasi" class="max-h-full max-w-full object-contain" />
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-green bg-emerald-50 px-2.5 py-1 rounded-full">Reusable Plastic Packaging</span>
+              <h3 class="font-heading font-bold text-slate-900 text-base mt-2">Box Impraboard Sekat Custom &amp; PE Foam</h3>
+              <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                Pembuatan boks plastik *impraboard* lengkap dengan partisi sekat komponen, *layer pad*, *PE Foam Sheet*, dan plastik *HDPE/LDPE/Anti-Static*.
+              </p>
+            </div>
+            <div class="flex items-center justify-between gap-2 pt-2 border-t border-slate-100">
+              <a href="pabrik-carton-box-impraboard.html" class="text-xs font-bold text-brand-tealDark hover:underline">Lihat Detail →</a>
+              <a href="mailto:marketing@wirasenasupplier.com?subject=RFQ%20Box%20Impraboard%20Custom" class="bg-brand-green hover:bg-brand-greenDark text-white text-xs font-bold px-3.5 py-2 rounded-lg transition">Minta Harga</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7: Masking Tape & Rubber -->
+        <div class="catalog-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col" data-cat="pack" data-keywords="lakban masking tape opp tape strapping band karet rubber molded synthetic rubber foot">
+          <div class="w-full h-48 bg-white p-4 flex items-center justify-center border-b border-slate-100">
+            <img src="assets/images/product-masking-tape.png?v=5" alt="Supplier Lakban & Rubber Industri" class="max-h-full max-w-full object-contain" />
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-green bg-emerald-50 px-2.5 py-1 rounded-full">Adhesive &amp; Technical Rubber</span>
+              <h3 class="font-heading font-bold text-slate-900 text-base mt-2">Lakban Industri, Masking Tape &amp; Karet Teknis</h3>
+              <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                Suplai *masking tape*, lakban pabrik, *adhesive*, serta manufaktur *Synthetic Rubber, Chloroprene Rubber, Rubber Molded, &amp; Rubber Foot*.
+              </p>
+            </div>
+            <div class="flex items-center justify-between gap-2 pt-2 border-t border-slate-100">
+              <a href="pabrik-carton-box-impraboard.html" class="text-xs font-bold text-brand-tealDark hover:underline">Lihat Detail →</a>
+              <a href="mailto:marketing@wirasenasupplier.com?subject=RFQ%20Masking%20Tape%20%26%20Rubber" class="bg-brand-green hover:bg-brand-greenDark text-white text-xs font-bold px-3.5 py-2 rounded-lg transition">Minta Harga</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8: Trolley Stainless & Besi -->
+        <div class="catalog-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col" data-cat="fab" data-keywords="trolley troli stainless besi susun angkut barang material handling fabrikasi">
+          <img src="assets/images/fabrication-trolley-stainless.png?v=5" alt="Pembuatan Trolley Stainless & Besi Pabrik" class="w-full h-48 object-cover border-b border-slate-100" />
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-green bg-emerald-50 px-2.5 py-1 rounded-full">Custom Trolley Fabrication</span>
+              <h3 class="font-heading font-bold text-slate-900 text-base mt-2">Pembuatan Trolley Stainless &amp; Trolley Parts</h3>
+              <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                Jasa pembuatan *storage trolley* rak susun stainless steel maupun trolley besi angkut boks komponen sesuai gambar teknik (*drawing*) pabrik.
+              </p>
+            </div>
+            <div class="flex items-center justify-between gap-2 pt-2 border-t border-slate-100">
+              <a href="jasa-fabrikasi-trolley.html" class="text-xs font-bold text-brand-tealDark hover:underline">Lihat Detail →</a>
+              <a href="mailto:marketing@wirasenasupplier.com?subject=RFQ%20Pembuatan%20Trolley%20Pabrik" class="bg-brand-green hover:bg-brand-greenDark text-white text-xs font-bold px-3.5 py-2 rounded-lg transition">Minta Harga</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 9: Bengkel Las & Fence Welding -->
+        <div class="catalog-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col" data-cat="fab" data-keywords="las welding bengkel las pagar pabrik safety fence konstruksi besi baja meja kerja">
+          <img src="assets/images/fabrication-welding.png?v=5" alt="Bengkel Las & Fabrikasi Industri Bekasi" class="w-full h-48 object-cover border-b border-slate-100" />
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-green bg-emerald-50 px-2.5 py-1 rounded-full">Welding &amp; Steel Work</span>
+              <h3 class="font-heading font-bold text-slate-900 text-base mt-2">Jasa Pengelasan Pagar (Fence Welding) &amp; Besi</h3>
+              <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                Layanan bengkel las fabrikasi industri untuk pembuatan pagar pembatas pabrik (*safety fence*), meja kerja produksi, dan konstruksi besi.
+              </p>
+            </div>
+            <div class="flex items-center justify-between gap-2 pt-2 border-t border-slate-100">
+              <a href="jasa-fabrikasi-trolley.html" class="text-xs font-bold text-brand-tealDark hover:underline">Lihat Detail →</a>
+              <a href="mailto:marketing@wirasenasupplier.com?subject=RFQ%20Jasa%20Las%20%26%20Fabrikasi%20Besi" class="bg-brand-green hover:bg-brand-greenDark text-white text-xs font-bold px-3.5 py-2 rounded-lg transition">Minta Harga</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    let currentCat = 'all';
+    function setCat(cat, btn) {
+      currentCat = cat;
+      document.querySelectorAll('.cat-btn').forEach(b => {
+        b.className = 'cat-btn bg-slate-100 hover:bg-emerald-50 text-slate-700 text-xs font-bold px-4 py-2 rounded-xl transition';
+      });
+      btn.className = 'cat-btn bg-brand-tealDark text-white text-xs font-bold px-4 py-2 rounded-xl transition';
+      filterCatalog();
+    }
+    function filterCatalog() {
+      const q = (document.getElementById('catalog-search').value || '').toLowerCase().trim();
+      document.querySelectorAll('.catalog-card').forEach(card => {
+        const catMatch = (currentCat === 'all' || card.dataset.cat === currentCat);
+        const text = (card.innerText + ' ' + (card.dataset.keywords || '')).toLowerCase();
+        const qMatch = (!q || text.includes(q));
+        card.style.display = (catMatch && qMatch) ? 'flex' : 'none';
+      });
+    }
+  </script>
+
+  <!-- Fasilitas Mesin Produksi Carton Box -->
+  <section id="mesin-produksi" class="py-16 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="inline-block bg-slate-100 text-brand-tealDark font-heading font-bold text-xs uppercase tracking-wider px-3.5 py-1 rounded-full">
+          In-House Production Facility
+        </span>
+        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+          Fasilitas 5 Mesin Produksi Carton Box Kami
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600 mt-2">
+          Bukan sekadar perantara — workshop kami di Cikarang Selatan diperkuat langsung oleh <strong>5 lini mesin produksi karton boks</strong> dan <strong>22 personel produksi</strong> untuk menjamin harga pabrik &amp; ketepatan jadwal pengiriman.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
+        <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden text-center shadow-sm">
+          <img src="assets/images/machine-1-cutting-creasing.png?v=5" alt="1. Cutting & Creasing" class="w-full h-44 sm:h-52 object-cover" />
+          <div class="p-3.5"><h3 class="font-heading font-bold text-slate-900 text-xs sm:text-sm">1. Cutting &amp; Creasing</h3></div>
+        </div>
+        <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden text-center shadow-sm">
+          <img src="assets/images/machine-2b-auto-folder-glue.png?v=5" alt="2. Automatic Folder Glue" class="w-full h-44 sm:h-52 object-cover" />
+          <div class="p-3.5"><h3 class="font-heading font-bold text-slate-900 text-xs sm:text-sm">2. Automatic Folder Glue</h3></div>
+        </div>
+        <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden text-center shadow-sm">
+          <img src="assets/images/machine-3-semi-folder-glue.png?v=5" alt="3. Semi Folder Glue" class="w-full h-44 sm:h-52 object-cover" />
+          <div class="p-3.5"><h3 class="font-heading font-bold text-slate-900 text-xs sm:text-sm">3. Semi Folder Glue</h3></div>
+        </div>
+        <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden text-center shadow-sm">
+          <img src="assets/images/machine-4-rotary-sloter.png?v=5" alt="4. Rotary Sloter" class="w-full h-44 sm:h-52 object-cover" />
+          <div class="p-3.5"><h3 class="font-heading font-bold text-slate-900 text-xs sm:text-sm">4. Rotary Sloter</h3></div>
+        </div>
+        <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden text-center shadow-sm col-span-2 sm:col-span-1">
+          <img src="assets/images/machine-5-rotary-die-cut.png?v=5" alt="5. Rotary Die Cut" class="w-full h-44 sm:h-52 object-cover" />
+          <div class="p-3.5"><h3 class="font-heading font-bold text-slate-900 text-xs sm:text-sm">5. Rotary Die Cut</h3></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mitra Pelanggan -->
+  <section id="pelanggan" class="py-14 bg-brand-tealDark text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <span class="text-xs font-heading font-bold uppercase tracking-wider text-emerald-300">Proven B2B Track Record</span>
+        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold mt-1">Mitra Pelanggan Industri Kami</h2>
+        <p class="text-xs sm:text-sm text-slate-300 mt-1.5">
+          Dipercaya oleh berbagai perusahaan manufaktur nasional &amp; multinasional di Indonesia:
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+        <div class="bg-white/10 border border-white/15 rounded-xl p-4 font-heading font-bold text-xs sm:text-sm flex items-center gap-3">
+          <span class="w-7 h-7 rounded-lg bg-brand-green text-white text-xs flex items-center justify-center shrink-0">01</span>
+          <span>PT. Jaya Refrigeration Equipment (Midea)</span>
+        </div>
+        <div class="bg-white/10 border border-white/15 rounded-xl p-4 font-heading font-bold text-xs sm:text-sm flex items-center gap-3">
+          <span class="w-7 h-7 rounded-lg bg-brand-green text-white text-xs flex items-center justify-center shrink-0">02</span>
+          <span>PT. Indorama Ventures</span>
+        </div>
+        <div class="bg-white/10 border border-white/15 rounded-xl p-4 font-heading font-bold text-xs sm:text-sm flex items-center gap-3">
+          <span class="w-7 h-7 rounded-lg bg-brand-green text-white text-xs flex items-center justify-center shrink-0">03</span>
+          <span>PT. Yasunli Abadi Utama</span>
+        </div>
+        <div class="bg-white/10 border border-white/15 rounded-xl p-4 font-heading font-bold text-xs sm:text-sm flex items-center gap-3">
+          <span class="w-7 h-7 rounded-lg bg-brand-green text-white text-xs flex items-center justify-center shrink-0">04</span>
+          <span>PT. Skyworth Industry Indonesia</span>
+        </div>
+        <div class="bg-white/10 border border-white/15 rounded-xl p-4 font-heading font-bold text-xs sm:text-sm flex items-center gap-3">
+          <span class="w-7 h-7 rounded-lg bg-brand-green text-white text-xs flex items-center justify-center shrink-0">05</span>
+          <span>PT. Daijo Industrial</span>
+        </div>
+        <div class="bg-white/10 border border-white/15 rounded-xl p-4 font-heading font-bold text-xs sm:text-sm flex items-center gap-3">
+          <span class="w-7 h-7 rounded-lg bg-brand-green text-white text-xs flex items-center justify-center shrink-0">06</span>
+          <span>PT. Nusantara Inti Solusindo</span>
+        </div>
+        <div class="bg-white/10 border border-white/15 rounded-xl p-4 font-heading font-bold text-xs sm:text-sm flex items-center gap-3">
+          <span class="w-7 h-7 rounded-lg bg-brand-green text-white text-xs flex items-center justify-center shrink-0">07</span>
+          <span>PT. EPS Indonesia</span>
+        </div>
+        <div class="bg-brand-green/25 border border-emerald-400/40 rounded-xl p-4 font-heading font-bold text-xs sm:text-sm flex items-center gap-3 text-emerald-200">
+          <span class="w-7 h-7 rounded-lg bg-emerald-500 text-white text-xs flex items-center justify-center shrink-0">+</span>
+          <span>Siap Menjadi Vendor Resmi Pabrik Anda</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Artikel & Panduan Pengadaan Pabrik (Seperti Seksi ARTIKEL KAMI di Trimitra untuk SEO) -->
+  <section class="py-16 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+        <div>
+          <span class="text-xs font-heading font-bold uppercase tracking-wider text-brand-green">Info &amp; Artikel Industri</span>
+          <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">
+            Panduan Pengadaan Kebutuhan Pabrik &amp; Kemasan B2B
+          </h2>
+        </div>
+        <a href="artikel-seo.html" class="text-xs sm:text-sm font-bold text-brand-green hover:underline">Lihat Semua Artikel →</a>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between">
+          <img src="assets/images/trading-electrical-mechanical.png?v=5" alt="Supplier Electrical Mechanical Cikarang" class="w-full h-44 object-cover" />
+          <div class="p-5 space-y-2.5 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold uppercase text-brand-green">Panduan Purchasing ME</span>
+              <h3 class="font-heading font-bold text-slate-900 text-base mt-1">
+                <a href="supplier-electrical-mechanical.html" class="hover:text-brand-green">Tips Memilih Supplier Alat Listrik, Sparepart Mechanical &amp; Pneumatic Pabrik Terdekat</a>
+              </h3>
+              <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                Keuntungan bermitra dengan general supplier lokal di Cikarang-Bekasi untuk pengadaan cepat komponen elektrikal, fitting angin, dan alat safety K3.
+              </p>
+            </div>
+            <a href="supplier-electrical-mechanical.html" class="text-xs font-bold text-brand-tealDark hover:underline inline-block pt-2">Baca Selengkapnya →</a>
+          </div>
+        </article>
+
+        <article class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between">
+          <img src="assets/images/product-carton-box.png?v=5" alt="Pabrik Carton Box & Impraboard Cikarang" class="w-full h-44 object-cover" />
+          <div class="p-5 space-y-2.5 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold uppercase text-brand-green">Solusi Kemasan Manufaktur</span>
+              <h3 class="font-heading font-bold text-slate-900 text-base mt-1">
+                <a href="pabrik-carton-box-impraboard.html" class="hover:text-brand-green">Perbedaan Kemasan Carton Box Single/Double Wall vs Box Impraboard Bersekat</a>
+              </h3>
+              <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                Panduan menentukan spesifikasi kardus industri untuk pengiriman sekali jalan maupun box plastik corrugated (impraboard) untuk sirkulasi part internal pabrik.
+              </p>
+            </div>
+            <a href="pabrik-carton-box-impraboard.html" class="text-xs font-bold text-brand-tealDark hover:underline inline-block pt-2">Baca Selengkapnya →</a>
+          </div>
+        </article>
+
+        <article class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between">
+          <img src="assets/images/fabrication-trolley-stainless.png?v=5" alt="Jasa Fabrikasi Trolley Stainless Pabrik" class="w-full h-44 object-cover" />
+          <div class="p-5 space-y-2.5 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold uppercase text-brand-green">Material Handling &amp; Workshop</span>
+              <h3 class="font-heading font-bold text-slate-900 text-base mt-1">
+                <a href="jasa-fabrikasi-trolley.html" class="hover:text-brand-green">Standar Fabrikasi Trolley Stainless Steel &amp; Trolley Komponen untuk Lini Produksi</a>
+              </h3>
+              <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                Mengapa desain custom trolley sesuai ukuran boks komponen dan standar pengelasan pagar pengaman sangat penting bagi efisiensi pabrik.
+              </p>
+            </div>
+            <a href="jasa-fabrikasi-trolley.html" class="text-xs font-bold text-brand-tealDark hover:underline inline-block pt-2">Baca Selengkapnya →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+"""
+
+with open(f"{BASE_DIR}/index.html", "w") as f:
+    f.write(
+        build_head(
+            "Supplier Kebutuhan Pabrik Cikarang & Bekasi | PT. Wirasena Maju Bersama Rayya — Electrical, Mechanical, Carton Box & Fabrikasi",
+            "PT. Wirasena Maju Bersama Rayya adalah Supplier Kebutuhan Pabrik Terdekat di Cikarang & Bekasi. Melayani Alat Listrik Industri, Sparepart Mechanical & Pneumatik, Pabrik Carton Box, Impraboard Custom & Jasa Fabrikasi Trolley.",
+            "supplier kebutuhan pabrik terdekat, general supplier pabrik cikarang bekasi, supplier alat listrik industri terdekat, supplier sparepart mesin pabrik, vendor mechanical electrical bekasi, pabrik carton box cikarang, supplier box impraboard custom, jasa fabrikasi trolley pabrik",
+            "index.html",
+            home_faqs,
+            "Beranda"
+        )
+        + build_navbar("index.html")
+        + home_body
+        + build_faq_and_footer(home_faqs)
+    )
+
+# ---------------------------------------------------------
+# 2. GENERATE SUPPLIER-ELECTRICAL-MECHANICAL.HTML
+# ---------------------------------------------------------
+me_faqs = [
+    ("Apa saja barang Electrical dan Mechanical yang bisa dipesan di PT. Wirasena Maju Bersama Rayya?",
+     "Kami menyuplai berbagai kebutuhan elektrikal dan mekanikal pabrik (MRO & General Trading), meliputi komponen sistem pneumatik (fitting angin, selang PU tubing, solenoid valve, air cylinder), alat listrik industri, perkakas kerja berisolasi, hand tools, cutting tools (mata bor, batu gerinda), hingga perlengkapan Safety K3 (APD), kain majun, dan alat kebersihan pabrik."),
+    ("Jika pabrik kami mencari merk atau tipe sparepart khusus yang tidak ada di brosur, apakah bisa dicarikan?",
+     "Bisa. Sesuai prinsip layanan General Trading kami ('All items are as requested by the buyer'), tim pengadaan kami siap mencarikan dan menyuplai item electrical, mechanical, maupun consumable sesuai merk/spesifikasi pada Purchase Requisition (PR) pabrik Anda."),
+    ("Berapa lama waktu pengiriman untuk area Cikarang, Bekasi, dan sekitarnya?",
+     "Karena lokasi kantor dan gudang workshop kami berada di Sukadami, Cikarang Selatan (dekat kawasan industri Jababeka, EJIP, MM2100, Delta Silicon, dan Lippo Cikarang), pengiriman item ready stock maupun pesanan rutin dapat dilakukan dengan sangat cepat ke pabrik Anda.")
+]
+
+me_body = """
+  <section class="bg-gradient-to-r from-brand-tealDark to-brand-teal text-white py-12 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+      <div class="text-xs text-emerald-300 font-bold mb-2">
+        <a href="index.html" class="hover:underline">Beranda</a> &nbsp;/&nbsp; <span>Supplier Electrical, Mechanical &amp; General Trading</span>
+      </div>
+      <h1 class="font-heading text-2xl sm:text-4xl font-extrabold leading-tight">
+        Supplier Alat Listrik Industri, Sparepart Mechanical, Pneumatik &amp; Kebutuhan Pabrik Terdekat
+      </h1>
+      <p class="text-xs sm:text-base text-slate-200 mt-3 max-w-3xl leading-relaxed">
+        Solusi pengadaan satu pintu (*One-Stop General Supplier*) untuk tim <strong>Purchasing, Maintenance, &amp; Engineering Pabrik</strong> di Cikarang, Bekasi, Pondok Gede, Jakarta, dan Karawang. Semua barang disuplai sesuai spesifikasi permintaan pembeli (*All items are as requested by the buyer*).
+      </p>
+    </div>
+  </section>
+
+  <section class="py-14 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 space-y-12">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="grid grid-cols-2 gap-4">
+          <img src="assets/images/trading-electrical-mechanical.png?v=5" alt="Supplier Alat Listrik Industri" class="w-full h-48 object-cover rounded-2xl border border-slate-200 shadow-sm" />
+          <img src="assets/images/trading-pneumatics.png?v=5" alt="Supplier Pneumatic Pabrik" class="w-full h-48 object-contain bg-slate-50 p-3 rounded-2xl border border-slate-200 shadow-sm" />
+          <img src="assets/images/trading-tools.png?v=5" alt="Supplier Cutting Tools Pabrik" class="w-full h-48 object-cover rounded-2xl border border-slate-200 shadow-sm" />
+          <img src="assets/images/trading-cleaning-k3.png?v=5" alt="Supplier Alat Safety K3 & Cleaning" class="w-full h-48 object-cover rounded-2xl border border-slate-200 shadow-sm" />
+        </div>
+
+        <div class="space-y-5">
+          <span class="inline-block bg-emerald-100 text-brand-green font-heading font-bold text-xs uppercase px-3 py-1 rounded-full">Divisi General Supplier B2B</span>
+          <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900">
+            Daftar Barang Electrical, Mechanical &amp; Consumable Pabrik yang Kami Suplai
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Kami memahami bahwa tim <em>Purchasing</em> dan <em>Maintenance</em> pabrik membutuhkan vendor terdekat yang sanggup menyediakan berbagai item teknis maupun operasional secara cepat tanpa harus memecah PO ke terlalu banyak toko.
+          </p>
+
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <strong class="font-heading text-slate-900 block">1. Komponen Electrical &amp; Alat Listrik Industri:</strong>
+              <span class="text-slate-600">Alat listrik pabrik, tang &amp; obeng isolasi listrik, komponen panel, kabel industri, sensor, saklar, dan perlengkapan perawatan elektrikal gedung/mesin.</span>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <strong class="font-heading text-slate-900 block">2. Sparepart Mechanical &amp; Sistem Pneumatik:</strong>
+              <span class="text-slate-600">Fitting pneumatic (one-touch fitting, speed controller), selang angin PU/Nylon tubing, solenoid valve, air cylinder, FRL unit, dan komponen mekanikal mesin.</span>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <strong class="font-heading text-slate-900 block">3. Hand Tools, Cutting Tools &amp; Perkakas Workshop:</strong>
+              <span class="text-slate-600">Mata bor besi/stainless, batu gerinda potong &amp; poles, gergaji industri, kunci mekanik set, alat ukur teknik, dan perlengkapan bengkel engineering.</span>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <strong class="font-heading text-slate-900 block">4. Perlengkapan Safety K3 (OSH), Cleaning Supplies &amp; ATK:</strong>
+              <span class="text-slate-600">Sarung tangan kerja/karet, kacamata safety, masker, kain majun jahit/lembaran, cairan pembersih lantai pabrik, peralatan kebersihan, pest control, &amp; alat tulis kantor (ATK).</span>
+            </div>
+          </div>
+
+          <div class="pt-2 flex flex-wrap gap-3">
+            <a href="mailto:marketing@wirasenasupplier.com?subject=Permintaan%20Penawaran%20Barang%20Electrical%20%26%20Mechanical" class="bg-brand-green hover:bg-brand-greenDark text-white font-heading font-bold text-xs px-5 py-3.5 rounded-xl transition">
+              Kirim Daftar Barang (RFQ) via Email
+            </a>
+            <a href="tel:02184990200" class="bg-brand-tealDark text-white font-heading font-bold text-xs px-5 py-3.5 rounded-xl transition">
+              Hubungi (021) 8499 0200
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+"""
+
+with open(f"{BASE_DIR}/supplier-electrical-mechanical.html", "w") as f:
+    f.write(
+        build_head(
+            "Supplier Alat Listrik Industri, Sparepart Mechanical & Pneumatic Pabrik Terdekat | PT. Wirasena Maju Bersama Rayya",
+            "Supplier kebutuhan pabrik terdekat di Cikarang & Bekasi untuk pengadaan barang Electrical, Mechanical, Pneumatic Fittings, Hand Tools, Cutting Tools, Alat Safety K3, Kain Majun & Cleaning Supplies.",
+            "supplier alat listrik industri terdekat, supplier sparepart mesin pabrik, vendor mechanical electrical bekasi, supplier pneumatic cikarang, general supplier pabrik terdekat, supplier alat safety k3 pabrik",
+            "supplier-electrical-mechanical.html",
+            me_faqs,
+            "Supplier Electrical & Mechanical"
+        )
+        + build_navbar("supplier-electrical-mechanical.html")
+        + me_body
+        + build_faq_and_footer(me_faqs)
+    )
+
+# ---------------------------------------------------------
+# 3. GENERATE PABRIK-CARTON-BOX-IMPRABOARD.HTML
+# ---------------------------------------------------------
+pack_faqs = [
+    ("Apakah PT. Wirasena Maju Bersama Rayya memproduksi Carton Box di pabrik sendiri?",
+     "Ya, kami memiliki fasilitas workshop produksi sendiri di Sukadami, Cikarang Selatan yang dilengkapi 5 unit mesin utama (Cutting & Creasing, Automatic Folder Glue, Semi Folder Glue, Rotary Sloter, dan Rotary Die Cut) serta 22 karyawan produksi berpengalaman."),
+    ("Apa saja jenis Box Impraboard dan kemasan yang bisa dipesan?",
+     "Kami memproduksi Box Impraboard (PP Corrugated Box) berbagai ketebalan dan warna lengkap dengan sekat partisi (layer pad) custom untuk komponen otomotif/elektronik, PE Foam Sheet, Plastic Packing (HDPE, LDPE, Anti-Static), Protection Sheet, Safety/Tempered Glass, Masking Tape, serta produk karet industri (Rubber Molded & Rubber Foot).")
+]
+
+pack_body = """
+  <section class="bg-gradient-to-r from-brand-tealDark to-brand-teal text-white py-12 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+      <div class="text-xs text-emerald-300 font-bold mb-2">
+        <a href="index.html" class="hover:underline">Beranda</a> &nbsp;/&nbsp; <span>Pabrik Carton Box, Impraboard &amp; Rubber</span>
+      </div>
+      <h1 class="font-heading text-2xl sm:text-4xl font-extrabold leading-tight">
+        Pabrik Carton Box Cikarang &amp; Supplier Box Impraboard Custom Bekasi
+      </h1>
+      <p class="text-xs sm:text-base text-slate-200 mt-3 max-w-3xl leading-relaxed">
+        Produsen tangan pertama kemasan kardus industri (*Corrugated Carton Box*), *Box Impraboard* bersekat, *PE Foam*, *Plastic Packing*, *Masking Tape*, serta *Fabrication Synthetic Rubber* untuk pabrik manufaktur di Jabodetabek.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-14 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 space-y-12">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+          <img src="assets/images/product-carton-box.png?v=5" alt="Pabrik Carton Box Cikarang" class="w-full h-56 object-cover" />
+          <div class="p-6 space-y-2">
+            <h2 class="font-heading font-extrabold text-slate-900 text-lg">1. Custom Carton Box &amp; Kardus Pabrik</h2>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Produksi kardus *Single Wall, Double Wall, Regular Slotted Container (RSC)*, hingga *Die-Cut Box* dengan cetak merek/spesifikasi khusus pelanggan, termasuk kemasan kaca (*Safety Glass &amp; Tempered Glass*).
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+          <div class="w-full h-56 bg-white p-4 flex items-center justify-center">
+            <img src="assets/images/product-impraboard-box.png?v=5" alt="Supplier Box Impraboard Custom" class="max-h-full max-w-full object-contain" />
+          </div>
+          <div class="p-6 space-y-2">
+            <h2 class="font-heading font-extrabold text-slate-900 text-lg">2. Box Impraboard Sekat &amp; PE Foam</h2>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Pembuatan boks plastik berongga (*Impraboard / PP Corrugated Box*) tahan air &amp; tahan benturan lengkap dengan sekat partisi komponen, *PE Foam*, serta plastik *HDPE, LDPE, &amp; Anti-Static*.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+          <div class="w-full h-56 bg-white p-4 flex items-center justify-center">
+            <img src="assets/images/product-masking-tape.png?v=5" alt="Masking Tape & Rubber Molded" class="max-h-full max-w-full object-contain" />
+          </div>
+          <div class="p-6 space-y-2">
+            <h2 class="font-heading font-extrabold text-slate-900 text-lg">3. Masking Tape &amp; Karet Industri (Rubber)</h2>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Penyediaan lakban pabrik, *Masking Tape, Adhesive*, serta pembuatan komponen karet teknis (*Fabrication Synthetic Rubber, Chloroprene Rubber, Rubber Molded, &amp; Rubber Foot*).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+"""
+
+with open(f"{BASE_DIR}/pabrik-carton-box-impraboard.html", "w") as f:
+    f.write(
+        build_head(
+            "Pabrik Carton Box Cikarang & Supplier Box Impraboard Custom Bekasi | PT. Wirasena Maju Bersama Rayya",
+            "Produsen & Supplier Kardus Carton Box Custom, Box Impraboard Sekat Partisi, PE Foam, Plastik Packing HDPE/LDPE, Masking Tape & Karet Industri di Cikarang Selatan, Bekasi.",
+            "pabrik carton box cikarang bekasi, supplier kardus pabrik terdekat, supplier box impraboard custom, jual impraboard cikarang, supplier pe foam plastik wrapping pabrik",
+            "pabrik-carton-box-impraboard.html",
+            pack_faqs,
+            "Pabrik Carton Box & Impraboard"
+        )
+        + build_navbar("pabrik-carton-box-impraboard.html")
+        + pack_body
+        + build_faq_and_footer(pack_faqs)
+    )
+
+# ---------------------------------------------------------
+# 4. GENERATE JASA-FABRIKASI-TROLLEY.HTML (NO HEAVY DUTY RACKING!)
+# ---------------------------------------------------------
+fab_faqs = [
+    ("Apa saja layanan fabrikasi yang dikerjakan oleh PT. Wirasena Maju Bersama Rayya?",
+     "Workshop fabrikasi kami melayani pembuatan Storage Trolley Stainless Steel, Custom Parts Trolley (trolley angkut boks komponen lini produksi), meja kerja pabrik, serta jasa pengelasan pagar pengaman (Fence Welding) dan konstruksi besi sesuai gambar kerja (drawing) dari pabrik pelanggan."),
+    ("Apakah bisa membuat trolley dengan ukuran khusus menyesuaikan boks Impraboard kami?",
+     "Sangat bisa. Karena kami memproduksi Box Impraboard sekaligus memiliki divisi fabrikasi besi/stainless sendiri, kami dapat merancang trolley yang ukurannya presisi mengikuti dimensi boks komponen di pabrik Anda.")
+]
+
+fab_body = """
+  <section class="bg-gradient-to-r from-brand-tealDark to-brand-teal text-white py-12 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+      <div class="text-xs text-emerald-300 font-bold mb-2">
+        <a href="index.html" class="hover:underline">Beranda</a> &nbsp;/&nbsp; <span>Jasa Fabrikasi Trolley &amp; Bengkel Las Industri</span>
+      </div>
+      <h1 class="font-heading text-2xl sm:text-4xl font-extrabold leading-tight">
+        Jasa Fabrikasi Trolley Stainless, Trolley Besi &amp; Bengkel Las Pabrik Bekasi Cikarang
+      </h1>
+      <p class="text-xs sm:text-base text-slate-200 mt-3 max-w-3xl leading-relaxed">
+        Melayani pembuatan *Storage Trolley Stainless Steel*, *Custom Parts Trolley*, meja kerja produksi, serta pengelasan pagar pengaman (*Fence Welding*) sesuai gambar teknik (*drawing*) pabrik Anda.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-14 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+          <img src="assets/images/fabrication-trolley-stainless.png?v=5" alt="Pembuatan Trolley Stainless Pabrik" class="w-full h-60 object-cover" />
+          <div class="p-6 space-y-2">
+            <h2 class="font-heading font-extrabold text-slate-900 text-lg">1. Storage Trolley Stainless Steel</h2>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Pembuatan trolley susun *stainless steel* tahan karat dengan roda *heavy-duty caster* untuk kebutuhan ruang produksi bersih, elektronik, maupun manufaktur umum.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+          <div class="w-full h-60 bg-white p-4 flex items-center justify-center">
+            <img src="assets/images/fabrication-trolley-blue.png?v=5" alt="Custom Parts Trolley Besi" class="max-h-full max-w-full object-contain" />
+          </div>
+          <div class="p-6 space-y-2">
+            <h2 class="font-heading font-extrabold text-slate-900 text-lg">2. Custom Parts &amp; Box Trolley</h2>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Fabrikasi trolley besi *powder coating* / cat duco yang dirancang presisi untuk memuat susunan boks *impraboard* atau kontainer komponen di lini *assembly*.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+          <img src="assets/images/fabrication-welding.png?v=5" alt="Bengkel Las Pagar & Konstruksi Pabrik" class="w-full h-60 object-cover" />
+          <div class="p-6 space-y-2">
+            <h2 class="font-heading font-extrabold text-slate-900 text-lg">3. Fence Welding &amp; Konstruksi Besi</h2>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Jasa pengelasan pagar pabrik (*safety fence*), partisi pembatas area mesin, meja kerja besi, dan perbaikan konstruksi logam di area workshop maupun pabrik.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+"""
+
+with open(f"{BASE_DIR}/jasa-fabrikasi-trolley.html", "w") as f:
+    f.write(
+        build_head(
+            "Jasa Fabrikasi Trolley Stainless & Bengkel Las Pabrik Bekasi Cikarang | PT. Wirasena Maju Bersama Rayya",
+            "Jasa fabrikasi pabrik terdekat di Cikarang & Bekasi: pembuatan Storage Trolley Stainless Steel, Custom Parts Trolley Besi, Meja Kerja Produksi, dan Bengkel Las Pagar Industri.",
+            "jasa fabrikasi pabrik terdekat, pembuatan trolley stainless pabrik, bikin trolley besi bekasi, bengkel las fabrikasi industri cikarang, fence welding pabrik",
+            "jasa-fabrikasi-trolley.html",
+            fab_faqs,
+            "Jasa Fabrikasi Trolley & Las"
+        )
+        + build_navbar("jasa-fabrikasi-trolley.html")
+        + fab_body
+        + build_faq_and_footer(fab_faqs)
+    )
+
+# ---------------------------------------------------------
+# 5. GENERATE ARTIKEL-SEO.HTML (TOPICAL AUTHORITY HUB)
+# ---------------------------------------------------------
+art_faqs = [
+    ("Mengapa pabrik di Cikarang dan Bekasi lebih memilih supplier lokal terdekat?",
+     "Memilih supplier pabrik yang memiliki workshop langsung di Cikarang Selatan / Bekasi memangkas biaya logistik, mempercepat lead-time pengiriman harian (terutama untuk barang urgent seperti carton box, sparepart pneumatic/electrical, dan consumable), serta memudahkan koordinasi QC maupun kunjungan audit vendor.")
+]
+
+art_body = """
+  <section class="bg-gradient-to-r from-brand-tealDark to-brand-teal text-white py-12 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+      <div class="text-xs text-emerald-300 font-bold mb-2">
+        <a href="index.html" class="hover:underline">Beranda</a> &nbsp;/&nbsp; <span>Info &amp; Artikel Industri</span>
+      </div>
+      <h1 class="font-heading text-2xl sm:text-4xl font-extrabold leading-tight">
+        Info &amp; Panduan Pengadaan Kebutuhan Pabrik (Procurement Knowledge Hub)
+      </h1>
+      <p class="text-xs sm:text-base text-slate-200 mt-3 max-w-3xl leading-relaxed">
+        Referensi teknis bagi tim *Purchasing, Procurement, &amp; Engineering* dalam memilih spesifikasi kemasan industri, komponen *Electrical &amp; Mechanical*, serta *Material Handling*.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-14 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-10 space-y-10">
+      <article class="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+        <span class="text-xs font-extrabold uppercase text-brand-green">Panduan #1 • Electrical, Mechanical &amp; MRO Supply</span>
+        <h2 class="font-heading text-xl sm:text-2xl font-extrabold text-slate-900">
+          Cara Efisien Pengadaan Barang Electrical, Mechanical, &amp; Consumable Pabrik di Kawasan Industri Bekasi-Cikarang
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+          Dalam operasional pabrik manufaktur di kawasan seperti <strong>Jababeka, MM2100, EJIP, dan Delta Silicon</strong>, kebutuhan akan <strong>alat listrik industri, komponen pneumatik (fitting angin, selang PU, solenoid valve), cutting tools, hingga alat safety K3 dan kain majun</strong> sering kali bersifat mendesak. Mengandalkan <em>General Supplier Pabrik Terdekat</em> seperti <strong>PT. Wirasena Maju Bersama Rayya</strong> memungkinkan tim Purchasing menggabungkan berbagai item MRO (<em>Maintenance, Repair, and Operations</em>) dalam satu pintu pengadaan yang efisien.
+        </p>
+        <a href="supplier-electrical-mechanical.html" class="inline-block text-xs font-bold text-brand-green hover:underline">Lihat Katalog Electrical, Mechanical &amp; General Trading →</a>
+      </article>
+
+      <article class="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+        <span class="text-xs font-extrabold uppercase text-brand-green">Panduan #2 • Corrugated Carton Box vs Impraboard</span>
+        <h2 class="font-heading text-xl sm:text-2xl font-extrabold text-slate-900">
+          Memilih Spesifikasi Kardus Carton Box &amp; Box Impraboard Custom untuk Perlindungan Produk Manufaktur
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+          Untuk pengiriman produk jadi (*finished goods*), penggunaan <strong>Carton Box Single Wall maupun Double Wall</strong> yang diproduksi dengan mesin <em>Rotary Sloter</em> dan <em>Automatic Folder Glue</em> menjamin presisi lipatan dan kekuatan tumpuk (*stacking strength*). Sementara untuk pengiriman komponen antar-lini atau *returnable packaging* antar-vendor, <strong>Box Impraboard dengan sekat partisi custom dan PE Foam</strong> memberikan daya tahan jangka panjang yang hemat biaya.
+        </p>
+        <a href="pabrik-carton-box-impraboard.html" class="inline-block text-xs font-bold text-brand-green hover:underline">Lihat Spesifikasi Carton Box &amp; Box Impraboard →</a>
+      </article>
+
+      <article class="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+        <span class="text-xs font-extrabold uppercase text-brand-green">Panduan #3 • Custom Trolley &amp; Industrial Welding</span>
+        <h2 class="font-heading text-xl sm:text-2xl font-extrabold text-slate-900">
+          Pentingnya Custom Storage Trolley Stainless &amp; Parts Trolley Sesuai Dimensi Lini Produksi
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+          Setiap pabrik memiliki ukuran boks komponen dan lebar jalur (*aisle*) produksi yang berbeda. Dengan memesan <strong>trolley stainless steel maupun trolley besi custom</strong> langsung di workshop fabrikasi lokal Cikarang, tim Engineering dapat menyesuaikan tinggi rak susun, kapasitas beban roda, serta pengelasan pagar pengaman (*safety fence*) secara presisi.
+        </p>
+        <a href="jasa-fabrikasi-trolley.html" class="inline-block text-xs font-bold text-brand-green hover:underline">Lihat Layanan Fabrikasi Trolley &amp; Bengkel Las →</a>
+      </article>
+    </div>
+  </section>
+"""
+
+with open(f"{BASE_DIR}/artikel-seo.html", "w") as f:
+    f.write(
+        build_head(
+            "Artikel & Panduan Pengadaan Kebutuhan Pabrik Cikarang Bekasi | PT. Wirasena Maju Bersama Rayya",
+            "Kumpulan panduan teknis untuk Purchasing & Engineering pabrik: tips memilih supplier electrical mechanical terdekat, spesifikasi carton box & impraboard, serta fabrikasi trolley.",
+            "supplier kebutuhan pabrik terdekat, tips memilih supplier pabrik cikarang, perbedaan carton box dan impraboard, spesifikasi trolley stainless pabrik",
+            "artikel-seo.html",
+            art_faqs,
+            "Info & Artikel Industri"
+        )
+        + build_navbar("artikel-seo.html")
+        + art_body
+        + build_faq_and_footer(art_faqs)
+    )
+
+# ---------------------------------------------------------
+# 6. UPDATE SITEMAP.XML WITH ALL 5 SEO PAGES
+# ---------------------------------------------------------
+pages = [
+    ("index.html", "1.0"),
+    ("supplier-electrical-mechanical.html", "0.9"),
+    ("pabrik-carton-box-impraboard.html", "0.9"),
+    ("jasa-fabrikasi-trolley.html", "0.9"),
+    ("artikel-seo.html", "0.8"),
+]
+sitemap_entries = ""
+for slug, prio in pages:
+    url = f"{DOMAIN}/" if slug == "index.html" else f"{DOMAIN}/{slug}"
+    sitemap_entries += f"""  <url>
+    <loc>{url}</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>{prio}</priority>
+  </url>\n"""
+
+with open(f"{BASE_DIR}/sitemap.xml", "w") as f:
+    f.write(f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{sitemap_entries}</urlset>
+""")
+
+print("Successfully generated 5-page SEO powerhouse website + sitemap.xml!")
