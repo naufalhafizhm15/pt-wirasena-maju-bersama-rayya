@@ -1,70 +1,62 @@
 # 📋 Master Roadmap & Checklist: PT. Wirasena Maju Bersama Rayya
 
-> **Status Proyek:** Tahap 1 Selesai (Website & Branding Foundation)  
+> **Status Proyek:** Tahap 1 Selesai (Fondasi Web & Branding), Tahap 2–4 Dalam Perencanaan  
 > **Domain Utama:** `wirasenaraya.com`  
 > **Repository:** [github.com/naufalhafizhm15/pt-wirasena-maju-bersama-rayya](https://github.com/naufalhafizhm15/pt-wirasena-maju-bersama-rayya)  
-> **Live Staging:** [naufalhafizhm15.github.io/pt-wirasena-maju-bersama-rayya](https://naufalhafizhm15.github.io/pt-wirasena-maju-bersama-rayya/)
+> **Live Staging:** [naufalhafizhm15.github.io/pt-wirasena-maju-bersama-rayya](https://naufalhafizhm15.github.io/pt-wirasena-maju-bersama-rayya/)  
+> **Spreadsheet Tracking:** [wirasena_project_tracking.xls](file:///home/naufalhzh/.gemini/antigravity/scratch/pt-wirasena-maju-bersama-rayya/wirasena_project_tracking.xls) | [wirasena_project_tracking.csv](file:///home/naufalhzh/.gemini/antigravity/scratch/pt-wirasena-maju-bersama-rayya/wirasena_project_tracking.csv)
 
 ---
 
 ## 🎯 1. Ringkasan Goals Perusahaan
 
-1. **Brand Positioning:** Memposisikan PT. Wirasena Maju Bersama Rayya sebagai mitra resmi tier-1 pengadaan manufaktur & kemasan industri yang kredibel, modern, dan tepercaya di Cikarang Selatan, Bekasi.
-2. **Lead Generation (RFQ B2B):** Memudahkan procurement & engineering pabrik di kawasan GIIC, EJIP, MM2100, Jababeka, Delta Silicon untuk meminta penawaran harga cepat (Fast Quote RFQ) lewat web & WhatsApp.
-3. **3 Pilar Solusi Terintegrasi:**
-   - 📦 **Pabrik Packaging:** Custom Carton Box Corrugated & Box Impraboard PP.
-   - ⚡ **Industrial Supply:** Electrical, Mechanical, Pneumatics, Perkakas, & APD K3.
-   - ⚙️ **Fabrikasi Logam:** Material Handling Trolley Stainless/Besi, Rak Pipa FIFO, & Workstation.
+1. **Brand Positioning B2B:** Memposisikan PT. Wirasena Maju Bersama Rayya sebagai mitra resmi tier-1 pengadaan manufaktur, kemasan karton, dan fabrikasi logam yang kredibel dan tepercaya di Cikarang Selatan, Bekasi.
+2. **Kredibilitas Multi-Channel:** Membangun kehadiran profesional di Google Search, Google Maps, dan media sosial bisnis (**LinkedIn, Instagram, Facebook**) agar saat procurement atau purchasing manager melakukan background check vendor, PT Wirasena tampil meyakinkan dan verified.
+3. **Lead Generation (RFQ B2B):** Menjaring permintaan penawaran harga cepat (Fast Quote RFQ) lewat web, WhatsApp, dan DM sosial media dari pabrik-pabrik di GIIC, EJIP, MM2100, Jababeka, Delta Silicon, dan KIIC Karawang.
 
 ---
 
-## 📊 2. Status Checklist Deliverables
+## 📊 2. Status Checklist Deliverables Lengkap (21 Item)
 
-### ✅ Fase 1: Branding & Fondasi Website (SELESAI)
-- [x] **Identitas Perusahaan:** Direktur Rony Yuniawan, NPWP 96.434.539.2-447.000 (PKP terverifikasi).
-- [x] **Alamat Resmi:** Sukadami, Cikarang Selatan, Bekasi (17530).
-- [x] **Eksplorasi & Modernisasi Logo:** Lambang pita 3D "WB" Zamrud dengan orbital ring dinamis (bebas mikro-teks).
-- [x] **Website Profile Komprehensif (4 Halaman):**
-  - [x] `index.html`: Hero modern bergaya TransTRACK, B2B Quick RFQ, Showcase 3 Solusi, 5 Fasilitas Mesin In-House, Client Logo Carousel, Google Maps & Lokasi.
-  - [x] `pabrik-carton-box-impraboard.html`: Spesifikasi flute E/B/C/CB/A, sekat partisi, impraboard box antistatik ESD.
-  - [x] `supplier-electrical-mechanical.html`: Komponen panel listrik industri, bearing, pneumatic SMC/Festo, safety APD.
-  - [x] `jasa-fabrikasi-trolley.html`: Trolley barang heavy duty, rak lean pipe FIFO, meja perakitan QC.
-- [x] **Form Kalkulator RFQ Otomatis:** Perhitungan estimasi & tombol direct ke WhatsApp.
-- [x] **Aset Visual HD:** Visual pabrik, mesin cetak karton, bending plat, dan material packaging beresolusi tinggi.
-- [x] **Mobile Responsive & Fast Loading:** Optimasi layout smartphone, drawer navigasi, dan sticky CTA WhatsApp.
-- [x] **Hosting Staging:** Live di GitHub Pages dengan auto-deploy.
+### ✅ FASE 1: Fondasi Branding & Web Profile (STATUS: SELESAI)
+- [x] **TSK-01:** Verifikasi Data Legalitas PT: Direktur Rony Yuniawan, NPWP: `96.434.539.2-447.000` (PKP terverifikasi).
+- [x] **TSK-02:** Desain & Modernisasi Logo Perusahaan: Pita 3D Zamrud "WB" Transparan (`logo-trans.png`), bebas mikro-teks buram.
+- [x] **TSK-03:** Pembuatan App Icon Suite: Favicon 32px, Apple Touch Icon 180px, PWA 512px.
+- [x] **TSK-04:** Homepage Company Profile (`index.html`): Hero modern TransTRACK, B2B RFQ, Showcase 3 Solusi, 5 Fasilitas Mesin In-House, Client Logo Slider, Lokasi Sukadami.
+- [x] **TSK-05:** Halaman Katalog 1 (`pabrik-carton-box-impraboard.html`): Spesifikasi kardus flute E/B/C/CB/A, sekat partisi, box impraboard ESD.
+- [x] **TSK-06:** Halaman Katalog 2 (`supplier-electrical-mechanical.html`): Komponen panel, bearing, pneumatik SMC/Festo, safety APD K3.
+- [x] **TSK-07:** Halaman Katalog 3 (`jasa-fabrikasi-trolley.html`): Storage trolley stainless/besi heavy duty, rak pipa lean FIFO, meja QC.
+- [x] **TSK-08:** Form Fast Quote RFQ Interaktif: Form kalkulator estimasi cepat dengan direct WhatsApp routing.
+- [x] **TSK-09:** Deploy Online Staging: Live di GitHub Pages dengan sistem auto-build.
 
 ---
 
-### ⏳ Fase 2: Aktivasi Domain & Kontak Bisnis (NEXT PRIORITAS)
-- [ ] **Nomor WhatsApp Bisnis Baru:** Mengganti placeholder nomor WA admin saat SIM card/WA bisnis baru sudah siap.
-- [ ] **Setup Domain `wirasenaraya.com`:**
-  - [ ] Setting DNS CNAME / A Records di registrar/Cloudflare menuju GitHub Pages.
-  - [ ] Konfigurasi file `CNAME` di root repository.
-  - [ ] Enforce HTTPS / SSL gratis di GitHub Pages.
-- [ ] **Email Bisnis Resmi:**
-  - [ ] Membuat akun email berdomain (contoh: `sales@wirasenaraya.com`, `rfq@wirasenaraya.com`, atau Google Workspace).
-- [ ] **Finalisasi Logo Resmi:**
-  - [ ] Menentukan opsi final antara *Pita WB + Orbital Ring* vs *Pita WB Standalone*.
+### ⏳ FASE 2: Aktivasi Domain & Kontak Resmi (PRIORITAS BERIKUTNYA)
+- [ ] **TSK-10:** Aktivasi Nomor WhatsApp Bisnis Baru: Mengganti placeholder nomor WA admin saat SIM card/WA bisnis baru sudah aktif.
+- [ ] **TSK-11:** Pointing DNS Domain `wirasenaraya.com`: Setting CNAME / A Record di registrar/Cloudflare mengarah ke GitHub Pages.
+- [ ] **TSK-12:** Aktivasi Sertifikat SSL / HTTPS: Memastikan gembok hijau aman aktif di `wirasenaraya.com`.
+- [ ] **TSK-13:** Setup Akun Email Bisnis: Membuat email profesional seperti `sales@wirasenaraya.com` dan `rfq@wirasenaraya.com`.
 
 ---
 
-### 🚀 Fase 3: SEO Lokal & Pengadaan Lapangan (GO-TO-MARKET)
-- [ ] **Google Business Profile (Google Maps):**
-  - [ ] Daftarkan titik lokasi "PT. Wirasena Maju Bersama Rayya" di Jl. Bah Kilong, Sukadami, Cikarang Selatan agar tampil di pencarian Google Maps pabrik sekitar.
-- [ ] **Company Profile PDF (1-2 Lembar):**
-  - [ ] Membuat e-Katalog ringkas format PDF yang bisa diunduh via tombol *"Download E-Katalog"* di website.
-- [ ] **Foto Dokumentasi Riil:**
-  - [ ] Saat ada batch produksi kardus/trolley baru, ambil foto riil di gudang Sukadami untuk menggantikan gambar render secara bertahap.
-- [ ] **Google Search Console & Sitemap:**
-  - [ ] Submit `sitemap.xml` agar langsung terindeks di mesin pencari Google saat ada yang mencari *"supplier karton box cikarang"* atau *"fabrikasi trolley bekasi"*.
+### 📱 FASE 3: Saluran Media Sosial & Kredibilitas B2B (BARU)
+- [ ] **TSK-14: LinkedIn Company Page Resmi**
+  - **Nama:** PT. Wirasena Maju Bersama Rayya
+  - **Deliverable:** Cover Banner (1584x396px), Avatar Logo WB (400x400px), Tagline B2B, Deskripsi Profil Perusahaan, Lokasi Kantor/Gudang Cikarang Selatan, dan tautan ke `wirasenaraya.com`.
+  - **Fungsi Utama:** Tempat verifikasi resmi bagi General Manager, Purchasing Manager, dan Procurement Officer pabrik multinasional.
+- [ ] **TSK-15: Instagram Bisnis (`@wirasenaraya` / `@wirasena.id`)**
+  - **Deliverable:** Profil Bisnis terverifikasi, bio profesional, linktree/link website, dan **9 Desain Feed Perdana** (Grid showcase: 3 postingan kardus box & impraboard, 3 postingan electrical & mechanical supply, 3 postingan trolley & las).
+  - **Fungsi Utama:** Katalog visual interaktif yang bisa langsung ditunjukkan sales saat presentasi ke klien.
+- [ ] **TSK-16: Facebook Business Page (Meta Business Suite)**
+  - **Deliverable:** Fanpage resmi terintegrasi dengan WhatsApp Business & Instagram, setting jam operasional, dan lokasi peta Sukadami.
+  - **Fungsi Utama:** Memperkuat ranking Google SEO lokal dan integrasi iklan berbayar (Meta Ads) bertarget pekerja industri Cikarang-Karawang.
+- [ ] **TSK-17: Integrasi Ikon Media Sosial di Website**
+  - **Deliverable:** Menambahkan tombol/ikon resmi LinkedIn, Instagram, dan Facebook pada Footer dan Mobile Drawer di `build_site.py`.
 
 ---
 
-## 🛠️ Rekomendasi Tempat Tracking yang Praktis
-
-| Media Tracking | Cocok Untuk | Keunggulan |
-| :--- | :--- | :--- |
-| **1. File `ROADMAP.md` di GitHub (Rekomendasi)** | Internal Proyek & Developer | Langsung ada di repository kode, bisa dicentang via GitHub web/mobile, tersimpan selamanya dalam Git. |
-| **2. GitHub Projects / Issues** | Task Management Ala Kanban | Gratis di repo ini, bisa buat kartu *To Do*, *In Progress*, *Done* seperti Trello. |
-| **3. Notion / Google Keep** | Mobile Quick Notes | Cocok jika ingin mencatat ide cepat dari HP bersama tim/klien (Om Yongki / Pak Rony). |
+### 🚀 FASE 4: Go-to-Market, Local SEO & Lapangan (PENGEMBANGAN)
+- [ ] **TSK-18:** Penyusunan Company Profile PDF (e-Katalog 2–4 lembar ringkas untuk dikirim via WA/email ke procurement).
+- [ ] **TSK-19:** Pendaftaran Google Business Profile (Google Maps) di Jl. Bah Kilong, Sukadami, Cikarang Selatan agar muncul saat dicari di sekitar kawasan industri.
+- [ ] **TSK-20:** Pendaftaran Google Search Console & submit `sitemap.xml` agar langsung terindeks kata kunci *"supplier kebutuhan pabrik cikarang"*.
+- [ ] **TSK-21:** Foto Dokumentasi Riil Lapangan (mengambil foto asli di gudang Sukadami saat ada batch produksi untuk menggantikan render secara bertahap).
