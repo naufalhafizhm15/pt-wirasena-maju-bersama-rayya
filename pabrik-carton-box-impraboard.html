@@ -8,8 +8,8 @@
   <meta name="keywords" content="supplier pabrik, supplier kebutuhan pabrik terdekat, general supplier pabrik cikarang bekasi, supplier alat listrik industri terdekat, supplier sparepart mesin &amp; pneumatic pabrik, supplier alat safety K3 &amp; cleaning pabrik, supplier kardus pabrik terdekat, pabrik carton box cikarang bekasi, supplier box impraboard custom, supplier lakban &amp; plastik wrapping pabrik, jasa fabrikasi pabrik terdekat, pembuatan trolley stainless &amp; besi pabrik, bengkel las &amp; fabrikasi industri bekasi" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://wirasenaraya.com/pabrik-carton-box-impraboard.html" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png?v=32" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png?v=32" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png?v=33" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png?v=33" />
 
   <!-- Anti-Cache Meta Tags (Forces fresh reload on mobile browsers & WhatsApp) -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -21,7 +21,7 @@
   <meta property="og:title" content="Supplier Kardus Pabrik Terdekat &amp; Pabrik Carton Box Cikarang Bekasi | PT. Wirasena" />
   <meta property="og:description" content="Supplier kardus pabrik terdekat dan pabrik corrugated carton box custom serta impraboard box berpartisi di Cikarang &amp; Bekasi. Didukung 5 mesin in-house harga langsung pabrik." />
   <meta property="og:url" content="https://wirasenaraya.com/pabrik-carton-box-impraboard.html" />
-  <meta property="og:image" content="https://wirasenaraya.com/assets/images/logo-trans.png?v=32" />
+  <meta property="og:image" content="https://wirasenaraya.com/assets/images/logo-trans.png?v=33" />
   <meta property="og:locale" content="id_ID" />
 
   <!-- Google Fonts: Montserrat (TransTRACK modern bold) + Inter -->
@@ -70,6 +70,10 @@
       background-color: #FFFFFF;
       color: #111928;
       -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
+    }
+    button, a {
+      touch-action: manipulation;
     }
     .pill-btn {
       border-radius: 9999px;
@@ -113,6 +117,9 @@
     details > summary::-webkit-details-marker {
       display: none;
     }
+    #mobile-drawer {
+      will-change: transform;
+    }
   </style>
 
   <!-- JSON-LD LocalBusiness Schema -->
@@ -154,14 +161,19 @@
   <!-- MAIN NAVBAR (TransTRACK Seamless Floating Header) -->
   <header class="sticky top-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-wira-border text-wira-ink shadow-sm" id="main-header" data-transparent="false">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 sm:h-20 gap-4">
+      <div class="flex items-center justify-between h-14 sm:h-20 gap-3 sm:gap-4">
         
         <!-- Brand Logo & Identity (TransTRACK Minimalist Clean Lockup) -->
-        <a href="index.html" class="flex items-center gap-3 shrink-0 group">
-          <img src="assets/images/logo-trans.png?v=32" alt="PT. Wirasena Maju Bersama Rayya" class="h-9 sm:h-11 w-auto object-contain shrink-0 group-hover:scale-105 transition-transform" />
-          <span class="font-heading font-extrabold text-sm sm:text-base lg:text-lg tracking-tight text-wira-ink whitespace-nowrap">
-            PT. Wirasena Maju Bersama Rayya
-          </span>
+        <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 shrink-0 group">
+          <img src="assets/images/logo-trans.png?v=33" alt="PT. Wirasena Maju Bersama Rayya" class="h-8 sm:h-11 w-auto object-contain shrink-0 group-hover:scale-105 transition-transform" />
+          <div class="flex flex-col">
+            <span class="font-heading font-extrabold text-sm sm:text-base lg:text-lg tracking-tight text-wira-ink whitespace-nowrap leading-tight">
+              PT. Wirasena <span class="hidden sm:inline">Maju Bersama Rayya</span>
+            </span>
+            <span class="text-[10px] text-emerald-700 font-medium sm:hidden leading-none mt-0.5">
+              Maju Bersama Rayya
+            </span>
+          </div>
         </a>
 
         <!-- Desktop Navigation Links (Centered, 1 Baris Rapi, No Wrap) -->
@@ -201,9 +213,9 @@
           <a href="#kontak-rfq" class="text-slate-700 hover:text-wira-accent font-medium transition-colors whitespace-nowrap">Kontak &amp; RFQ</a>
         </nav>
 
-        <!-- CTA Button Kanan (Single Clean TransTRACK Pill) -->
+        <!-- CTA Button Kanan (Desktop Pill) -->
         <div class="hidden sm:flex items-center shrink-0">
-          <a href="#kontak-rfq" class="pill-btn bg-white hover:bg-slate-100 text-slate-900 font-heading font-bold text-xs sm:text-sm px-5 py-2.5 sm:px-6 sm:py-2.5 rounded-full shadow-lg transition flex items-center gap-2 whitespace-nowrap">
+          <a href="#kontak-rfq" class="pill-btn bg-white hover:bg-slate-100 text-slate-900 font-heading font-bold text-xs sm:text-sm px-5 py-2.5 sm:px-6 sm:py-2.5 rounded-full shadow-lg transition flex items-center gap-2 whitespace-nowrap active:scale-95">
             <span>Minta Penawaran</span>
             <svg class="w-3.5 h-3.5 text-slate-700 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
@@ -211,39 +223,130 @@
           </a>
         </div>
 
-        <!-- Mobile Drawer Toggle -->
-        <button id="mobile-menu-btn" type="button" aria-label="Buka Menu Navigasi" class="lg:hidden p-2 rounded-xl border border-white/20 text-current hover:bg-white/10 transition">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
-          </svg>
-        </button>
+        <!-- Mobile Quick RFQ & App Drawer Toggle -->
+        <div class="flex items-center gap-2 lg:hidden">
+          <a href="#kontak-rfq" class="sm:hidden pill-btn px-3 py-1.5 bg-wira-accent text-white font-heading font-bold text-[11px] rounded-full shadow-sm active:scale-95 transition">RFQ &rarr;</a>
+          <button id="mobile-menu-btn" type="button" aria-label="Buka Menu Navigasi" class="w-9 h-9 rounded-full bg-slate-100 border border-slate-200 text-slate-800 flex items-center justify-center hover:bg-slate-200 active:scale-90 transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+            </svg>
+          </button>
+        </div>
 
-      </div>
-    </div>
-
-    <!-- Mobile Drawer Overlay -->
-    <div id="mobile-drawer" class="hidden lg:hidden bg-white text-wira-ink border-t border-wira-border px-5 pt-4 pb-6 space-y-2 shadow-2xl">
-      <a href="index.html" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-bold hover:bg-slate-50">Beranda</a>
-      <a href="pabrik-carton-box-impraboard.html" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50">Carton Box Custom &amp; Impraboard</a>
-      <a href="supplier-electrical-mechanical.html" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50">Electrical, Mechanical &amp; Pneumatik</a>
-      <a href="jasa-fabrikasi-trolley.html" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50">Fabrikasi Storage Trolley &amp; Las</a>
-      <a href="index.html#fasilitas-mesin" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50">5 Mesin Produksi In-House</a>
-      <a href="index.html#mitra-industri" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50">Mitra Pabrik Manufaktur</a>
-      <div class="pt-4 border-t border-slate-100 flex flex-col gap-2.5">
-        <a href="#kontak-rfq" class="mobile-nav-link pill-btn text-center py-3 bg-wira-accent text-white font-heading font-bold text-xs shadow-md">
-          Minta Penawaran Harga (WhatsApp)
-        </a>
-        <a href="tel:+622184990200" class="pill-btn text-center py-2.5 border border-slate-300 text-xs font-semibold text-slate-700">
-          Telepon: (021) 8499 0200
-        </a>
       </div>
     </div>
   </header>
 
+  <!-- NATIVE MOBILE APP DRAWER (iOS / Android Sheet with Backdrop Blur) -->
+  <div id="mobile-drawer-backdrop" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
+  <aside id="mobile-drawer" class="fixed top-0 bottom-0 right-0 z-50 w-[86%] max-w-sm bg-[#0B1512]/98 backdrop-blur-2xl text-white border-l border-white/10 shadow-2xl flex flex-col justify-between translate-x-full transition-transform duration-300 ease-out lg:hidden" aria-label="Navigasi Menu Mobile">
+    
+    <!-- Drawer Top Header (App Bar Style) -->
+    <div class="p-4 sm:p-5 border-b border-white/10 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <img src="assets/images/logo-trans.png?v=33" alt="PT. Wirasena" class="h-8 w-auto object-contain" />
+        <div>
+          <span class="font-heading font-extrabold text-sm text-white block leading-tight">PT. Wirasena</span>
+          <span class="text-[10px] text-emerald-400 font-medium">B2B Industrial Supplier</span>
+        </div>
+      </div>
+      <button id="mobile-close-btn" type="button" aria-label="Tutup Menu" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 active:scale-90 text-white flex items-center justify-center transition">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Drawer Menu Items (Native Categorized List Cells with Chevrons) -->
+    <div class="flex-1 overflow-y-auto p-4 space-y-4 no-scrollbar">
+      
+      <!-- Group 1: Solusi & Produk -->
+      <div>
+        <span class="px-2 text-[10px] font-heading font-bold text-slate-400 uppercase tracking-wider block mb-1.5">
+          Layanan &amp; Manufaktur In-House
+        </span>
+        <div class="space-y-1">
+          <a href="pabrik-carton-box-impraboard.html" class="mobile-nav-link flex items-center justify-between p-2.5 rounded-xl bg-white/5 hover:bg-white/10 active:scale-[0.98] transition">
+            <div class="flex items-center gap-3">
+              <span class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs shrink-0 font-bold">📦</span>
+              <div>
+                <strong class="font-heading text-xs text-white block">Carton Box &amp; Impraboard</strong>
+                <span class="text-[10px] text-slate-400 block">Kardus custom &amp; sekat partisi</span>
+              </div>
+            </div>
+            <svg class="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+          </a>
+
+          <a href="supplier-electrical-mechanical.html" class="mobile-nav-link flex items-center justify-between p-2.5 rounded-xl bg-white/5 hover:bg-white/10 active:scale-[0.98] transition">
+            <div class="flex items-center gap-3">
+              <span class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs shrink-0 font-bold">⚡</span>
+              <div>
+                <strong class="font-heading text-xs text-white block">Electrical &amp; Mechanical</strong>
+                <span class="text-[10px] text-slate-400 block">Komponen panel, bearing &amp; MRO</span>
+              </div>
+            </div>
+            <svg class="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+          </a>
+
+          <a href="jasa-fabrikasi-trolley.html" class="mobile-nav-link flex items-center justify-between p-2.5 rounded-xl bg-white/5 hover:bg-white/10 active:scale-[0.98] transition">
+            <div class="flex items-center gap-3">
+              <span class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs shrink-0 font-bold">🛒</span>
+              <div>
+                <strong class="font-heading text-xs text-white block">Fabrikasi Storage Trolley</strong>
+                <span class="text-[10px] text-slate-400 block">Stainless SUS 304 &amp; rak FIFO</span>
+              </div>
+            </div>
+            <svg class="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Group 2: Profil & Bukti Pabrik -->
+      <div>
+        <span class="px-2 text-[10px] font-heading font-bold text-slate-400 uppercase tracking-wider block mb-1.5">
+          Bukti Fasilitas &amp; Kemitraan
+        </span>
+        <div class="space-y-1">
+          <a href="index.html#fasilitas-mesin" class="mobile-nav-link flex items-center justify-between p-2.5 rounded-xl hover:bg-white/5 active:scale-[0.98] transition">
+            <span class="font-heading text-xs text-slate-200">5 Mesin Produksi In-House</span>
+            <svg class="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+          </a>
+          <a href="index.html#mengapa-memilih" class="mobile-nav-link flex items-center justify-between p-2.5 rounded-xl hover:bg-white/5 active:scale-[0.98] transition">
+            <span class="font-heading text-xs text-slate-200">Keunggulan 1 Pintu PO</span>
+            <svg class="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+          </a>
+          <a href="index.html#mitra-industri" class="mobile-nav-link flex items-center justify-between p-2.5 rounded-xl hover:bg-white/5 active:scale-[0.98] transition">
+            <span class="font-heading text-xs text-slate-200">26+ Mitra Pabrik Manufaktur</span>
+            <svg class="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+          </a>
+          <a href="#kontak-rfq" class="mobile-nav-link flex items-center justify-between p-2.5 rounded-xl hover:bg-white/5 active:scale-[0.98] transition">
+            <span class="font-heading text-xs text-emerald-400 font-bold">Kontak &amp; Permintaan RFQ</span>
+            <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Drawer Footer Actions -->
+    <div class="p-4 border-t border-white/10 space-y-2 bg-black/20">
+      <a href="https://wa.me/622184990200?text=Halo%20PT.%20Wirasena,%20kami%20ingin%20minta%20penawaran%20harga%20(RFQ):" target="_blank" rel="noopener" class="mobile-nav-link w-full py-3 px-4 bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-heading font-bold text-xs rounded-xl flex items-center justify-center gap-2 shadow-lg transition">
+        <span>Hubungi WhatsApp Marketing</span>
+      </a>
+      <a href="tel:+622184990200" class="w-full py-2.5 px-4 bg-white/5 border border-white/15 active:scale-95 text-white font-heading font-semibold text-xs rounded-xl flex items-center justify-center gap-2 transition">
+        <span>Telepon: (021) 8499 0200</span>
+      </a>
+      <p class="text-[10px] text-slate-400 text-center pt-0.5">
+        Workshop Sukadami, Cikarang Selatan &bull; PKP
+      </p>
+    </div>
+
+  </aside>
+
   <main>
     <section class="bg-wira-dark text-white py-10 sm:py-20 relative overflow-hidden">
       <!-- Cinematic Industrial Background -->
-      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" style="background-image: url('assets/images/wirasena-factory-hero-bg.jpg?v=32');"></div>
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" style="background-image: url('assets/images/wirasena-factory-hero-bg.jpg?v=33');"></div>
       <div class="absolute inset-0 bg-gradient-to-r from-[#0B1512] via-[#0E201B]/90 to-[#070D0B] opacity-90 pointer-events-none"></div>
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 class="font-heading font-extrabold text-2xl sm:text-4xl lg:text-5xl text-white tracking-tight max-w-4xl leading-tight">
@@ -262,7 +365,7 @@
         <div id="carton-box" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start pb-10 sm:pb-14 border-b border-wira-border">
           <div class="lg:col-span-5">
             <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-wira-border shadow-sm h-56 sm:h-72 bg-slate-100">
-              <img src="assets/images/product-carton-box.png?v=32" alt="Pabrik Corrugated Carton Box Custom" class="w-full h-full object-cover" />
+              <img src="assets/images/product-carton-box.png?v=33" alt="Pabrik Corrugated Carton Box Custom" class="w-full h-full object-cover" />
             </div>
           </div>
           <div class="lg:col-span-7 space-y-3.5">
@@ -302,7 +405,7 @@
         <div id="impraboard" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start pb-10 sm:pb-14 border-b border-wira-border">
           <div class="lg:col-span-5">
             <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-wira-border shadow-sm h-56 sm:h-72 bg-white p-4 flex items-center justify-center">
-              <img src="assets/images/product-impraboard-box.png?v=32" alt="Box Impraboard PP Sekat Partisi" class="max-h-full max-w-full object-contain" />
+              <img src="assets/images/product-impraboard-box.png?v=33" alt="Box Impraboard PP Sekat Partisi" class="max-h-full max-w-full object-contain" />
             </div>
           </div>
           <div class="lg:col-span-7 space-y-3.5">
@@ -342,7 +445,7 @@
         <div id="rubber-tape" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           <div class="lg:col-span-5">
             <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-wira-border shadow-sm h-56 sm:h-72 bg-white p-4 flex items-center justify-center">
-              <img src="assets/images/product-masking-tape.png?v=32" alt="Synthetic Rubber & Lakban" class="max-h-full max-w-full object-contain" />
+              <img src="assets/images/product-masking-tape.png?v=33" alt="Synthetic Rubber & Lakban" class="max-h-full max-w-full object-contain" />
             </div>
           </div>
           <div class="lg:col-span-7 space-y-3.5">
@@ -396,7 +499,7 @@
         <!-- Left: Official Company Contacts -->
         <div class="lg:col-span-5 bg-white border border-wira-border rounded-2xl sm:rounded-[28px] p-5 sm:p-8 shadow-sm space-y-6">
           <div class="flex items-center gap-3 pb-5 border-b border-slate-100">
-            <img src="assets/images/logo-trans.png?v=32" alt="PT. Wirasena Maju Bersama Rayya" class="h-11 w-auto object-contain shrink-0" />
+            <img src="assets/images/logo-trans.png?v=33" alt="PT. Wirasena Maju Bersama Rayya" class="h-11 w-auto object-contain shrink-0" />
             <div>
               <h3 class="font-heading font-bold text-sm text-wira-ink">PT. Wirasena Maju Bersama Rayya</h3>
               <p class="text-[11px] font-mono text-emerald-600 font-semibold">NPWP: 96.434.539.2-447.000</p>
@@ -502,7 +605,7 @@
   </section>
 
   <!-- DARK ROUNDED FOOTER (TransTRACK Style, rounded-3xl at top) -->
-  <footer class="bg-wira-dark text-white pt-12 sm:pt-16 pb-10 border-t border-white/10">
+  <footer class="bg-wira-dark text-white pt-12 sm:pt-16 pb-28 lg:pb-10 border-t border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 pb-10 border-b border-white/10">
@@ -510,7 +613,7 @@
         <!-- Col 1: Identity & Legal -->
         <div class="lg:col-span-5 space-y-3 sm:space-y-4">
           <div class="flex items-center gap-3">
-            <img src="assets/images/logo-trans.png?v=32" alt="PT. Wirasena Maju Bersama Rayya" class="h-11 sm:h-13 w-auto object-contain shrink-0" />
+            <img src="assets/images/logo-trans.png?v=33" alt="PT. Wirasena Maju Bersama Rayya" class="h-11 sm:h-13 w-auto object-contain shrink-0" />
             <div>
               <span class="font-heading font-extrabold text-sm sm:text-base text-white block">PT. Wirasena Maju Bersama Rayya</span>
               <span class="font-mono text-[11px] text-emerald-400">NPWP: 96.434.539.2-447.000 (PKP)</span>
@@ -570,9 +673,29 @@
     </div>
   </footer>
 
-  <!-- FLOATING WHATSAPP PILL BUTTON (Mobile-friendly compact size) -->
-  <a href="https://wa.me/622184990200?text=Halo%20PT.%20Wirasena%20Maju%20Bersama%20Rayya,%20kami%20ingin%20tanya%20harga%20produk%20pabrik:" target="_blank" rel="noopener" class="pill-btn fixed bottom-4 right-4 sm:bottom-5 sm:right-5 z-50 bg-[#25D366] hover:bg-[#20ba59] text-white font-heading font-bold text-xs px-4 py-3 sm:px-5 sm:py-3.5 shadow-2xl flex items-center gap-2 transition">
-    <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current shrink-0" viewBox="0 0 24 24">
+  <!-- NATIVE MOBILE FLOATING BOTTOM DOCK (Thumb Action Bar - Hidden on lg) -->
+  <div class="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-[#070D0B]/95 backdrop-blur-xl border-t border-white/10 px-3 py-2 pb-[max(0.6rem,env(safe-area-inset-bottom))] shadow-[0_-8px_30px_rgba(0,0,0,0.6)] flex items-center gap-2">
+    <!-- WhatsApp Direct -->
+    <a href="https://wa.me/622184990200?text=Halo%20PT.%20Wirasena%20Maju%20Bersama%20Rayya,%20kami%20ingin%20tanya%20harga%20produk%20pabrik:" target="_blank" rel="noopener" class="flex-1 bg-emerald-600 active:bg-emerald-700 active:scale-[0.98] text-white font-heading font-bold text-xs py-2.5 px-3 rounded-full flex items-center justify-center gap-1.5 shadow-md transition">
+      <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+      <span>Chat WhatsApp</span>
+    </a>
+
+    <!-- Minta RFQ Button -->
+    <a href="#kontak-rfq" class="flex-1 bg-white hover:bg-slate-100 active:bg-slate-200 active:scale-[0.98] text-slate-900 font-heading font-bold text-xs py-2.5 px-3 rounded-full flex items-center justify-center gap-1.5 shadow-md transition">
+      <span>Minta Penawaran</span>
+      <svg class="w-3.5 h-3.5 text-slate-700 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+    </a>
+
+    <!-- Quick Phone Call Icon -->
+    <a href="tel:+622184990200" aria-label="Telepon Kantor" class="w-9 h-9 rounded-full bg-white/10 border border-white/15 active:scale-90 text-white flex items-center justify-center shrink-0 transition">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+    </a>
+  </div>
+
+  <!-- DESKTOP FLOATING WHATSAPP PILL BUTTON (Hidden on mobile) -->
+  <a href="https://wa.me/622184990200?text=Halo%20PT.%20Wirasena%20Maju%20Bersama%20Rayya,%20kami%20ingin%20tanya%20harga%20produk%20pabrik:" target="_blank" rel="noopener" class="pill-btn hidden lg:flex fixed bottom-5 right-5 z-50 bg-[#25D366] hover:bg-[#20ba59] text-white font-heading font-bold text-xs px-5 py-3.5 shadow-2xl items-center gap-2 transition">
+    <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24">
       <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
     </svg>
     <span>Tanya Harga WA</span>
@@ -581,17 +704,34 @@
   <!-- SCRIPTS -->
   <script>
     const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileCloseBtn = document.getElementById('mobile-close-btn');
+    const mobileBackdrop = document.getElementById('mobile-drawer-backdrop');
     const mobileDrawer = document.getElementById('mobile-drawer');
-    if (mobileBtn && mobileDrawer) {
-      mobileBtn.addEventListener('click', () => {
-        mobileDrawer.classList.toggle('hidden');
-      });
-      document.querySelectorAll('.mobile-nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileDrawer.classList.add('hidden');
-        });
-      });
+
+    function openMobileDrawer() {
+      if (mobileDrawer && mobileBackdrop) {
+        mobileBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+        mobileBackdrop.classList.add('opacity-100', 'pointer-events-auto');
+        mobileDrawer.classList.remove('translate-x-full');
+        document.body.style.overflow = 'hidden';
+      }
     }
+
+    function closeMobileDrawer() {
+      if (mobileDrawer && mobileBackdrop) {
+        mobileBackdrop.classList.remove('opacity-100', 'pointer-events-auto');
+        mobileBackdrop.classList.add('opacity-0', 'pointer-events-none');
+        mobileDrawer.classList.add('translate-x-full');
+        document.body.style.overflow = '';
+      }
+    }
+
+    if (mobileBtn) mobileBtn.addEventListener('click', openMobileDrawer);
+    if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMobileDrawer);
+    if (mobileBackdrop) mobileBackdrop.addEventListener('click', closeMobileDrawer);
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', closeMobileDrawer);
+    });
 
     function submitRFQ(e) {
       e.preventDefault();
