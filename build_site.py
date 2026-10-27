@@ -543,9 +543,11 @@ def build_index():
   <main>
     <!-- SECTION 1: CINEMATIC DARK HERO (TransTRACK Style, Mobile-Tuned) -->
     <section class="relative bg-wira-dark text-white pt-10 pb-16 sm:pt-20 sm:pb-28 overflow-hidden">
-      <!-- Dark industrial ambient gradient & subtle grid -->
-      <div class="absolute inset-0 bg-gradient-to-b from-[#0B1512] via-[#0E201B] to-[#070D0B] opacity-95 pointer-events-none"></div>
-      <div class="absolute inset-0 bg-[radial-gradient(#165B33_1px,transparent_1px)] [background-size:24px_24px] opacity-15 pointer-events-none"></div>
+      <!-- TransTRACK Cinematic Industrial Vehicle & Warehouse Background -->
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-65" style="background-image: url('assets/images/hero-cinematic-bg.jpg?v=16');"></div>
+      <!-- Vignette and dark gradient overlay for text readability -->
+      <div class="absolute inset-0 bg-gradient-to-b from-[#0B1512]/80 via-[#0B1512]/50 to-[#070D0B] opacity-95 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(#165B33_1px,transparent_1px)] [background-size:24px_24px] opacity-10 pointer-events-none"></div>
 
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
         
@@ -1449,7 +1451,9 @@ def build_trading():
     body = """
   <main>
     <section class="bg-wira-dark text-white py-10 sm:py-20 relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-r from-[#0B1512] via-[#0E201B] to-[#070D0B] opacity-95 pointer-events-none"></div>
+      <!-- Cinematic Industrial Background -->
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" style="background-image: url('assets/images/hero-cinematic-bg.jpg?v=16');"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0B1512] via-[#0E201B]/90 to-[#070D0B] opacity-90 pointer-events-none"></div>
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-emerald-300 font-heading text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-2.5">
           MRO &amp; Automation Supply
@@ -1603,7 +1607,9 @@ def build_packaging():
     body = """
   <main>
     <section class="bg-wira-dark text-white py-10 sm:py-20 relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-r from-[#0B1512] via-[#0E201B] to-[#070D0B] opacity-95 pointer-events-none"></div>
+      <!-- Cinematic Industrial Background -->
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" style="background-image: url('assets/images/hero-cinematic-bg.jpg?v=16');"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0B1512] via-[#0E201B]/90 to-[#070D0B] opacity-90 pointer-events-none"></div>
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-emerald-300 font-heading text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-2.5">
           In-House Packaging Factory
@@ -1753,7 +1759,9 @@ def build_fabrikasi():
     body = """
   <main>
     <section class="bg-wira-dark text-white py-10 sm:py-20 relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-r from-[#0B1512] via-[#0E201B] to-[#070D0B] opacity-95 pointer-events-none"></div>
+      <!-- Cinematic Industrial Background -->
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" style="background-image: url('assets/images/hero-cinematic-bg.jpg?v=16');"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0B1512] via-[#0E201B]/90 to-[#070D0B] opacity-90 pointer-events-none"></div>
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-emerald-300 font-heading text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-2.5">
           Industrial Metal Workshop
