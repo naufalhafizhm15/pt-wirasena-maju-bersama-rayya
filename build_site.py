@@ -43,6 +43,7 @@ def get_head(title, description, canonical_slug, extra_schema=""):
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
   <title>{title}</title>
   <meta name="description" content="{description}" />
+  <meta name="keywords" content="supplier pabrik, supplier kebutuhan pabrik terdekat, general supplier pabrik cikarang bekasi, supplier alat listrik industri terdekat, supplier sparepart mesin &amp; pneumatic pabrik, supplier alat safety K3 &amp; cleaning pabrik, supplier kardus pabrik terdekat, pabrik carton box cikarang bekasi, supplier box impraboard custom, supplier lakban &amp; plastik wrapping pabrik, jasa fabrikasi pabrik terdekat, pembuatan trolley stainless &amp; besi pabrik, bengkel las &amp; fabrikasi industri bekasi" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="{url}" />
   <link rel="icon" type="image/png" href="assets/images/logo-avatar.png?v=18" />
@@ -157,7 +158,8 @@ def get_head(title, description, canonical_slug, extra_schema=""):
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "Organization"],
     "name": "PT. Wirasena Maju Bersama Rayya",
-    "description": "Supplier pabrik Cikarang & Bekasi untuk Carton Box Custom, Impraboard Box, Alat Listrik, Mekanikal, Pneumatik, Safety K3, dan Fabrikasi Storage Trolley.",
+    "alternateName": ["Supplier Pabrik Cikarang", "General Supplier Pabrik Bekasi", "Supplier Kebutuhan Pabrik Terdekat"],
+    "description": "Supplier kebutuhan pabrik terdekat di Cikarang & Bekasi untuk Carton Box Custom, Impraboard Box, Alat Listrik Industri, Mekanikal, Pneumatik, Safety K3, dan Fabrikasi Storage Trolley.",
     "url": "https://wirasenamajubersama.com",
     "telephone": "+62-21-84990200",
     "email": "info@wirasenamajubersama.com",
@@ -169,7 +171,16 @@ def get_head(title, description, canonical_slug, extra_schema=""):
       "addressRegion": "Jawa Barat",
       "postalCode": "17530",
       "addressCountry": "ID"
-    }}
+    }},
+    "knowsAbout": [
+      "Supplier Pabrik",
+      "Supplier Kebutuhan Pabrik Terdekat",
+      "Pabrik Corrugated Carton Box Custom",
+      "Box Impraboard PP Sekat Partisi",
+      "Alat Listrik Industri & Panel MRO",
+      "Sparepart Mesin & Pneumatic",
+      "Jasa Fabrikasi Storage Trolley"
+    ]
   }}
   </script>
   {extra_schema}
@@ -533,8 +544,8 @@ def get_footer_and_scripts():
 
 def build_index():
     head = get_head(
-        "PT. Wirasena Maju Bersama Rayya | Solusi Pengadaan & Manufaktur Industri Cikarang",
-        "Solusi pengadaan industri terintegrasi di Cikarang & Bekasi: Pabrik Carton Box Custom, Box Impraboard, Supplier Electrical & Mechanical, serta Fabrikasi Storage Trolley.",
+        "Supplier Pabrik Cikarang Bekasi &amp; Pabrik Kemasan Karton | PT. Wirasena",
+        "Supplier kebutuhan pabrik terdekat di Cikarang &amp; Bekasi. Pengadaan cepat alat listrik industri, sparepart mesin mechanical, pneumatic, APD K3, pabrik kardus carton box custom, dan fabrikasi trolley.",
         ""
     )
     nav = get_navbar("home", transparent_hero=True)
@@ -1443,8 +1454,8 @@ def build_index():
 
 def build_trading():
     head = get_head(
-        "Supplier Alat Listrik, Mekanikal, Pneumatik & K3 Cikarang | PT. Wirasena",
-        "Supplier pabrik Cikarang & Bekasi untuk pengadaan barang Electrical (MCB, PLC, Panel), Sparepart Mechanical, Komponen Pneumatik, Cutting Tools, Safety K3, dan Kain Majun.",
+        "Supplier Kebutuhan Pabrik Terdekat: Alat Listrik &amp; Sparepart Mesin Cikarang | PT. Wirasena",
+        "Supplier alat listrik industri, sparepart mesin &amp; pneumatic pabrik terdekat di Cikarang &amp; Bekasi. Pengadaan MCB, PLC, inverter, kabel, fitting pneumatic Festo SMC, dan alat safety K3 pabrik.",
         "supplier-electrical-mechanical.html"
     )
     nav = get_navbar("trading")
@@ -1599,8 +1610,8 @@ def build_trading():
 
 def build_packaging():
     head = get_head(
-        "Pabrik Carton Box Custom & Impraboard Box Cikarang | PT. Wirasena",
-        "Produsen Corrugated Carton Box Custom (Single, Double, Triple Wall), Box Impraboard PP Sekat Partisi, dan Synthetic Rubber di Cikarang Selatan.",
+        "Supplier Kardus Pabrik Terdekat &amp; Pabrik Carton Box Cikarang Bekasi | PT. Wirasena",
+        "Supplier kardus pabrik terdekat dan pabrik corrugated carton box custom serta impraboard box berpartisi di Cikarang &amp; Bekasi. Didukung 5 mesin in-house harga langsung pabrik.",
         "pabrik-carton-box-impraboard.html"
     )
     nav = get_navbar("packaging")
@@ -1751,8 +1762,8 @@ def build_packaging():
 
 def build_fabrikasi():
     head = get_head(
-        "Jasa Fabrikasi Storage Trolley, Rak Pipa FIFO & Las Cikarang | PT. Wirasena",
-        "Bengkel fabrikasi logam di Cikarang Selatan untuk pembuatan Storage Trolley Stainless SUS 304 / Besi Hollow, Rak Pipa FIFO Roller, Meja Kerja, dan Pagar Las Industri.",
+        "Jasa Fabrikasi Pabrik Terdekat &amp; Trolley Industri Cikarang Bekasi | PT. Wirasena",
+        "Jasa fabrikasi pabrik terdekat di Cikarang &amp; Bekasi untuk pembuatan trolley stainless &amp; besi pabrik, rak pipa FIFO lean production, dan bengkel las industri presisi.",
         "jasa-fabrikasi-trolley.html"
     )
     nav = get_navbar("fabrikasi")
