@@ -1,0 +1,18 @@
+﻿Task ID,Kategori / Fase,Item Pekerjaan & Goals,PIC (Penanggung Jawab),Prioritas,Status,Target Selesai,Deliverable / Output,Catatan / Keterangan
+TSK-01,Fase 1: Branding,Verifikasi Data Legalitas PT & NPWP,Pak Rony / Naufal,HIGH,SELESAI,2026-10-27,NPWP 96.434.539.2-447.000 terverifikasi (PKP),Data resmi dicantumkan di footer & kontak
+TSK-02,Fase 1: Branding,Desain & Modernisasi Logo Perusahaan,Antigravity / Naufal,HIGH,SELESAI,2026-10-27,Pita 3D Zamrud WB Transparan (logo-trans.png),"Bebas mikro-teks, resolusi tajam"
+TSK-03,Fase 1: Branding,Pembuatan App Icon & Favicon Suite,Antigravity,MEDIUM,SELESAI,2026-10-27,"favicon-32, apple-touch-icon, app-icon-512",Mendukung tampilan bookmark iOS/Android
+TSK-04,Fase 1: Website,Homepage Company Profile (index.html),Antigravity,HIGH,SELESAI,2026-10-27,https://wirasenaraya.com/,"Hero TransTRACK, 3 Lini Solusi, 5 Mesin, Peta Sukadami"
+TSK-05,Fase 1: Website,Katalog: Pabrik Carton Box & Impraboard,Antigravity,HIGH,SELESAI,2026-10-27,pabrik-carton-box-impraboard.html,"Spesifikasi flute E/B/C/CB/A, sekat partisi, impraboard ESD"
+TSK-06,Fase 1: Website,Katalog: General Supplier Electrical & Mechanical,Antigravity,HIGH,SELESAI,2026-10-27,supplier-electrical-mechanical.html,"Komponen panel, bearing, pneumatik SMC/Festo, safety APD"
+TSK-07,Fase 1: Website,Katalog: Jasa Fabrikasi Trolley & Bengkel Las,Antigravity,HIGH,SELESAI,2026-10-27,jasa-fabrikasi-trolley.html,"Storage trolley heavy duty, rak pipa FIFO, meja QC"
+TSK-08,Fase 1: Website,Form Fast Quote RFQ Interaktif,Antigravity,HIGH,SELESAI,2026-10-27,Form RFQ + Direct WhatsApp routing,Format pesan otomatis ke WA admin saat disubmit
+TSK-09,Fase 1: Website,Deploy Staging Online ke GitHub Pages,Antigravity,HIGH,SELESAI,2026-10-27,naufalhafizhm15.github.io/pt-wirasena-maju-bersama-rayya,Auto build & sync via git repository
+TSK-10,Fase 2: Aktivasi Domain,Aktivasi Nomor WhatsApp Bisnis Baru,Naufal / Admin,HIGH,BELUM DIMULAI,2026-10-29,Nomor WA Bisnis Resmi PT,Mengganti nomor placeholder saat kartu/WA baru siap
+TSK-11,Fase 2: Aktivasi Domain,Pointing DNS Domain wirasenaraya.com,Naufal / IT,HIGH,DALAM PROSES,2026-10-30,DNS CNAME / A Record terhubung ke hosting,Bisa diakses langsung dari wirasenaraya.com
+TSK-12,Fase 2: Aktivasi Domain,Aktivasi Sertifikat Keamanan SSL/HTTPS,Naufal / IT,HIGH,BELUM DIMULAI,2026-10-30,HTTPS Gembok Hijau Aktif,Proteksi enkripsi data pengunjung web
+TSK-13,Fase 2: Email Bisnis,Setup Akun Email Bisnis Resmi,Naufal / IT,MEDIUM,BELUM DIMULAI,2026-11-02,sales@wirasenaraya.com / rfq@wirasenaraya.com,Meningkatkan kredibilitas saat kirim surat penawaran
+TSK-14,Fase 3: Dokumen Bisnis,Penyusunan Company Profile PDF (e-Katalog),Antigravity / Naufal,HIGH,BELUM DIMULAI,2026-11-05,File PDF Compro 2-4 lembar,Untuk diunduh di web & dilampirkan via WA/Email
+TSK-15,Fase 3: Local SEO,Pendaftaran Google Business Profile (Maps),Naufal / Pak Rony,HIGH,BELUM DIMULAI,2026-11-08,Titik Google Maps Pabrik Sukadami Terverifikasi,Mempermudah procurement pabrik sekitar Cikarang mencari vendor
+TSK-16,Fase 3: Search Engine,Pendaftaran Google Search Console & Sitemap,Antigravity,MEDIUM,BELUM DIMULAI,2026-11-10,sitemap.xml terindeks Google,Ranking kata kunci: pabrik karton box cikarang
+TSK-17,Fase 3: Dokumentasi,Foto Asli Gudang & Mesin Sukadami,Pak Rony / Om Yongki,MEDIUM,BELUM DIMULAI,2026-11-15,Galeri Foto Asli Produksi & Pengiriman,Menggantikan gambar render AI secara bertahap

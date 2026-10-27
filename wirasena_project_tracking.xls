@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="Header">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2" ss:Color="#047857"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="11" ss:Color="#FFFFFF" ss:Bold="1"/>
+   <Interior ss:Color="#065F46" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="Title">
+   <Font ss:FontName="Calibri" ss:Size="16" ss:Color="#065F46" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="StatusSelesai">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="10" ss:Color="#065F46" ss:Bold="1"/>
+   <Interior ss:Color="#D1FAE5" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="StatusProses">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="10" ss:Color="#92400E" ss:Bold="1"/>
+   <Interior ss:Color="#FEF3C7" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="StatusBelum">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="10" ss:Color="#4B5563" ss:Bold="1"/>
+   <Interior ss:Color="#F3F4F6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="PrioHigh">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="10" ss:Color="#991B1B" ss:Bold="1"/>
+   <Interior ss:Color="#FEE2E2" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="PrioMed">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="10" ss:Color="#92400E" ss:Bold="1"/>
+   <Interior ss:Color="#FEF3C7" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="CenterCell">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Project Roadmap">
+  <Table ss:DefaultRowHeight="22">
+   <Column ss:Width="60"/>
+   <Column ss:Width="140"/>
+   <Column ss:Width="260"/>
+   <Column ss:Width="130"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="110"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="260"/>
+   <Column ss:Width="260"/>
+   
+   <Row ss:Height="30">
+    <Cell ss:MergeAcross="8" ss:StyleID="Title"><Data ss:Type="String">PT. WIRASENA MAJU BERSAMA RAYYA - MASTER PROJECT TRACKER</Data></Cell>
+   </Row>
+   <Row ss:Height="24">
+    <Cell ss:StyleID="Header"><Data ss:Type="String">ID</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Kategori / Fase</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Item Pekerjaan &amp; Goals</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">PIC</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Prioritas</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Status</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Target</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Deliverable / Output</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Catatan / Keterangan</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">TSK-01</Data></Cell>
+    <Cell><Data ss:Type="String">Fase 1: Branding</Data></Cell>
+    <Cell><Data ss:Type="String">Verifikasi Data Legalitas PT & NPWP</Data></Cell>
+    <Cell><Data ss:Type="String">Pak Rony / Naufal</Data></Cell>
+    <Cell ss:StyleID="PrioHigh"><Data ss:Type="String">HIGH</Data></Cell>
+    <Cell ss:StyleID="StatusSelesai"><Data ss:Type="String">SELESAI</Data></Cell>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">2026-10-27</Data></Cell>
+    <Cell><Data ss:Type="String">NPWP 96.434.539.2-447.000 terverifikasi (PKP)</Data></Cell>
+    <Cell><Data ss:Type="String">Data resmi dicantumkan di footer & kontak</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">TSK-02</Data></Cell>
+    <Cell><Data ss:Type="String">Fase 1: Branding</Data></Cell>
+    <Cell><Data ss:Type="String">Desain & Modernisasi Logo Perusahaan</Data></Cell>
+    <Cell><Data ss:Type="String">Antigravity / Naufal</Data></Cell>
+    <Cell ss:StyleID="PrioHigh"><Data ss:Type="String">HIGH</Data></Cell>
+    <Cell ss:StyleID="StatusSelesai"><Data ss:Type="String">SELESAI</Data></Cell>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">2026-10-27</Data></Cell>
+    <Cell><Data ss:Type="String">Pita 3D Zamrud WB Transparan (logo-trans.png)</Data></Cell>
+    <Cell><Data ss:Type="String">Bebas mikro-teks, resolusi tajam</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">TSK-03</Data></Cell>
+    <Cell><Data ss:Type="String">Fase 1: Branding</Data></Cell>
+    <Cell><Data ss:Type="String">Pembuatan App Icon & Favicon Suite</Data></Cell>
+    <Cell><Data ss:Type="String">Antigravity</Data></Cell>
+    <Cell ss:StyleID="PrioMed"><Data ss:Type="String">MEDIUM</Data></Cell>
+    <Cell ss:StyleID="StatusSelesai"><Data ss:Type="String">SELESAI</Data></Cell>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">2026-10-27</Data></Cell>
+    <Cell><Data ss:Type="String">favicon-32, apple-touch-icon, app-icon-512</Data></Cell>
+    <Cell><Data ss:Type="String">Mendukung tampilan bookmark iOS/Android</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">TSK-04</Data></Cell>
+    <Cell><Data ss:Type="String">Fase 1: Website</Data></Cell>
+    <Cell><Data ss:Type="String">Homepage Company Profile (index.html)</Data></Cell>
+    <Cell><Data ss:Type="String">Antigravity</Data></Cell>
+    <Cell ss:StyleID="PrioHigh"><Data ss:Type="String">HIGH</Data></Cell>
+    <Cell ss:StyleID="StatusSelesai"><Data ss:Type="String">SELESAI</Data></Cell>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">2026-10-27</Data></Cell>
+    <Cell><Data ss:Type="String">https://wirasenaraya.com/</Data></Cell>
+    <Cell><Data ss:Type="String">Hero TransTRACK, 3 Lini Solusi, 5 Mesin, Peta Sukadami</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">TSK-05</Data></Cell>
+    <Cell><Data ss:Type="String">Fase 1: Website</Data></Cell>
+    <Cell><Data ss:Type="String">Katalog: Pabrik Carton Box & Impraboard</Data></Cell>
+    <Cell><Data ss:Type="String">Antigravity</Data></Cell>
+    <Cell ss:StyleID="PrioHigh"><Data ss:Type="String">HIGH</Data></Cell>
+    <Cell ss:StyleID="StatusSelesai"><Data ss:Type="String">SELESAI</Data></Cell>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">2026-10-27</Data></Cell>
+    <Cell><Data ss:Type="String">pabrik-carton-box-impraboard.html</Data></Cell>
+    <Cell><Data ss:Type="String">Spesifikasi flute E/B/C/CB/A, sekat partisi, impraboard ESD</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">TSK-06</Data></Cell>
+    <Cell><Data ss:Type="String">Fase 1: Website</Data></Cell>
+    <Cell><Data ss:Type="String">Katalog: General Supplier Electrical & Mechanical</Data></Cell>
+    <Cell><Data ss:Type="String">Antigravity</Data></Cell>
+    <Cell ss:StyleID="PrioHigh"><Data ss:Type="String">HIGH</Data></Cell>
+    <Cell ss:StyleID="StatusSelesai"><Data ss:Type="String">SELESAI</Data></Cell>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">2026-10-27</Data></Cell>
+    <Cell><Data ss:Type="String">supplier-electrical-mechanical.html</Data></Cell>
+    <Cell><Data ss:Type="String">Komponen panel, bearing, pneumatik SMC/Festo, safety APD</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">TSK-07</Data></Cell>
+    <Cell><Data ss:Type="String">Fase 1: Website</Data></Cell>
+    <Cell><Data ss:Type="String">Katalog: Jasa Fabrikasi Trolley & Bengkel Las</Data></Cell>
+    <Cell><Data ss:Type="String">Antigravity</Data></Cell>
+    <Cell ss:StyleID="PrioHigh"><Data ss:Type="String">HIGH</Data></Cell>
+    <Cell ss:StyleID="StatusSelesai"><Data ss:Type="String">SELESAI</Data></Cell>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">2026-10-27</Data></Cell>
+    <Cell><Data ss:Type="String">jasa-fabrikasi-trolley.html</Data></Cell>
+    <Cell><Data ss:Type="String">Storage trolley heavy duty, rak pipa FIFO, meja QC</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">TSK-08</Data></Cell>
+    <Cell><Data ss:Type="String">Fase 1: Website</Data></Cell>
+    <Cell><Data ss:Type="String">Form Fast Quote RFQ Interaktif</Data></Cell>
+    <Cell><Data ss:Type="String">Antigravity</Data></Cell>
+    <Cell ss:StyleID="PrioHigh"><Data ss:Type="String">HIGH</Data></Cell>
+    <Cell ss:StyleID="StatusSelesai"><Data ss:Type="String">SELESAI</Data></Cell>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">2026-10-27</Data></Cell>
+    <Cell><Data ss:Type="String">Form RFQ + Direct WhatsApp routing</Data></Cell>
+    <Cell><Data ss:Type="String">Format pesan otomatis ke WA admin saat disubmit</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">TSK-09</Data></Cell>
+    <Cell><Data ss:Type="String">Fase 1: Website</Data></Cell>
+    <Cell><Data ss:Type="String">Deploy Staging Online ke GitHub Pages</Data></Cell>
+    <Cell><Data ss:Type="String">Antigravity</Data></Cell>
+    <Cell ss:StyleID="PrioHigh"><Data ss:Type="String">HIGH</Data></Cell>
+    <Cell ss:StyleID="StatusSelesai"><Data ss:Type="String">SELESAI</Data></Cell>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">2026-10-27</Data></Cell>
+    <Cell><Data ss:Type="String">naufalhafizhm15.github.io/pt-wirasena-maju-bersama-rayya</Data></Cell>
+    <Cell><Data ss:Type="String">Auto build & sync via git repository</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">TSK-10</Data></Cell>
+    <Cell><Data ss:Type="String">Fase 2: Aktivasi Domain</Data></Cell>
+    <Cell><Data ss:Type="String">Aktivasi Nomor WhatsApp Bisnis Baru</Data></Cell>
+    <Cell><Data ss:Type="String">Naufal / Admin</Data></Cell>
+    <Cell ss:StyleID="PrioHigh"><Data ss:Type="String">HIGH</Data></Cell>
+    <Cell ss:StyleID="StatusBelum"><Data ss:Type="String">BELUM DIMULAI</Data></Cell>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">2026-10-29</Data></Cell>
+    <Cell><Data ss:Type="String">Nomor WA Bisnis Resmi PT</Data></Cell>
+    <Cell><Data ss:Type="String">Mengganti nomor placeholder saat kartu/WA baru siap</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">TSK-11</Data></Cell>
+    <Cell><Data ss:Type="String">Fase 2: Aktivasi Domain</Data></Cell>
+    <Cell><Data ss:Type="String">Pointing DNS Domain wirasenaraya.com</Data></Cell>
+    <Cell><Data ss:Type="String">Naufal / IT</Data></Cell>
+    <Cell ss:StyleID="PrioHigh"><Data ss:Type="String">HIGH</Data></Cell>
+    <Cell ss:StyleID="StatusProses"><Data ss:Type="String">DALAM PROSES</Data></Cell>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">2026-10-30</Data></Cell>
+    <Cell><Data ss:Type="String">DNS CNAME / A Record terhubung ke hosting</Data></Cell>
+    <Cell><Data ss:Type="String">Bisa diakses langsung dari wirasenaraya.com</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">TSK-12</Data></Cell>
+    <Cell><Data ss:Type="String">Fase 2: Aktivasi Domain</Data></Cell>
+    <Cell><Data ss:Type="String">Aktivasi Sertifikat Keamanan SSL/HTTPS</Data></Cell>
+    <Cell><Data ss:Type="String">Naufal / IT</Data></Cell>
+    <Cell ss:StyleID="PrioHigh"><Data ss:Type="String">HIGH</Data></Cell>
+    <Cell ss:StyleID="StatusBelum"><Data ss:Type="String">BELUM DIMULAI</Data></Cell>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">2026-10-30</Data></Cell>
+    <Cell><Data ss:Type="String">HTTPS Gembok Hijau Aktif</Data></Cell>
+    <Cell><Data ss:Type="String">Proteksi enkripsi data pengunjung web</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">TSK-13</Data></Cell>
+    <Cell><Data ss:Type="String">Fase 2: Email Bisnis</Data></Cell>
+    <Cell><Data ss:Type="String">Setup Akun Email Bisnis Resmi</Data></Cell>
+    <Cell><Data ss:Type="String">Naufal / IT</Data></Cell>
+    <Cell ss:StyleID="PrioMed"><Data ss:Type="String">MEDIUM</Data></Cell>
+    <Cell ss:StyleID="StatusBelum"><Data ss:Type="String">BELUM DIMULAI</Data></Cell>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">2026-11-02</Data></Cell>
+    <Cell><Data ss:Type="String">sales@wirasenaraya.com / rfq@wirasenaraya.com</Data></Cell>
+    <Cell><Data ss:Type="String">Meningkatkan kredibilitas saat kirim surat penawaran</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">TSK-14</Data></Cell>
+    <Cell><Data ss:Type="String">Fase 3: Dokumen Bisnis</Data></Cell>
+    <Cell><Data ss:Type="String">Penyusunan Company Profile PDF (e-Katalog)</Data></Cell>
+    <Cell><Data ss:Type="String">Antigravity / Naufal</Data></Cell>
+    <Cell ss:StyleID="PrioHigh"><Data ss:Type="String">HIGH</Data></Cell>
+    <Cell ss:StyleID="StatusBelum"><Data ss:Type="String">BELUM DIMULAI</Data></Cell>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">2026-11-05</Data></Cell>
+    <Cell><Data ss:Type="String">File PDF Compro 2-4 lembar</Data></Cell>
+    <Cell><Data ss:Type="String">Untuk diunduh di web & dilampirkan via WA/Email</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">TSK-15</Data></Cell>
+    <Cell><Data ss:Type="String">Fase 3: Local SEO</Data></Cell>
+    <Cell><Data ss:Type="String">Pendaftaran Google Business Profile (Maps)</Data></Cell>
+    <Cell><Data ss:Type="String">Naufal / Pak Rony</Data></Cell>
+    <Cell ss:StyleID="PrioHigh"><Data ss:Type="String">HIGH</Data></Cell>
+    <Cell ss:StyleID="StatusBelum"><Data ss:Type="String">BELUM DIMULAI</Data></Cell>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">2026-11-08</Data></Cell>
+    <Cell><Data ss:Type="String">Titik Google Maps Pabrik Sukadami Terverifikasi</Data></Cell>
+    <Cell><Data ss:Type="String">Mempermudah procurement pabrik sekitar Cikarang mencari vendor</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">TSK-16</Data></Cell>
+    <Cell><Data ss:Type="String">Fase 3: Search Engine</Data></Cell>
+    <Cell><Data ss:Type="String">Pendaftaran Google Search Console & Sitemap</Data></Cell>
+    <Cell><Data ss:Type="String">Antigravity</Data></Cell>
+    <Cell ss:StyleID="PrioMed"><Data ss:Type="String">MEDIUM</Data></Cell>
+    <Cell ss:StyleID="StatusBelum"><Data ss:Type="String">BELUM DIMULAI</Data></Cell>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">2026-11-10</Data></Cell>
+    <Cell><Data ss:Type="String">sitemap.xml terindeks Google</Data></Cell>
+    <Cell><Data ss:Type="String">Ranking kata kunci: pabrik karton box cikarang</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">TSK-17</Data></Cell>
+    <Cell><Data ss:Type="String">Fase 3: Dokumentasi</Data></Cell>
+    <Cell><Data ss:Type="String">Foto Asli Gudang & Mesin Sukadami</Data></Cell>
+    <Cell><Data ss:Type="String">Pak Rony / Om Yongki</Data></Cell>
+    <Cell ss:StyleID="PrioMed"><Data ss:Type="String">MEDIUM</Data></Cell>
+    <Cell ss:StyleID="StatusBelum"><Data ss:Type="String">BELUM DIMULAI</Data></Cell>
+    <Cell ss:StyleID="CenterCell"><Data ss:Type="String">2026-11-15</Data></Cell>
+    <Cell><Data ss:Type="String">Galeri Foto Asli Produksi & Pengiriman</Data></Cell>
+    <Cell><Data ss:Type="String">Menggantikan gambar render AI secara bertahap</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+</Workbook>
