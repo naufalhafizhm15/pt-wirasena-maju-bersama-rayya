@@ -46,7 +46,7 @@ def get_head(title, description, canonical_slug, extra_schema=""):
   <meta name="keywords" content="supplier pabrik, supplier kebutuhan pabrik terdekat, general supplier pabrik cikarang bekasi, supplier alat listrik industri terdekat, supplier sparepart mesin &amp; pneumatic pabrik, supplier alat safety K3 &amp; cleaning pabrik, supplier kardus pabrik terdekat, pabrik carton box cikarang bekasi, supplier box impraboard custom, supplier lakban &amp; plastik wrapping pabrik, jasa fabrikasi pabrik terdekat, pembuatan trolley stainless &amp; besi pabrik, bengkel las &amp; fabrikasi industri bekasi" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="{url}" />
-  <link rel="icon" type="image/png" href="assets/images/logo-avatar.png?v=25" />
+  <link rel="icon" type="image/png" href="assets/images/logo-avatar.png?v=26" />
 
   <!-- Anti-Cache Meta Tags (Forces fresh reload on mobile browsers & WhatsApp) -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -58,7 +58,7 @@ def get_head(title, description, canonical_slug, extra_schema=""):
   <meta property="og:title" content="{title}" />
   <meta property="og:description" content="{description}" />
   <meta property="og:url" content="{url}" />
-  <meta property="og:image" content="https://wirasenaraya.com/assets/images/logo-trans.png?v=25" />
+  <meta property="og:image" content="https://wirasenaraya.com/assets/images/logo-trans.png?v=26" />
   <meta property="og:locale" content="id_ID" />
 
   <!-- Google Fonts: Montserrat (TransTRACK modern bold) + Inter -->
@@ -192,7 +192,8 @@ def get_navbar(active_page="home", transparent_hero=False):
     nav_bg = "bg-white/95 backdrop-blur-md border-b border-wira-border text-wira-ink" if not transparent_hero else "bg-wira-dark/90 backdrop-blur-md border-b border-white/10 text-white"
     link_color = "text-slate-700 hover:text-wira-accent" if not transparent_hero else "text-slate-200 hover:text-white"
     active_color = "text-wira-accent font-bold" if not transparent_hero else "text-emerald-400 font-bold"
-    nav_logo = "assets/images/logo-footer-white.png?v=25" if transparent_hero else "assets/images/logo-trans.png?v=25"
+    brand_text_color = "text-wira-ink" if not transparent_hero else "text-white"
+    nav_logo = "assets/images/logo-footer-white.png?v=26" if transparent_hero else "assets/images/logo-trans.png?v=26"
 
     def nav_class(page):
         return active_color if active_page == page else link_color
@@ -203,23 +204,18 @@ def get_navbar(active_page="home", transparent_hero=False):
   <!-- MAIN STICKY NAVBAR -->
   <header class="sticky top-0 z-50 {nav_bg} transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 sm:h-20 gap-3">
+      <div class="flex items-center justify-between h-16 sm:h-20 gap-4">
         
-        <!-- Brand Logo & Identity -->
-        <a href="index.html" class="flex items-center gap-2.5 sm:gap-3.5 shrink-0 group">
-          <img src="{nav_logo}" alt="PT. Wirasena Maju Bersama Rayya" class="h-11 sm:h-15 w-auto object-contain shrink-0 group-hover:scale-105 transition-transform" />
-          <div class="max-w-[190px] sm:max-w-none">
-            <span class="font-heading font-extrabold text-xs sm:text-base lg:text-lg block leading-tight tracking-tight truncate sm:whitespace-normal">
-              PT. Wirasena Maju Bersama Rayya
-            </span>
-            <span class="text-[10px] sm:text-[11px] text-slate-400 block font-heading font-medium tracking-wide truncate">
-              Packaging &bull; Supply Chain &bull; Fabrication
-            </span>
-          </div>
+        <!-- Brand Logo & Identity (Clean Single-Line Corporate Lockup) -->
+        <a href="index.html" class="flex items-center gap-3 shrink-0 group">
+          <img src="{nav_logo}" alt="PT. Wirasena Maju Bersama Rayya" class="h-10 sm:h-12 w-auto object-contain shrink-0 group-hover:scale-105 transition-transform" />
+          <span class="font-heading font-extrabold text-sm sm:text-base lg:text-lg tracking-tight {brand_text_color} whitespace-nowrap">
+            PT. Wirasena Maju Bersama Rayya
+          </span>
         </a>
 
-        <!-- Desktop Navigation Links -->
-        <nav class="hidden lg:flex items-center gap-7 font-heading text-sm" aria-label="Menu Utama">
+        <!-- Desktop Navigation Links (Evenly spaced, clean alignment) -->
+        <nav class="hidden lg:flex items-center gap-5 xl:gap-8 font-heading text-sm ml-auto mr-6" aria-label="Menu Utama">
           <a href="index.html" class="{nav_class('home')} transition-colors">Beranda</a>
 
           <!-- Dropdown Katalog Solusi -->
@@ -318,7 +314,7 @@ def get_footer_and_scripts():
         <!-- Left: Official Company Contacts -->
         <div class="lg:col-span-5 bg-white border border-wira-border rounded-2xl sm:rounded-[28px] p-5 sm:p-8 shadow-sm space-y-6">
           <div class="flex items-center gap-3 pb-5 border-b border-slate-100">
-            <img src="assets/images/logo-trans.png?v=25" alt="PT. Wirasena Maju Bersama Rayya" class="h-11 w-auto object-contain shrink-0" />
+            <img src="assets/images/logo-trans.png?v=26" alt="PT. Wirasena Maju Bersama Rayya" class="h-11 w-auto object-contain shrink-0" />
             <div>
               <h3 class="font-heading font-bold text-sm text-wira-ink">PT. Wirasena Maju Bersama Rayya</h3>
               <p class="text-[11px] font-mono text-emerald-600 font-semibold">NPWP: 96.434.539.2-447.000</p>
@@ -432,7 +428,7 @@ def get_footer_and_scripts():
         <!-- Col 1: Identity & Legal -->
         <div class="lg:col-span-5 space-y-3 sm:space-y-4">
           <div class="flex items-center gap-3">
-            <img src="assets/images/logo-footer-white.png?v=25" alt="PT. Wirasena Maju Bersama Rayya" class="h-11 sm:h-14 w-auto object-contain shrink-0" />
+            <img src="assets/images/logo-footer-white.png?v=26" alt="PT. Wirasena Maju Bersama Rayya" class="h-11 sm:h-14 w-auto object-contain shrink-0" />
             <div>
               <span class="font-heading font-extrabold text-sm sm:text-base text-white block">PT. Wirasena Maju Bersama Rayya</span>
               <span class="font-mono text-[11px] text-emerald-400">NPWP: 96.434.539.2-447.000 (PKP)</span>
@@ -625,7 +621,7 @@ def build_index():
     <!-- SECTION 1: CINEMATIC DARK HERO (TransTRACK Style, Mobile-Tuned) -->
     <section class="relative bg-wira-dark text-white pt-10 pb-16 sm:pt-20 sm:pb-28 overflow-hidden">
       <!-- TransTRACK Cinematic Industrial Packaging Plant & Machine Floor Background -->
-      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-65" style="background-image: url('assets/images/wirasena-factory-hero-bg.jpg?v=25');"></div>
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-65" style="background-image: url('assets/images/wirasena-factory-hero-bg.jpg?v=26');"></div>
       <!-- Vignette and dark gradient overlay for text readability -->
       <div class="absolute inset-0 bg-gradient-to-b from-[#0B1512]/80 via-[#0B1512]/50 to-[#070D0B] opacity-95 pointer-events-none"></div>
       <div class="absolute inset-0 bg-[radial-gradient(#165B33_1px,transparent_1px)] [background-size:24px_24px] opacity-10 pointer-events-none"></div>
@@ -750,7 +746,7 @@ def build_index():
 
                 <!-- Workshop Visual Snapshot -->
                 <div class="rounded-xl sm:rounded-2xl overflow-hidden border border-white/10 shadow-md">
-                  <img src="assets/images/machine-2b-auto-folder-glue.png?v=25" alt="Mesin Produksi Automatic Folder Glue PT Wirasena" class="w-full h-44 sm:h-52 object-cover" />
+                  <img src="assets/images/machine-2b-auto-folder-glue.png?v=26" alt="Mesin Produksi Automatic Folder Glue PT Wirasena" class="w-full h-44 sm:h-52 object-cover" />
                 </div>
 
                 <div class="p-3 sm:p-4 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between text-xs">
@@ -887,7 +883,7 @@ def build_index():
             <!-- Machine 1 -->
             <div class="group relative rounded-xl sm:rounded-2xl overflow-hidden bg-white/10 border border-white/15 flex flex-col justify-between shadow-lg">
               <div class="h-40 sm:h-44 overflow-hidden">
-                <img src="assets/images/machine-1-cutting-creasing.png?v=25" alt="Mesin Cutting & Creasing Carton Box" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+                <img src="assets/images/machine-1-cutting-creasing.png?v=26" alt="Mesin Cutting & Creasing Carton Box" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
               </div>
               <div class="p-3 bg-white text-wira-ink text-left">
                 <span class="text-[10px] font-mono font-bold text-wira-accent block uppercase">Mesin 01</span>
@@ -899,7 +895,7 @@ def build_index():
             <!-- Machine 2 -->
             <div class="group relative rounded-xl sm:rounded-2xl overflow-hidden bg-white/10 border border-white/15 flex flex-col justify-between shadow-lg">
               <div class="h-40 sm:h-44 overflow-hidden">
-                <img src="assets/images/machine-2b-auto-folder-glue.png?v=25" alt="Mesin Auto Folder Glue" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+                <img src="assets/images/machine-2b-auto-folder-glue.png?v=26" alt="Mesin Auto Folder Glue" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
               </div>
               <div class="p-3 bg-white text-wira-ink text-left">
                 <span class="text-[10px] font-mono font-bold text-wira-accent block uppercase">Mesin 02</span>
@@ -911,7 +907,7 @@ def build_index():
             <!-- Machine 3 -->
             <div class="group relative rounded-xl sm:rounded-2xl overflow-hidden bg-white/10 border border-white/15 flex flex-col justify-between shadow-lg">
               <div class="h-40 sm:h-44 overflow-hidden">
-                <img src="assets/images/machine-3-semi-folder-glue.png?v=25" alt="Mesin Semi Folder Glue" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+                <img src="assets/images/machine-3-semi-folder-glue.png?v=26" alt="Mesin Semi Folder Glue" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
               </div>
               <div class="p-3 bg-white text-wira-ink text-left">
                 <span class="text-[10px] font-mono font-bold text-wira-accent block uppercase">Mesin 03</span>
@@ -923,7 +919,7 @@ def build_index():
             <!-- Machine 4 -->
             <div class="group relative rounded-xl sm:rounded-2xl overflow-hidden bg-white/10 border border-white/15 flex flex-col justify-between shadow-lg">
               <div class="h-40 sm:h-44 overflow-hidden">
-                <img src="assets/images/machine-4-rotary-sloter.png?v=25" alt="Mesin Rotary Sloter" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+                <img src="assets/images/machine-4-rotary-sloter.png?v=26" alt="Mesin Rotary Sloter" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
               </div>
               <div class="p-3 bg-white text-wira-ink text-left">
                 <span class="text-[10px] font-mono font-bold text-wira-accent block uppercase">Mesin 04</span>
@@ -935,7 +931,7 @@ def build_index():
             <!-- Machine 5 -->
             <div class="group relative rounded-xl sm:rounded-2xl overflow-hidden bg-white/10 border border-white/15 flex flex-col justify-between shadow-lg sm:col-span-2 lg:col-span-1">
               <div class="h-40 sm:h-44 overflow-hidden">
-                <img src="assets/images/machine-5-rotary-die-cut.png?v=25" alt="Mesin Rotary Die Cut" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+                <img src="assets/images/machine-5-rotary-die-cut.png?v=26" alt="Mesin Rotary Die Cut" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
               </div>
               <div class="p-3 bg-white text-wira-ink text-left">
                 <span class="text-[10px] font-mono font-bold text-wira-accent block uppercase">Mesin 05</span>
@@ -998,7 +994,7 @@ def build_index():
           <div class="solution-card bg-white border border-wira-border rounded-2xl sm:rounded-[28px] overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between" data-cat="packaging">
             <div>
               <div class="h-48 sm:h-64 bg-slate-100 overflow-hidden relative">
-                <img src="assets/images/product-carton-box.png?v=25" alt="Produksi Carton Box Custom" class="w-full h-full object-cover" />
+                <img src="assets/images/product-carton-box.png?v=26" alt="Produksi Carton Box Custom" class="w-full h-full object-cover" />
                 <span class="absolute top-3 left-3 pill-btn px-3 py-1 bg-wira-dark/80 text-white font-heading text-[10px] font-bold backdrop-blur-md">
                   In-House Factory
                 </span>
@@ -1030,7 +1026,7 @@ def build_index():
           <div class="solution-card bg-white border border-wira-border rounded-2xl sm:rounded-[28px] overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between" data-cat="teknik">
             <div>
               <div class="h-48 sm:h-64 bg-slate-100 overflow-hidden relative">
-                <img src="assets/images/trading-electrical-mechanical.png?v=25" alt="Pengadaan Komponen Listrik & Mesin" class="w-full h-full object-cover" />
+                <img src="assets/images/trading-electrical-mechanical.png?v=26" alt="Pengadaan Komponen Listrik & Mesin" class="w-full h-full object-cover" />
                 <span class="absolute top-3 left-3 pill-btn px-3 py-1 bg-wira-dark/80 text-white font-heading text-[10px] font-bold backdrop-blur-md">
                   MRO Supply Chain
                 </span>
@@ -1062,7 +1058,7 @@ def build_index():
           <div class="solution-card bg-white border border-wira-border rounded-2xl sm:rounded-[28px] overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between" data-cat="fabrikasi">
             <div>
               <div class="h-48 sm:h-64 bg-slate-50 p-4 flex items-center justify-center relative">
-                <img src="assets/images/fabrication-trolley-blue.png?v=25" alt="Fabrikasi Storage Trolley Stainless Besi" class="max-h-full max-w-full object-contain" />
+                <img src="assets/images/fabrication-trolley-blue.png?v=26" alt="Fabrikasi Storage Trolley Stainless Besi" class="max-h-full max-w-full object-contain" />
                 <span class="absolute top-3 left-3 pill-btn px-3 py-1 bg-wira-dark/80 text-white font-heading text-[10px] font-bold backdrop-blur-md">
                   Metal Fabrication
                 </span>
@@ -1094,7 +1090,7 @@ def build_index():
           <div class="solution-card bg-white border border-wira-border rounded-2xl sm:rounded-[28px] overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between" data-cat="safety">
             <div>
               <div class="h-48 sm:h-64 bg-slate-100 overflow-hidden relative">
-                <img src="assets/images/trading-cleaning-k3.png?v=25" alt="Safety APD, Kain Majun & Lakban" class="w-full h-full object-cover" />
+                <img src="assets/images/trading-cleaning-k3.png?v=26" alt="Safety APD, Kain Majun & Lakban" class="w-full h-full object-cover" />
                 <span class="absolute top-3 left-3 pill-btn px-3 py-1 bg-wira-dark/80 text-white font-heading text-[10px] font-bold backdrop-blur-md">
                   Consumables &amp; Safety
                 </span>
@@ -1147,7 +1143,7 @@ def build_index():
           <div class="bg-slate-50 border border-wira-border rounded-2xl sm:rounded-[32px] p-5 sm:p-8 shadow-sm flex flex-col justify-between">
             <div>
               <div class="rounded-xl sm:rounded-2xl overflow-hidden h-48 sm:h-64 bg-white border border-slate-200 mb-5 shadow-sm">
-                <img src="assets/images/product-carton-box.png?v=25" alt="Carton Box & Impraboard Packaging" class="w-full h-full object-cover" />
+                <img src="assets/images/product-carton-box.png?v=26" alt="Carton Box & Impraboard Packaging" class="w-full h-full object-cover" />
               </div>
               <span class="text-xs font-heading font-bold text-wira-accent uppercase tracking-wider">Industrial Packaging</span>
               <h3 class="font-heading font-extrabold text-xl sm:text-2xl text-wira-ink mt-1 mb-3">
@@ -1228,7 +1224,7 @@ def build_index():
           <div class="bg-slate-50 border border-wira-border rounded-2xl sm:rounded-[32px] p-5 sm:p-8 shadow-sm flex flex-col justify-between">
             <div>
               <div class="rounded-xl sm:rounded-2xl overflow-hidden h-48 sm:h-64 bg-white border border-slate-200 mb-5 shadow-sm flex items-center justify-center p-3">
-                <img src="assets/images/fabrication-trolley-blue.png?v=25" alt="Fabrikasi Storage Trolley" class="max-h-full max-w-full object-contain" />
+                <img src="assets/images/fabrication-trolley-blue.png?v=26" alt="Fabrikasi Storage Trolley" class="max-h-full max-w-full object-contain" />
               </div>
               <span class="text-xs font-heading font-bold text-wira-accent uppercase tracking-wider">Metal &amp; Workshop</span>
               <h3 class="font-heading font-extrabold text-xl sm:text-2xl text-wira-ink mt-1 mb-3">
@@ -1331,7 +1327,7 @@ def build_index():
                 </p>
 
                 <div class="pt-3">
-                  <img src="assets/images/machine-4-rotary-sloter.png?v=25" alt="Operasional Pabrik PT Wirasena" class="rounded-xl w-full h-40 sm:h-48 object-cover border border-white/10 shadow" />
+                  <img src="assets/images/machine-4-rotary-sloter.png?v=26" alt="Operasional Pabrik PT Wirasena" class="rounded-xl w-full h-40 sm:h-48 object-cover border border-white/10 shadow" />
                 </div>
 
                 <div class="pt-2 flex items-center gap-2 text-xs text-slate-400">
@@ -1436,7 +1432,7 @@ def build_index():
     <section id="mitra-industri" class="relative py-16 sm:py-24 bg-white overflow-hidden">
       <!-- Dotted World Map Background (TransTRACK Style) -->
       <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
-        <img src="assets/images/map-dots.svg?v=25" alt="Peta Jaringan Kemitraan Pabrik" class="w-full max-w-5xl h-auto object-contain" />
+        <img src="assets/images/map-dots.svg?v=26" alt="Peta Jaringan Kemitraan Pabrik" class="w-full max-w-5xl h-auto object-contain" />
       </div>
 
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1473,88 +1469,88 @@ def build_index():
               <!-- SLIDE 0 (6 Logos Frame) -->
               <div class="w-full shrink-0 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 items-center justify-items-center px-2">
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-midea.svg?v=25" alt="PT. Jaya Refrigeration (Midea)" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-midea.svg?v=26" alt="PT. Jaya Refrigeration (Midea)" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
                 </div>
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-indorama.svg?v=25" alt="PT. Indorama Ventures" class="max-h-9 sm:max-h-11 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-indorama.svg?v=26" alt="PT. Indorama Ventures" class="max-h-9 sm:max-h-11 max-w-full object-contain" />
                 </div>
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-yasunli.png?v=25" alt="PT. Yasunli Abadi Utama" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-yasunli.png?v=26" alt="PT. Yasunli Abadi Utama" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
                 </div>
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-skyworth.svg?v=25" alt="PT. Skyworth Industry Indonesia" class="max-h-9 sm:max-h-11 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-skyworth.svg?v=26" alt="PT. Skyworth Industry Indonesia" class="max-h-9 sm:max-h-11 max-w-full object-contain" />
                 </div>
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-daijo.png?v=25" alt="PT. Daijo Industrial" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-daijo.png?v=26" alt="PT. Daijo Industrial" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
                 </div>
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-nis.png?v=25" alt="PT. Nusantara Inti Solusindo" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-nis.png?v=26" alt="PT. Nusantara Inti Solusindo" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
                 </div>
               </div>
 
               <!-- SLIDE 1 (Next Batch Frame) -->
               <div class="w-full shrink-0 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 items-center justify-items-center px-2">
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-eps.png?v=25" alt="PT. EPS Indonesia" class="max-h-10 sm:max-h-12 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-eps.png?v=26" alt="PT. EPS Indonesia" class="max-h-10 sm:max-h-12 max-w-full object-contain" />
                 </div>
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-hns.png?v=25" alt="PT. Haeng Nam Sejahtera" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-hns.png?v=26" alt="PT. Haeng Nam Sejahtera" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
                 </div>
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-midea.svg?v=25" alt="PT. Jaya Refrigeration (Midea)" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-midea.svg?v=26" alt="PT. Jaya Refrigeration (Midea)" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
                 </div>
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-indorama.svg?v=25" alt="PT. Indorama Ventures" class="max-h-9 sm:max-h-11 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-indorama.svg?v=26" alt="PT. Indorama Ventures" class="max-h-9 sm:max-h-11 max-w-full object-contain" />
                 </div>
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-yasunli.png?v=25" alt="PT. Yasunli Abadi Utama" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-yasunli.png?v=26" alt="PT. Yasunli Abadi Utama" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
                 </div>
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-skyworth.svg?v=25" alt="PT. Skyworth Industry Indonesia" class="max-h-9 sm:max-h-11 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-skyworth.svg?v=26" alt="PT. Skyworth Industry Indonesia" class="max-h-9 sm:max-h-11 max-w-full object-contain" />
                 </div>
               </div>
 
               <!-- SLIDE 2 (Next Batch Frame) -->
               <div class="w-full shrink-0 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 items-center justify-items-center px-2">
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-daijo.png?v=25" alt="PT. Daijo Industrial" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-daijo.png?v=26" alt="PT. Daijo Industrial" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
                 </div>
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-nis.png?v=25" alt="PT. Nusantara Inti Solusindo" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-nis.png?v=26" alt="PT. Nusantara Inti Solusindo" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
                 </div>
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-eps.png?v=25" alt="PT. EPS Indonesia" class="max-h-10 sm:max-h-12 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-eps.png?v=26" alt="PT. EPS Indonesia" class="max-h-10 sm:max-h-12 max-w-full object-contain" />
                 </div>
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-hns.png?v=25" alt="PT. Haeng Nam Sejahtera" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-hns.png?v=26" alt="PT. Haeng Nam Sejahtera" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
                 </div>
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-midea.svg?v=25" alt="PT. Jaya Refrigeration (Midea)" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-midea.svg?v=26" alt="PT. Jaya Refrigeration (Midea)" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
                 </div>
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-indorama.svg?v=25" alt="PT. Indorama Ventures" class="max-h-9 sm:max-h-11 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-indorama.svg?v=26" alt="PT. Indorama Ventures" class="max-h-9 sm:max-h-11 max-w-full object-contain" />
                 </div>
               </div>
 
               <!-- SLIDE 3 (Next Batch Frame) -->
               <div class="w-full shrink-0 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 items-center justify-items-center px-2">
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-yasunli.png?v=25" alt="PT. Yasunli Abadi Utama" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-yasunli.png?v=26" alt="PT. Yasunli Abadi Utama" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
                 </div>
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-skyworth.svg?v=25" alt="PT. Skyworth Industry Indonesia" class="max-h-9 sm:max-h-11 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-skyworth.svg?v=26" alt="PT. Skyworth Industry Indonesia" class="max-h-9 sm:max-h-11 max-w-full object-contain" />
                 </div>
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-daijo.png?v=25" alt="PT. Daijo Industrial" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-daijo.png?v=26" alt="PT. Daijo Industrial" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
                 </div>
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-nis.png?v=25" alt="PT. Nusantara Inti Solusindo" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-nis.png?v=26" alt="PT. Nusantara Inti Solusindo" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
                 </div>
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-eps.png?v=25" alt="PT. EPS Indonesia" class="max-h-10 sm:max-h-12 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-eps.png?v=26" alt="PT. EPS Indonesia" class="max-h-10 sm:max-h-12 max-w-full object-contain" />
                 </div>
                 <div class="w-32 sm:w-36 h-14 sm:h-18 flex items-center justify-center transition-transform hover:scale-110 duration-200">
-                  <img src="assets/images/clients/logo-hns.png?v=25" alt="PT. Haeng Nam Sejahtera" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
+                  <img src="assets/images/clients/logo-hns.png?v=26" alt="PT. Haeng Nam Sejahtera" class="max-h-11 sm:max-h-13 max-w-full object-contain" />
                 </div>
               </div>
 
@@ -1623,7 +1619,7 @@ def build_trading():
   <main>
     <section class="bg-wira-dark text-white py-10 sm:py-20 relative overflow-hidden">
       <!-- Cinematic Industrial Background -->
-      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" style="background-image: url('assets/images/wirasena-factory-hero-bg.jpg?v=25');"></div>
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" style="background-image: url('assets/images/wirasena-factory-hero-bg.jpg?v=26');"></div>
       <div class="absolute inset-0 bg-gradient-to-r from-[#0B1512] via-[#0E201B]/90 to-[#070D0B] opacity-90 pointer-events-none"></div>
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-emerald-300 font-heading text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-2.5">
@@ -1645,7 +1641,7 @@ def build_trading():
         <div id="electrical" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start pb-10 sm:pb-14 border-b border-wira-border">
           <div class="lg:col-span-5">
             <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-wira-border shadow-sm h-56 sm:h-72 bg-slate-100">
-              <img src="assets/images/trading-electrical-mechanical.png?v=25" alt="Komponen Listrik Industri & Panel" class="w-full h-full object-cover" />
+              <img src="assets/images/trading-electrical-mechanical.png?v=26" alt="Komponen Listrik Industri & Panel" class="w-full h-full object-cover" />
             </div>
           </div>
           <div class="lg:col-span-7 space-y-3.5">
@@ -1685,7 +1681,7 @@ def build_trading():
         <div id="mechanical" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start pb-10 sm:pb-14 border-b border-wira-border">
           <div class="lg:col-span-5">
             <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-wira-border shadow-sm h-56 sm:h-72 bg-slate-100">
-              <img src="assets/images/trading-tools.png?v=25" alt="Sparepart Mekanikal & Cutting Tools" class="w-full h-full object-cover" />
+              <img src="assets/images/trading-tools.png?v=26" alt="Sparepart Mekanikal & Cutting Tools" class="w-full h-full object-cover" />
             </div>
           </div>
           <div class="lg:col-span-7 space-y-3.5">
@@ -1725,7 +1721,7 @@ def build_trading():
         <div id="pneumatics" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           <div class="lg:col-span-5">
             <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-wira-border shadow-sm h-56 sm:h-72 bg-white p-4 flex items-center justify-center">
-              <img src="assets/images/trading-pneumatics.png?v=25" alt="Komponen Pneumatik & APD K3" class="max-h-full max-w-full object-contain" />
+              <img src="assets/images/trading-pneumatics.png?v=26" alt="Komponen Pneumatik & APD K3" class="max-h-full max-w-full object-contain" />
             </div>
           </div>
           <div class="lg:col-span-7 space-y-3.5">
@@ -1779,7 +1775,7 @@ def build_packaging():
   <main>
     <section class="bg-wira-dark text-white py-10 sm:py-20 relative overflow-hidden">
       <!-- Cinematic Industrial Background -->
-      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" style="background-image: url('assets/images/wirasena-factory-hero-bg.jpg?v=25');"></div>
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" style="background-image: url('assets/images/wirasena-factory-hero-bg.jpg?v=26');"></div>
       <div class="absolute inset-0 bg-gradient-to-r from-[#0B1512] via-[#0E201B]/90 to-[#070D0B] opacity-90 pointer-events-none"></div>
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-emerald-300 font-heading text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-2.5">
@@ -1801,7 +1797,7 @@ def build_packaging():
         <div id="carton-box" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start pb-10 sm:pb-14 border-b border-wira-border">
           <div class="lg:col-span-5">
             <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-wira-border shadow-sm h-56 sm:h-72 bg-slate-100">
-              <img src="assets/images/product-carton-box.png?v=25" alt="Pabrik Corrugated Carton Box Custom" class="w-full h-full object-cover" />
+              <img src="assets/images/product-carton-box.png?v=26" alt="Pabrik Corrugated Carton Box Custom" class="w-full h-full object-cover" />
             </div>
           </div>
           <div class="lg:col-span-7 space-y-3.5">
@@ -1841,7 +1837,7 @@ def build_packaging():
         <div id="impraboard" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start pb-10 sm:pb-14 border-b border-wira-border">
           <div class="lg:col-span-5">
             <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-wira-border shadow-sm h-56 sm:h-72 bg-white p-4 flex items-center justify-center">
-              <img src="assets/images/product-impraboard-box.png?v=25" alt="Box Impraboard PP Sekat Partisi" class="max-h-full max-w-full object-contain" />
+              <img src="assets/images/product-impraboard-box.png?v=26" alt="Box Impraboard PP Sekat Partisi" class="max-h-full max-w-full object-contain" />
             </div>
           </div>
           <div class="lg:col-span-7 space-y-3.5">
@@ -1881,7 +1877,7 @@ def build_packaging():
         <div id="rubber-tape" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           <div class="lg:col-span-5">
             <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-wira-border shadow-sm h-56 sm:h-72 bg-white p-4 flex items-center justify-center">
-              <img src="assets/images/product-masking-tape.png?v=25" alt="Synthetic Rubber & Lakban" class="max-h-full max-w-full object-contain" />
+              <img src="assets/images/product-masking-tape.png?v=26" alt="Synthetic Rubber & Lakban" class="max-h-full max-w-full object-contain" />
             </div>
           </div>
           <div class="lg:col-span-7 space-y-3.5">
@@ -1931,7 +1927,7 @@ def build_fabrikasi():
   <main>
     <section class="bg-wira-dark text-white py-10 sm:py-20 relative overflow-hidden">
       <!-- Cinematic Industrial Background -->
-      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" style="background-image: url('assets/images/wirasena-factory-hero-bg.jpg?v=25');"></div>
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" style="background-image: url('assets/images/wirasena-factory-hero-bg.jpg?v=26');"></div>
       <div class="absolute inset-0 bg-gradient-to-r from-[#0B1512] via-[#0E201B]/90 to-[#070D0B] opacity-90 pointer-events-none"></div>
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-emerald-300 font-heading text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-2.5">
@@ -1953,7 +1949,7 @@ def build_fabrikasi():
         <div id="storage-trolley" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start pb-10 sm:pb-14 border-b border-wira-border">
           <div class="lg:col-span-5">
             <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-wira-border shadow-sm h-56 sm:h-72 bg-white p-4 flex items-center justify-center">
-              <img src="assets/images/fabrication-trolley-blue.png?v=25" alt="Fabrikasi Storage Trolley Stainless Besi" class="max-h-full max-w-full object-contain" />
+              <img src="assets/images/fabrication-trolley-blue.png?v=26" alt="Fabrikasi Storage Trolley Stainless Besi" class="max-h-full max-w-full object-contain" />
             </div>
           </div>
           <div class="lg:col-span-7 space-y-3.5">
@@ -1993,7 +1989,7 @@ def build_fabrikasi():
         <div id="welding-fifo" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           <div class="lg:col-span-5">
             <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-wira-border shadow-sm h-56 sm:h-72 bg-slate-100">
-              <img src="assets/images/fabrication-welding.png?v=25" alt="Rak Pipa FIFO & Pengelasan Pabrik" class="w-full h-full object-cover" />
+              <img src="assets/images/fabrication-welding.png?v=26" alt="Rak Pipa FIFO & Pengelasan Pabrik" class="w-full h-full object-cover" />
             </div>
           </div>
           <div class="lg:col-span-7 space-y-3.5">
