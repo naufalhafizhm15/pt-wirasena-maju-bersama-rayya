@@ -19,6 +19,13 @@
 ## 📊 2. Status Checklist Deliverables Lengkap (21 Item)
 
 ### ✅ FASE 1: Fondasi Branding & Web Profile (STATUS: SELESAI)
+
+### 🔄 UPDATE TERBARU (29 OKTOBER 2026 - FEEDBACK OM YONGKI):
+- [x] **TSK-22:** Olah & Bersihkan 3 Foto Produk Mekanikal: Gear Pump GC 20, Mini Helical Gear Motor Yuema G3LM, dan Elektro Motor 3-Phase Yuema SA Series (penghilangan watermark toko lain dan isolasi unit mesin).
+- [x] **TSK-23:** Penyisipan Foto 3 Unit Pompa & Gearbox pada katalog  murni visual tanpa teks deskripsi panjang (*'keterangannya ga ush'*).
+- [x] **TSK-24:** Penambahan Visual Box Impraboard Sekat berdampingan langsung dengan Corrugated Carton Box di Section 4 (Solusi Utama) dan Section 5 (Showcase).
+- [x] **TSK-25:** Sterilisasi Nomor Telepon/WhatsApp lama sesuai arahan Om Yongki (*'kosongkan dlu, sy sdg beli wa bisnis no'*), dialihkan ke RFQ email resmi dan badge proses aktivasi WA Bisnis.
+
 - [x] **TSK-01:** Verifikasi Data Legalitas PT: Direktur Rony Yuniawan, NPWP: `96.434.539.2-447.000` (PKP terverifikasi).
 - [x] **TSK-02:** Desain & Modernisasi Logo Perusahaan: Pita 3D Zamrud "WB" Transparan (`logo-trans.png`), bebas mikro-teks buram.
 - [x] **TSK-03:** Pembuatan App Icon Suite: Favicon 32px, Apple Touch Icon 180px, PWA 512px.
