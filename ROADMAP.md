@@ -21,6 +21,9 @@
 ### ✅ FASE 1: Fondasi Branding & Web Profile (STATUS: SELESAI)
 
 ### 🔄 UPDATE TERBARU (29 OKTOBER 2026 - FEEDBACK OM YONGKI):
+- [x] **TSK-26:** Rendering & Restorasi Foto Studio HD 1200x896: Gear Pump GC, Mini Helical Gear Motor, dan Elektro Motor 3-Phase isolasi studio seamless white, bebas watermark & teks katalog.
+- [x] **TSK-27:** Implementasi 1-Row Unified Product Strip di Beranda: 6 item inti (Carton Box, Box Impraboard, Storage Trolley, Gear Pump, Gear Motor, Elektro Motor) dalam 1 baris sejajar tanpa brand & tanpa deskripsi.
+
 - [x] **TSK-22:** Olah & Bersihkan 3 Foto Produk Mekanikal: Gear Pump GC 20, Mini Helical Gear Motor Yuema G3LM, dan Elektro Motor 3-Phase Yuema SA Series (penghilangan watermark toko lain dan isolasi unit mesin).
 - [x] **TSK-23:** Penyisipan Foto 3 Unit Pompa & Gearbox pada katalog  murni visual tanpa teks deskripsi panjang (*'keterangannya ga ush'*).
 - [x] **TSK-24:** Penambahan Visual Box Impraboard Sekat berdampingan langsung dengan Corrugated Carton Box di Section 4 (Solusi Utama) dan Section 5 (Showcase).
