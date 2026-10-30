@@ -159,7 +159,7 @@
 
   <!-- MAIN NAVBAR (TransTRACK Seamless Floating Header) -->
   <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 text-white bg-transparent border-b border-transparent" id="main-header" data-transparent="true">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-14 sm:h-20 gap-3 sm:gap-4">
         
         <!-- Brand Logo & Identity (TransTRACK Minimalist Clean Lockup) -->
@@ -352,7 +352,7 @@
       <!-- Seamless Vignette and dark gradient overlay extending from top of screen -->
       <div class="absolute inset-0 bg-gradient-to-b from-[#070D0B]/85 via-[#070D0B]/60 to-[#070D0B] pointer-events-none"></div>
 
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+      <div class="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
         
         <!-- Punchy TransTRACK-Style Outcome Headline (Responsive font sizes) -->
         <h1 class="font-heading font-extrabold text-2xl sm:text-4xl lg:text-6xl text-white tracking-tight leading-[1.2] max-w-5xl break-words">
@@ -446,7 +446,7 @@
 
     <!-- SECTION 2: MENGAPA MEMILIH PT. WIRASENA? (TransTRACK Split Layout, Mobile-Proportional Badges) -->
     <section id="mengapa-memilih" class="py-12 sm:py-20 bg-white overflow-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           
@@ -578,7 +578,7 @@
 
     <!-- SECTION 3: FULL-WIDTH BRAND BANNER FOR 5 IN-HOUSE MACHINES (Mobile-Optimized Padding) -->
     <section id="fasilitas-mesin" class="py-10 sm:py-16 bg-white overflow-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="rounded-2xl sm:rounded-3xl bg-wira-forest text-white p-5 sm:p-10 lg:p-12 shadow-2xl relative overflow-hidden">
           <div class="absolute -right-20 -top-20 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -675,7 +675,7 @@
 
     <!-- SECTION 4: SOLUSI UTAMA (Native Mobile Scroll Chips + Visual Cards) -->
     <section id="solusi-utama" class="py-12 sm:py-20 bg-wira-canvas overflow-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
           <h2 class="font-heading text-2xl sm:text-4xl font-extrabold text-wira-ink tracking-tight">
@@ -706,162 +706,168 @@
         </div>
 
         <!-- 2x2 Grid of Large Solution Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           
-          <!-- Card 1: Carton Box & Impraboard -->
-          <div class="solution-card bg-white border border-wira-border rounded-2xl sm:rounded-[28px] overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between" data-cat="packaging">
+          <!-- Card 1: Carton Box, Impraboard & PE Foam -->
+          <div class="solution-card bg-white border border-wira-border rounded-2xl sm:rounded-[28px] overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between" data-cat="kemasan">
             <div>
               <div class="grid grid-cols-2 h-48 sm:h-64 bg-slate-100 overflow-hidden relative divide-x divide-white/20">
-                <div class="relative h-full overflow-hidden group">
-                  <img src="assets/images/product-carton-box.png?v=38" alt="Produksi Carton Box Custom" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
-                  <span class="absolute bottom-2 left-2 px-2 py-0.5 bg-black/60 backdrop-blur-sm text-white text-[10px] font-heading font-bold rounded">Carton Box</span>
+                <div class="relative h-full overflow-hidden group bg-white flex items-center justify-center p-2">
+                  <img src="assets/images/product-carton-box.png?v=38" alt="Carton Box Corrugated Custom" class="w-full h-full object-contain group-hover:scale-105 transition duration-300" />
+                  <span class="absolute bottom-2 left-2 px-2.5 py-1 bg-slate-900/80 text-white font-heading text-[10px] font-bold rounded-md backdrop-blur-md">
+                    Carton Box Corrugated
+                  </span>
                 </div>
-                <div class="relative h-full overflow-hidden group">
-                  <img src="assets/images/product-impraboard-box.png?v=38" alt="Box Impraboard PP Sekat Partisi" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
-                  <span class="absolute bottom-2 left-2 px-2 py-0.5 bg-black/60 backdrop-blur-sm text-white text-[10px] font-heading font-bold rounded">Box Impraboard</span>
+                <div class="relative h-full overflow-hidden group bg-white flex items-center justify-center p-2">
+                  <img src="assets/images/product-impraboard-box.png?v=38" alt="Box Plastik Impraboard" class="w-full h-full object-contain group-hover:scale-105 transition duration-300" />
+                  <span class="absolute bottom-2 left-2 px-2.5 py-1 bg-slate-900/80 text-white font-heading text-[10px] font-bold rounded-md backdrop-blur-md">
+                    Impraboard Box
+                  </span>
                 </div>
-                <span class="absolute top-3 left-3 pill-btn px-3 py-1 bg-wira-dark/85 text-white font-heading text-[10px] font-bold backdrop-blur-md shadow-sm">
-                  In-House Factory
-                </span>
               </div>
               <div class="p-5 sm:p-8">
-                <span class="text-xs font-heading italic text-wira-accent font-semibold block mb-1">Custom Industrial Packaging</span>
-                <h3 class="font-heading font-extrabold text-lg sm:text-xl text-wira-ink">Produksi Corrugated Carton Box &amp; Box Impraboard</h3>
+                <span class="text-xs font-heading italic text-wira-accent font-semibold block mb-1">In-House 5 Lini Mesin</span>
+                <h3 class="font-heading font-extrabold text-lg sm:text-xl text-wira-ink">Manufaktur Corrugated Carton Box, Impraboard &amp; PE Foam</h3>
                 <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
-                  Lindungi produk manufaktur Anda dengan boks kardus <em>Single/Double Wall</em> berdaya tahan tumpuk tinggi, cetak logo flexo, dan boks plastik berongga Impraboard tahan air untuk sirkulasi antar-lini.
+                  Pabrikasi langsung master carton box RSC/die-cut, boks impraboard partisi tahan oli/air, serta lembar proteksi PE Foam &amp; protection sheet anti-statis (ESD) untuk komponen presisi &amp; kaca.
                 </p>
-                <div class="mt-4 flex flex-wrap gap-1.5 sm:gap-2 text-[10px] sm:text-[11px] text-slate-600">
-                  <span class="px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-full font-medium">B-Flute, C-Flute, BC-Flute</span>
-                  <span class="px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-full font-medium">Die-Cut &amp; Partisi Sekat</span>
-                  <span class="px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-full font-medium">Impraboard ESD Anti-Statis</span>
-                </div>
+                <p class="mt-3 text-xs text-slate-500 font-mono">
+                  Corrugated Flute B/C/BC &bull; Impraboard Box &amp; Sekat &bull; PE Foam &amp; Anti-Static Sheet
+                </p>
               </div>
             </div>
             <div class="px-5 sm:px-8 py-3.5 bg-slate-50/70 border-t border-slate-100 flex items-center justify-between">
-              <a href="pabrik-carton-box-impraboard.html" class="font-heading font-bold text-xs text-wira-accent hover:underline">
-                Lihat Spesifikasi &rarr;
-              </a>
+              <button type="button" onclick="openDivisionModal('packaging')" class="font-heading font-bold text-xs text-wira-accent hover:text-emerald-700 flex items-center gap-1.5 transition cursor-pointer">
+                <span>Buka Lembar Spesifikasi &rarr;</span>
+              </button>
               <a href="#kontak-rfq" class="pill-btn px-4 py-2 bg-wira-accent text-white font-heading font-bold text-xs hover:bg-emerald-700 transition">
                 Minta Penawaran
               </a>
             </div>
           </div>
 
-          <!-- Card 2: Electrical, Mechanical & Pneumatics -->
-          <div class="solution-card bg-white border border-wira-border rounded-2xl sm:rounded-[28px] overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between" data-cat="teknik">
+          <!-- Card 2: Pneumatics, Tools & MRO Mechanical Electrical -->
+          <div class="solution-card bg-white border border-wira-border rounded-2xl sm:rounded-[28px] overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between" data-cat="mro">
             <div>
-              <div class="grid grid-cols-3 h-48 sm:h-64 bg-slate-100 overflow-hidden relative divide-x divide-white/20">
+              <div class="grid grid-cols-2 h-48 sm:h-64 bg-slate-100 overflow-hidden relative divide-x divide-white/20">
                 <div class="relative h-full overflow-hidden group bg-white flex items-center justify-center p-2">
-                  <img src="assets/images/product-gearpump-gc20.png?v=38" alt="Gear Pump" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300" />
-                  <span class="absolute bottom-2 left-2 px-2 py-0.5 bg-black/60 backdrop-blur-sm text-white text-[9px] font-heading font-semibold rounded">Gear Pump</span>
+                  <img src="assets/images/trading-pneumatics.png?v=38" alt="Pneumatik & Fitting Selang" class="w-full h-full object-contain group-hover:scale-105 transition duration-300" />
+                  <span class="absolute bottom-2 left-2 px-2.5 py-1 bg-slate-900/80 text-white font-heading text-[10px] font-bold rounded-md backdrop-blur-md">
+                    Pneumatik &amp; Valve
+                  </span>
                 </div>
                 <div class="relative h-full overflow-hidden group bg-white flex items-center justify-center p-2">
-                  <img src="assets/images/product-motor-gearlm.png?v=38" alt="Gear Motor" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300" />
-                  <span class="absolute bottom-2 left-2 px-2 py-0.5 bg-black/60 backdrop-blur-sm text-white text-[9px] font-heading font-semibold rounded">Gear Motor</span>
+                  <img src="assets/images/trading-tools.png?v=38" alt="Tools & Cutting Tools Industri" class="w-full h-full object-contain group-hover:scale-105 transition duration-300" />
+                  <span class="absolute bottom-2 left-2 px-2.5 py-1 bg-slate-900/80 text-white font-heading text-[10px] font-bold rounded-md backdrop-blur-md">
+                    Tools &amp; MRO
+                  </span>
                 </div>
-                <div class="relative h-full overflow-hidden group bg-white flex items-center justify-center p-2">
-                  <img src="assets/images/product-motor-yuema-sa.png?v=38" alt="Elektro Motor" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300" />
-                  <span class="absolute bottom-2 left-2 px-2 py-0.5 bg-black/60 backdrop-blur-sm text-white text-[9px] font-heading font-semibold rounded">Elektro Motor 3P</span>
-                </div>
-                <span class="absolute top-3 left-3 pill-btn px-3 py-1 bg-wira-dark/85 text-white font-heading text-[10px] font-bold backdrop-blur-md shadow-sm">
-                  Mechanical &amp; MRO
-                </span>
               </div>
               <div class="p-5 sm:p-8">
-                <span class="text-xs font-heading italic text-wira-accent font-semibold block mb-1">MRO &amp; Automation Parts</span>
-                <h3 class="font-heading font-extrabold text-lg sm:text-xl text-wira-ink">Alat Listrik Industri, Mekanikal &amp; Pneumatik</h3>
+                <span class="text-xs font-heading italic text-wira-accent font-semibold block mb-1">Supply Resmi MRO Pabrik</span>
+                <h3 class="font-heading font-extrabold text-lg sm:text-xl text-wira-ink">General Trading: Pneumatik, Tools &amp; Mekanikal MRO</h3>
                 <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
-                  Pengadaan suku cadang pemeliharaan mesin pabrik (MRO): Gear Pump cairan, Motor Gearbox, Elektro Motor 3-Phase, komponen panel listrik, bearing transmisi, dan silinder pneumatik.
+                  Pengadaan resmi sistem pneumatik fitting &amp; solenoid valve, perkakas potong &amp; hand tools industri, serta komponen transmisi mesin (gear motor LM, gear pump solar/oli mesin, &amp; motor induksi 3-phase).
                 </p>
-                <div class="mt-4 flex flex-wrap gap-1.5 sm:gap-2 text-[10px] sm:text-[11px] text-slate-600">
-                  <span class="px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-full font-medium">Gear Pump &amp; Motor Gearbox</span>
-                  <span class="px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-full font-medium">Panel MCB, Contactor &amp; PLC</span>
-                  <span class="px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-full font-medium">Air Cylinder &amp; Fitting PU</span>
-                </div>
+                <p class="mt-3 text-xs text-slate-500 font-mono">
+                  Pneumatik &amp; Fitting &bull; Tools &amp; Cutting Tools &bull; Gear Motor &amp; Gear Pump Industri
+                </p>
               </div>
             </div>
             <div class="px-5 sm:px-8 py-3.5 bg-slate-50/70 border-t border-slate-100 flex items-center justify-between">
-              <a href="supplier-electrical-mechanical.html" class="font-heading font-bold text-xs text-wira-accent hover:underline">
-                Lihat Daftar Barang &rarr;
-              </a>
+              <button type="button" onclick="openDivisionModal('mro')" class="font-heading font-bold text-xs text-wira-accent hover:text-emerald-700 flex items-center gap-1.5 transition cursor-pointer">
+                <span>Buka Lembar Spesifikasi &rarr;</span>
+              </button>
               <a href="#kontak-rfq" class="pill-btn px-4 py-2 bg-wira-accent text-white font-heading font-bold text-xs hover:bg-emerald-700 transition">
                 Minta Penawaran
               </a>
             </div>
           </div>
 
-          <!-- Card 3: Storage Trolley & Fabrication -->
+          <!-- Card 3: Storage Trolley, Fence Welding & Rubber Parts -->
           <div class="solution-card bg-white border border-wira-border rounded-2xl sm:rounded-[28px] overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between" data-cat="fabrikasi">
             <div>
-              <div class="h-48 sm:h-64 bg-slate-50 p-4 flex items-center justify-center relative">
-                <img src="assets/images/fabrication-trolley-blue.png?v=38" alt="Fabrikasi Storage Trolley Stainless Besi" class="max-h-full max-w-full object-contain" />
-                <span class="absolute top-3 left-3 pill-btn px-3 py-1 bg-wira-dark/80 text-white font-heading text-[10px] font-bold backdrop-blur-md">
-                  Metal Fabrication
-                </span>
+              <div class="grid grid-cols-2 h-48 sm:h-64 bg-slate-100 overflow-hidden relative divide-x divide-white/20">
+                <div class="relative h-full overflow-hidden group bg-white flex items-center justify-center p-2">
+                  <img src="assets/images/fabrication-trolley-blue.png?v=38" alt="Storage Parts Trolley 4 Susun" class="w-full h-full object-contain group-hover:scale-105 transition duration-300" />
+                  <span class="absolute bottom-2 left-2 px-2.5 py-1 bg-slate-900/80 text-white font-heading text-[10px] font-bold rounded-md backdrop-blur-md">
+                    Parts Trolley
+                  </span>
+                </div>
+                <div class="relative h-full overflow-hidden group bg-white flex items-center justify-center p-2">
+                  <img src="assets/images/fabrication-welding.png?v=38" alt="Fence Welding Pagar Pengaman Mesin" class="w-full h-full object-contain group-hover:scale-105 transition duration-300" />
+                  <span class="absolute bottom-2 left-2 px-2.5 py-1 bg-slate-900/80 text-white font-heading text-[10px] font-bold rounded-md backdrop-blur-md">
+                    Fence Welding
+                  </span>
+                </div>
               </div>
               <div class="p-5 sm:p-8">
-                <span class="text-xs font-heading italic text-wira-accent font-semibold block mb-1">Material Handling &amp; Lean</span>
-                <h3 class="font-heading font-extrabold text-lg sm:text-xl text-wira-ink">Fabrikasi Storage Trolley &amp; Rak Pipa FIFO</h3>
+                <span class="text-xs font-heading italic text-wira-accent font-semibold block mb-1">Workshop Fabrikasi In-House</span>
+                <h3 class="font-heading font-extrabold text-lg sm:text-xl text-wira-ink">Fabrikasi Storage Trolley, Pagar Mesin &amp; Karet Industri</h3>
                 <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
-                  Pembuatan kereta dorong komponen (<em>parts trolley</em>), rak aliran FIFO dengan roller track, meja kerja perakitan/QC, serta pagar pengaman mesin (<em>fence welding</em>) sesuai gambar teknik pabrik.
+                  Bengkel las argon &amp; CO2: parts storage trolley 4 susun roda PU, rak trolley stainless SUS 304, pagar pengaman mesin (fence welding), serta fabrikasi cetakan karet sintetis &amp; rubber foot peredam getaran.
                 </p>
-                <div class="mt-4 flex flex-wrap gap-1.5 sm:gap-2 text-[10px] sm:text-[11px] text-slate-600">
-                  <span class="px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-full font-medium">SUS 304 &amp; Besi Hollow</span>
-                  <span class="px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-full font-medium">Finishing Powder Coating</span>
-                  <span class="px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-full font-medium">Roda Heavy-Duty PU Caster</span>
-                </div>
+                <p class="mt-3 text-xs text-slate-500 font-mono">
+                  Parts Trolley &amp; SUS 304 &bull; Fence Welding Pagar Mesin &bull; Rubber Foot &amp; Molded Damper
+                </p>
               </div>
             </div>
             <div class="px-5 sm:px-8 py-3.5 bg-slate-50/70 border-t border-slate-100 flex items-center justify-between">
-              <a href="jasa-fabrikasi-trolley.html" class="font-heading font-bold text-xs text-wira-accent hover:underline">
-                Lihat Spesifikasi &rarr;
-              </a>
+              <button type="button" onclick="openDivisionModal('fabrication')" class="font-heading font-bold text-xs text-wira-accent hover:text-emerald-700 flex items-center gap-1.5 transition cursor-pointer">
+                <span>Buka Lembar Spesifikasi &rarr;</span>
+              </button>
               <a href="#kontak-rfq" class="pill-btn px-4 py-2 bg-wira-accent text-white font-heading font-bold text-xs hover:bg-emerald-700 transition">
                 Minta Penawaran
               </a>
             </div>
           </div>
 
-          <!-- Card 4: Safety K3 & Consumables -->
+          <!-- Card 4: Cleaning Supplies, Safety APD & Industrial Tape -->
           <div class="solution-card bg-white border border-wira-border rounded-2xl sm:rounded-[28px] overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between" data-cat="safety">
             <div>
-              <div class="h-48 sm:h-64 bg-slate-100 overflow-hidden relative">
-                <img src="assets/images/trading-cleaning-k3.png?v=38" alt="Safety APD, Kain Majun & Lakban" class="w-full h-full object-cover" />
-                <span class="absolute top-3 left-3 pill-btn px-3 py-1 bg-wira-dark/80 text-white font-heading text-[10px] font-bold backdrop-blur-md">
-                  Consumables &amp; Safety
-                </span>
+              <div class="grid grid-cols-2 h-48 sm:h-64 bg-slate-100 overflow-hidden relative divide-x divide-white/20">
+                <div class="relative h-full overflow-hidden group bg-white flex items-center justify-center p-2">
+                  <img src="assets/images/trading-cleaning-k3.png?v=38" alt="Cleaning Supplies & Tisu Industri" class="w-full h-full object-contain group-hover:scale-105 transition duration-300" />
+                  <span class="absolute bottom-2 left-2 px-2.5 py-1 bg-slate-900/80 text-white font-heading text-[10px] font-bold rounded-md backdrop-blur-md">
+                    Cleaning &amp; K3
+                  </span>
+                </div>
+                <div class="relative h-full overflow-hidden group bg-white flex items-center justify-center p-2">
+                  <img src="assets/images/product-masking-tape.png?v=38" alt="Masking Tape & Lakban Industri" class="w-full h-full object-contain group-hover:scale-105 transition duration-300" />
+                  <span class="absolute bottom-2 left-2 px-2.5 py-1 bg-slate-900/80 text-white font-heading text-[10px] font-bold rounded-md backdrop-blur-md">
+                    Tape &amp; ATK
+                  </span>
+                </div>
               </div>
               <div class="p-5 sm:p-8">
-                <span class="text-xs font-heading italic text-wira-accent font-semibold block mb-1">Daily Plant Supplies</span>
-                <h3 class="font-heading font-extrabold text-lg sm:text-xl text-wira-ink">Safety APD, Kain Majun &amp; Lakban Industri</h3>
+                <span class="text-xs font-heading italic text-wira-accent font-semibold block mb-1">Daily Consumables &amp; Safety</span>
+                <h3 class="font-heading font-extrabold text-lg sm:text-xl text-wira-ink">Cleaning Supplies, Perlengkapan K3 &amp; Lakban Industri</h3>
                 <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
-                  Pengadaan rutin perlengkapan keselamatan kerja (sepatu safety, helm, sarung tangan), kain majun katun daya serap tinggi untuk pembersihan mesin, serta aneka lakban OPP &amp; stretch film.
+                  Suplai rutin cairan pembersih mesin degreaser &amp; floor cleaner, tisu industri (JRT &amp; towel), perlengkapan keselamatan APD K3 (sepatu safety, helm, sarung tangan), pest control, masking tape, serta ATK kantor pabrik.
                 </p>
-                <div class="mt-4 flex flex-wrap gap-1.5 sm:gap-2 text-[10px] sm:text-[11px] text-slate-600">
-                  <span class="px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-full font-medium">Sepatu &amp; Helm Safety</span>
-                  <span class="px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-full font-medium">Kain Majun Putih / Warna</span>
-                  <span class="px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-full font-medium">OPP Tape &amp; Stretch Film</span>
-                </div>
+                <p class="mt-3 text-xs text-slate-500 font-mono">
+                  Tisu Industri &amp; Chemical Pembersih &bull; APD K3 &amp; Pest Control &bull; Masking Tape &amp; ATK Kantor
+                </p>
               </div>
             </div>
             <div class="px-5 sm:px-8 py-3.5 bg-slate-50/70 border-t border-slate-100 flex items-center justify-between">
-              <a href="supplier-electrical-mechanical.html#pneumatics" class="font-heading font-bold text-xs text-wira-accent hover:underline">
-                Lihat Spesifikasi &rarr;
-              </a>
+              <button type="button" onclick="openDivisionModal('safety')" class="font-heading font-bold text-xs text-wira-accent hover:text-emerald-700 flex items-center gap-1.5 transition cursor-pointer">
+                <span>Buka Lembar Spesifikasi &rarr;</span>
+              </button>
               <a href="#kontak-rfq" class="pill-btn px-4 py-2 bg-wira-accent text-white font-heading font-bold text-xs hover:bg-emerald-700 transition">
                 Minta Penawaran
               </a>
             </div>
           </div>
 
-        </div>
+        </div></div>
 
       </div>
     </section>
 
     <!-- SECTION 5: FITUR & SPESIFIKASI ANDALAN (Responsive 1-col on mobile, 2-col on desktop) -->
     <section id="spesifikasi-andalan" class="py-12 sm:py-20 bg-white overflow-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
           <p class="font-heading text-xs font-bold text-wira-accent uppercase tracking-wider mb-1.5">Katalog &amp; Spesifikasi Detail</p>
@@ -873,76 +879,61 @@
           </p>
         </div>
 
-        <!-- 1-Row Unified Products Strip (Om Yongki: Tampilkan bareng2 dlm 1 row tanpa brand & tanpa desc) -->
+        <!-- 1-Row Unified Products Strip (Clean, Big Images, Zero Box/Border Container) -->
         <div class="mb-12 sm:mb-16">
-          <div class="flex items-center justify-between mb-4">
+          <div class="mb-4 sm:mb-6">
             <span class="text-xs font-heading font-bold text-wira-accent uppercase tracking-wider">Item Produk &amp; Sparepart Siap Suplai:</span>
-            <span class="text-[11px] font-mono text-emerald-800 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full font-semibold">
-              1 Pintu Pengadaan Pabrik
-            </span>
           </div>
 
-          <!-- 1 Row Grid (6 Kolom Samping-Sampingan, 1 Row) -->
-          <div class="grid grid-cols-3 lg:grid-cols-6 gap-2.5 sm:gap-4">
+          <!-- 1 Row Grid (6 Kolom Samping-Sampingan, Gambar Besar & Bersih Tanpa Box/Border) -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 items-end">
             
             <!-- Item 1: Carton Box -->
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-2 sm:p-3 text-center flex flex-col justify-between hover:border-emerald-500 hover:shadow-md transition group">
-              <div class="h-24 sm:h-32 bg-white rounded-xl flex items-center justify-center p-2 overflow-hidden border border-slate-100 shadow-xs">
-                <img src="assets/images/product-carton-box.png?v=38" alt="Carton Box" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300" />
+            <div class="text-center group flex flex-col items-center">
+              <div class="h-36 sm:h-44 w-full flex items-center justify-center p-1">
+                <img src="assets/images/product-carton-box.png?v=38" alt="Carton Box" class="max-h-full w-auto object-contain group-hover:scale-105 transition duration-300 drop-shadow-sm" />
               </div>
-              <div class="pt-2">
-                <span class="text-[11px] sm:text-xs font-heading font-bold text-wira-ink block">Carton Box</span>
-              </div>
+              <span class="text-xs sm:text-sm font-heading font-bold text-wira-ink mt-3 block group-hover:text-emerald-700 transition">Carton Box</span>
             </div>
 
             <!-- Item 2: Impraboard Box -->
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-2 sm:p-3 text-center flex flex-col justify-between hover:border-emerald-500 hover:shadow-md transition group">
-              <div class="h-24 sm:h-32 bg-white rounded-xl flex items-center justify-center p-2 overflow-hidden border border-slate-100 shadow-xs">
-                <img src="assets/images/product-impraboard-box.png?v=38" alt="Box Impraboard" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300" />
+            <div class="text-center group flex flex-col items-center">
+              <div class="h-36 sm:h-44 w-full flex items-center justify-center p-1">
+                <img src="assets/images/product-impraboard-box.png?v=38" alt="Box Impraboard" class="max-h-full w-auto object-contain group-hover:scale-105 transition duration-300 drop-shadow-sm" />
               </div>
-              <div class="pt-2">
-                <span class="text-[11px] sm:text-xs font-heading font-bold text-wira-ink block">Box Impraboard</span>
-              </div>
+              <span class="text-xs sm:text-sm font-heading font-bold text-wira-ink mt-3 block group-hover:text-emerald-700 transition">Box Impraboard</span>
             </div>
 
             <!-- Item 3: Storage Trolley -->
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-2 sm:p-3 text-center flex flex-col justify-between hover:border-emerald-500 hover:shadow-md transition group">
-              <div class="h-24 sm:h-32 bg-white rounded-xl flex items-center justify-center p-2 overflow-hidden border border-slate-100 shadow-xs">
-                <img src="assets/images/fabrication-trolley-blue.png?v=38" alt="Storage Trolley" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300" />
+            <div class="text-center group flex flex-col items-center">
+              <div class="h-36 sm:h-44 w-full flex items-center justify-center p-1">
+                <img src="assets/images/fabrication-trolley-blue.png?v=38" alt="Storage Trolley" class="max-h-full w-auto object-contain group-hover:scale-105 transition duration-300 drop-shadow-sm" />
               </div>
-              <div class="pt-2">
-                <span class="text-[11px] sm:text-xs font-heading font-bold text-wira-ink block">Storage Trolley</span>
-              </div>
+              <span class="text-xs sm:text-sm font-heading font-bold text-wira-ink mt-3 block group-hover:text-emerald-700 transition">Storage Trolley</span>
             </div>
 
             <!-- Item 4: Gear Pump -->
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-2 sm:p-3 text-center flex flex-col justify-between hover:border-emerald-500 hover:shadow-md transition group">
-              <div class="h-24 sm:h-32 bg-white rounded-xl flex items-center justify-center p-2 overflow-hidden border border-slate-100 shadow-xs">
-                <img src="assets/images/product-gearpump-gc20.png?v=38" alt="Gear Pump" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300" />
+            <div class="text-center group flex flex-col items-center">
+              <div class="h-36 sm:h-44 w-full flex items-center justify-center p-1">
+                <img src="assets/images/product-gearpump-gc20.png?v=38" alt="Gear Pump" class="max-h-full w-auto object-contain group-hover:scale-105 transition duration-300 drop-shadow-sm" />
               </div>
-              <div class="pt-2">
-                <span class="text-[11px] sm:text-xs font-heading font-bold text-wira-ink block">Gear Pump</span>
-              </div>
+              <span class="text-xs sm:text-sm font-heading font-bold text-wira-ink mt-3 block group-hover:text-emerald-700 transition">Gear Pump</span>
             </div>
 
             <!-- Item 5: Gear Motor -->
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-2 sm:p-3 text-center flex flex-col justify-between hover:border-emerald-500 hover:shadow-md transition group">
-              <div class="h-24 sm:h-32 bg-white rounded-xl flex items-center justify-center p-2 overflow-hidden border border-slate-100 shadow-xs">
-                <img src="assets/images/product-motor-gearlm.png?v=38" alt="Mini Helical Gear Motor" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300" />
+            <div class="text-center group flex flex-col items-center">
+              <div class="h-36 sm:h-44 w-full flex items-center justify-center p-1">
+                <img src="assets/images/product-motor-gearlm.png?v=38" alt="Gear Motor" class="max-h-full w-auto object-contain group-hover:scale-105 transition duration-300 drop-shadow-sm" />
               </div>
-              <div class="pt-2">
-                <span class="text-[11px] sm:text-xs font-heading font-bold text-wira-ink block">Gear Motor</span>
-              </div>
+              <span class="text-xs sm:text-sm font-heading font-bold text-wira-ink mt-3 block group-hover:text-emerald-700 transition">Gear Motor</span>
             </div>
 
             <!-- Item 6: Elektro Motor -->
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-2 sm:p-3 text-center flex flex-col justify-between hover:border-emerald-500 hover:shadow-md transition group">
-              <div class="h-24 sm:h-32 bg-white rounded-xl flex items-center justify-center p-2 overflow-hidden border border-slate-100 shadow-xs">
-                <img src="assets/images/product-motor-yuema-sa.png?v=38" alt="Elektro Motor 3 Phase" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300" />
+            <div class="text-center group flex flex-col items-center">
+              <div class="h-36 sm:h-44 w-full flex items-center justify-center p-1">
+                <img src="assets/images/product-motor-yuema-sa.png?v=38" alt="Elektro Motor" class="max-h-full w-auto object-contain group-hover:scale-105 transition duration-300 drop-shadow-sm" />
               </div>
-              <div class="pt-2">
-                <span class="text-[11px] sm:text-xs font-heading font-bold text-wira-ink block">Elektro Motor</span>
-              </div>
+              <span class="text-xs sm:text-sm font-heading font-bold text-wira-ink mt-3 block group-hover:text-emerald-700 transition">Elektro Motor</span>
             </div>
 
           </div>
@@ -1126,7 +1117,7 @@
 
     <!-- SECTION 6: INTERACTIVE ACCORDION (Clean touch targets) -->
     <section class="py-12 sm:py-20 bg-wira-canvas border-t border-wira-border overflow-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
@@ -1215,7 +1206,7 @@
               <div class="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-slate-600 border-t border-slate-100 pt-3.5 space-y-2">
                 <p>Pengadaan darurat maupun berkala untuk perbaikan mesin line breakdown, pergantian kontaktor panel, bearing aus, hingga pengelasan pagar pembatas mesin.</p>
                 <div class="font-heading font-semibold text-wira-accent text-[11px] sm:text-xs pt-1">
-                  Solusi Utama: <span class="font-normal text-slate-700">Komponen Listrik Schneider/Mitsubishi, Solenoid SMC/Festo, Perkakas Torsi, Fence Welding</span>
+                  Solusi Utama: <span class="font-normal text-slate-700">Komponen Listrik Panel, Solenoid Valve, Perkakas Torsi, Fence Welding</span>
                 </div>
               </div>
             </details>
@@ -1250,7 +1241,7 @@
         <img src="assets/images/map-dots.svg?v=38" alt="Peta Jaringan Kemitraan Pabrik" class="w-full max-w-5xl h-auto object-contain" />
       </div>
 
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
         <!-- Authority & Prestige Headline -->
         <h2 class="font-heading font-bold text-2xl sm:text-4xl lg:text-5xl text-wira-ink tracking-tight max-w-4xl mx-auto">
@@ -1331,7 +1322,7 @@
 
   <!-- SECTION 8: CONTACT & FAST WHATSAPP RFQ -->
   <section id="kontak-rfq" class="py-12 sm:py-20 bg-wira-canvas border-t border-wira-border overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
         <h2 class="font-heading text-2xl sm:text-4xl font-extrabold text-wira-ink tracking-tight">
@@ -1439,7 +1430,7 @@
 
             <div>
               <label for="rfq-specs" class="block font-heading text-xs font-bold text-slate-700 mb-1.5">Rincian Barang / Ukuran (P x L x T) / Estimasi Kebutuhan</label>
-              <textarea id="rfq-specs" rows="3" required placeholder="Contoh: Butuh Carton Box Double Wall ukuran 40x30x25 cm qty 500 pcs, dan MCB Schneider 3P 20A qty 10 pcs..." class="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 text-xs sm:text-sm rounded-xl border border-wira-border bg-slate-50/50 text-wira-ink focus:bg-white focus:border-wira-accent outline-none transition"></textarea>
+              <textarea id="rfq-specs" rows="3" required placeholder="Contoh: Butuh Carton Box Double Wall ukuran 40x30x25 cm qty 500 pcs, dan MCB 3P 20A qty 10 pcs..." class="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 text-xs sm:text-sm rounded-xl border border-wira-border bg-slate-50/50 text-wira-ink focus:bg-white focus:border-wira-accent outline-none transition"></textarea>
             </div>
 
             <button type="submit" class="pill-btn w-full bg-wira-accent hover:bg-wira-accentHover text-white font-heading font-bold text-xs sm:text-sm py-3.5 sm:py-4 px-6 shadow-lg transition flex items-center justify-center gap-2">
@@ -1457,7 +1448,7 @@
 
   <!-- DARK ROUNDED FOOTER (TransTRACK Style, rounded-3xl at top) -->
   <footer class="bg-wira-dark text-white pt-12 sm:pt-16 pb-28 lg:pb-10 border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 pb-10 border-b border-white/10">
         
@@ -1618,6 +1609,427 @@
       window.addEventListener('scroll', handleHeaderScroll, { passive: true });
       handleHeaderScroll();
     }
+  </script>
+
+  <!-- MULTI-PRODUCT SPECIFICATION MODAL (100% Sesuai Katalog Resmi PDF + Permintaan Om Yongki) -->
+  <div id="product-modal-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden opacity-0 transition-opacity duration-200 flex items-center justify-center p-3 sm:p-6" onclick="closeProductModal(event)">
+    <div id="product-modal-card" class="bg-white rounded-2xl sm:rounded-3xl shadow-2xl max-w-3xl w-full max-h-[92vh] overflow-y-auto border border-slate-200 transform scale-95 transition-transform duration-200 relative no-scrollbar" onclick="event.stopPropagation()">
+      
+      <!-- Modal Header -->
+      <div class="p-4 sm:p-6 border-b border-slate-100 flex items-center justify-between sticky top-0 bg-white/95 backdrop-blur-md z-20">
+        <div>
+          <span id="modal-div-badge" class="text-[10px] sm:text-xs font-mono font-bold text-emerald-700 uppercase tracking-wider block">DIVISI</span>
+          <h3 id="modal-div-title" class="font-heading font-extrabold text-base sm:text-xl text-wira-ink">Katalog Spesifikasi</h3>
+        </div>
+        <button type="button" onclick="closeProductModal()" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 active:scale-95 text-slate-700 flex items-center justify-center transition cursor-pointer" aria-label="Tutup Modal">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Product Selection Tabs inside Modal -->
+      <div class="bg-slate-50 border-b border-slate-100 px-4 sm:px-6 py-2.5 overflow-x-auto no-scrollbar">
+        <div id="modal-item-tabs" class="flex items-center gap-2"></div>
+      </div>
+
+      <!-- Modal Content Body -->
+      <div class="p-4 sm:p-6 space-y-6">
+        
+        <!-- Top Half: Product Hero Image & Summary -->
+        <div class="flex flex-col sm:flex-row items-center gap-6">
+          <div class="w-full sm:w-1/2 h-52 sm:h-64 bg-slate-50 rounded-2xl border border-slate-200 p-4 flex items-center justify-center overflow-hidden shrink-0">
+            <img id="modal-item-img" src="" alt="Detail Produk" class="max-w-full max-h-full object-contain filter drop-shadow-md" />
+          </div>
+          <div class="w-full sm:w-1/2 space-y-3">
+            <h4 id="modal-item-name" class="font-heading font-extrabold text-lg sm:text-2xl text-wira-ink leading-tight"></h4>
+            <p id="modal-item-desc" class="text-xs sm:text-sm text-slate-600 leading-relaxed"></p>
+            <div class="pt-2">
+              <span class="inline-flex items-center gap-1.5 text-xs font-mono text-emerald-700 font-bold bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-200/60">
+                <svg class="w-4 h-4 shrink-0 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                Legalitas PKP Resmi &bull; Pengiriman Mandiri Cikarang
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Specifications Ledger Table -->
+        <div>
+          <span class="font-heading font-bold text-xs uppercase text-slate-400 tracking-wider block mb-2">Tabel Spesifikasi Teknis &amp; Varian:</span>
+          <div id="modal-specs-table" class="border border-slate-200 rounded-xl overflow-hidden divide-y divide-slate-100 text-xs"></div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row gap-3">
+          <a id="modal-wa-btn" href="#" target="_blank" rel="noopener" class="flex-1 py-3 px-5 bg-emerald-600 hover:bg-emerald-700 active:scale-[0.98] text-white rounded-xl font-heading font-bold text-xs sm:text-sm text-center transition flex items-center justify-center gap-2 shadow-sm">
+            <span>Minta Penawaran (RFQ) Barang Ini</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </a>
+          <button type="button" onclick="closeProductModal()" class="py-3 px-5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-heading font-bold text-xs transition cursor-pointer">
+            Tutup
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    var modalDivisions = {
+      'packaging': {
+        badge: 'DIVISI MANUFAKTUR KEMASAN IN-HOUSE',
+        title: 'Katalog Spesifikasi Carton Box, Impraboard & PE Foam',
+        items: [
+          {
+            id: 'carton-box',
+            tabName: 'Carton Box Corrugated',
+            name: 'Corrugated Carton Box Custom (5 Mesin In-House)',
+            img: 'assets/images/product-carton-box.png?v=38',
+            desc: 'Diproduksi langsung dengan 5 lini mesin in-house di Sukadami Cikarang. Menjamin presisi ukuran gambar teknik (drawing) pabrik dan ketahanan tumpukan gudang (Box Compression Test).',
+            specs: [
+              { label: 'Tipe Flute', val: 'Single Wall (B/C/E Flute), Double Wall (BC/CB Flute), Triple Wall' },
+              { label: 'Ketebalan Kertas', val: 'B-Flute (3mm), C-Flute (4mm), BC-Flute (7mm), Kraft / Medium' },
+              { label: 'Model Kemasan', val: 'Standard RSC, Overlap, Top-Bottom, Die-Cut Box & Partisi Sekat' },
+              { label: 'Printing', val: 'Flexo 1 s/d 4 Warna (Cetak Logo & Simbol Safety Pabrik)' },
+              { label: 'Aplikasi', val: 'Master box pengiriman industri otomotif, elektronik, makanan & sparepart' }
+            ],
+            wa: 'Corrugated Carton Box Custom'
+          },
+          {
+            id: 'impraboard-std',
+            tabName: 'Box Plastik Impraboard',
+            name: 'Box Plastik Impraboard & Partisi Sekat Custom',
+            img: 'assets/images/product-impraboard-box.png?v=38',
+            desc: 'Boks plastik berongga (PP Corrugated Board) tahan air, tahan oli/minyak industri, dan dapat dicuci berulang kali (returnable packaging) untuk siklus perakitan part pabrik.',
+            specs: [
+              { label: 'Ketebalan Board', val: '3 mm, 4 mm, 5 mm (Densitas tinggi kuat beban part logam)' },
+              { label: 'Varian Material', val: 'Regular PP Board & ESD Conductive Anti-Statis (10^4 - 10^9 Ohm)' },
+              { label: 'Konstruksi', val: 'Rivet aluminium kokoh, ultrasonic welding, sudut corner protector plastik' },
+              { label: 'Aksesoris', val: 'Partisi sekat layer custom, handle lubang tangan, card holder label' },
+              { label: 'Aplikasi', val: 'WIP (Work In Process) perakitan otomotif, PCB elektronik, delivery part vendor' }
+            ],
+            wa: 'Box Plastik Impraboard Custom'
+          },
+          {
+            id: 'pe-foam-sheet',
+            tabName: 'PE Foam & Protection Sheet',
+            name: 'PE Foam, Protection Sheet & Plastic Packing Anti-Static (Slide 04 & 05 PDF)',
+            img: 'assets/images/product-protection-sheet.png?v=38',
+            desc: 'Sesuai dokumen resmi Halaman 04 & 05: Suplai lembar proteksi benturan dan goresan untuk pengemasan kaca tempered, safety glass, panel elektronik, dan bodi part otomotif.',
+            specs: [
+              { label: 'Material Proteksi', val: 'Polyethylene (PE) Foam Sheet, Bubble Wrap & Protection Sheet Anti-Scratch' },
+              { label: 'Plastik Packing', val: 'HDPE, LDPE, Polybag, & Kantong Plastik Anti-Static (ESD Pink/Blue)' },
+              { label: 'Ketebalan PE Foam', val: '0.5 mm, 1 mm, 2 mm, 5 mm s/d 10 mm (Bentuk roll atau lembaran potongan)' },
+              { label: 'Proteksi Kaca & Panel', val: 'Bantalan sudut (foam corner) & pelapis tempered glass / safety glass' },
+              { label: 'Aplikasi', val: 'Pemisah tumpukan part presisi, bantalan komponen audio/layar, ekspor packaging' }
+            ],
+            wa: 'PE Foam dan Protection Sheet'
+          }
+        ]
+      },
+      'mro': {
+        badge: 'DIVISI GENERAL TRADING & MRO INDUSTRI',
+        title: 'Katalog Spesifikasi Pneumatik, Tools & Mekanikal MRO',
+        items: [
+          {
+            id: 'pneumatik',
+            tabName: 'Pneumatik & Fitting',
+            name: 'Sistem Pneumatik, Solenoid Valve & Air Fitting (Slide 07 PDF)',
+            img: 'assets/images/trading-pneumatics.png?v=38',
+            desc: 'Sesuai slide 07 Company Profile: Komponen kontrol otomasi udara pneumatik berstandar industri presisi untuk mesin perakitan dan sistem aktuator pabrik.',
+            specs: [
+              { label: 'Air Fitting', val: 'One-touch tube fitting (L-type, straight, tee, speed controller, 4-16mm)' },
+              { label: 'Valve Kontrol', val: 'Solenoid valve 5/2 way, 3/2 way, mechanical valve, manifold base valve' },
+              { label: 'Air Actuator', val: 'Silinder pneumatik standar ISO, compact cylinder, guide cylinder' },
+              { label: 'FRL Unit', val: 'Filter Regulator Lubricator (Air treatment udara bersih & tekanan stabil)' },
+              { label: 'Brand Kompatibel', val: 'Standar industri presisi & kompatibel otomasi pabrik' }
+            ],
+            wa: 'Pneumatik Solenoid Valve dan Fitting'
+          },
+          {
+            id: 'tools-cutting',
+            tabName: 'Tools & Cutting Tools',
+            name: 'Industrial Tools, Hand Tools & Cutting Tools (Slide 08 PDF)',
+            img: 'assets/images/trading-tools.png?v=38',
+            desc: 'Sesuai slide 08 Company Profile: Pengadaan perkakas kerja bengkel, kunci perawatan mesin, serta aneka mata potong (cutting tools) tahan aus untuk lini produksi.',
+            specs: [
+              { label: 'Hand Tools', val: 'Kunci ring pas set, obeng presisi, tang kombinasi/potong/buaya, kunci L hex' },
+              { label: 'Cutting Tools', val: 'Mata gergaji mesin (hacksaw blade), cutter heavy-duty, endmill, mata bor HSS' },
+              { label: 'Heavy Equipment', val: 'Palu tembaga/karet perakitan mesin, ragum catok bengkel (bench vise)' },
+              { label: 'Standar Kualitas', val: 'High-torque Chrome Vanadium (Cr-V) & industrial grade alloy' },
+              { label: 'Aplikasi', val: 'Maintenance team, lini perakitan, workshop tool crib pabrik' }
+            ],
+            wa: 'Tools dan Cutting Tools Industri'
+          },
+          {
+            id: 'gearpump',
+            tabName: 'Gear Pump Industri',
+            name: 'Gear Pump Minyak, Solar & Cairan Kental',
+            img: 'assets/images/product-gearpump-gc20.png?v=38',
+            desc: 'Pompa roda gigi transfer cairan viskositas sedang hingga tinggi (oli mesin, solar industri, gliserin, pelumas gearbox) tanpa risiko kavitasi.',
+            specs: [
+              { label: 'Model Andalan', val: 'Spesifikasi GC-20 (3/4 Inch), GC-25 (1 Inch) & Varian Pulley Drive' },
+              { label: 'Kapasitas Aliran', val: '37 s/d 55 Liter per Menit (Kecepatan 400 - 600 RPM)' },
+              { label: 'Tekanan Kerja', val: '0.1 s/d 0.3 MPa (Maksimal 3 Bar / 43 PSI)' },
+              { label: 'Material Pompa', val: 'Body FC200 Cast Iron, Gear Carbon Steel tahan abrasi oli kotor' },
+              { label: 'Aplikasi', val: 'Transfer oli boiler, sirkulasi oli chiller mesin stamping, tangki solar genset' }
+            ],
+            wa: 'Gear Pump Industri GC Series'
+          },
+          {
+            id: 'gearmotor',
+            tabName: 'Gear Motor & Reducer',
+            name: 'Gear Motor Helical & Speed Reducer LM / Flange',
+            img: 'assets/images/product-motor-gearlm.png?v=38',
+            desc: 'Penggerak konveyor dan sistem otomasi pabrik dengan rasio reduksi torsi tinggi, efisiensi transmisi prima, dan tingkat kebisingan rendah.',
+            specs: [
+              { label: 'Daya Motor', val: '0.1 kW (1/8 HP) hingga 3.7 kW (5 HP) 3-Phase 220/380V' },
+              { label: 'Rasio Reduksi', val: '1:10, 1:20, 1:30, 1:40, 1:50, hingga 1:60 (Sesuai RPM target)' },
+              { label: 'Tipe Pemasangan', val: 'Horizontal Foot Mounted (B3) & Vertical Flange Mounted (B5)' },
+              { label: 'Material Gear', val: 'Cr-Mo Alloy Steel dengan perlakuan panas karburisasi presisi' },
+              { label: 'Aplikasi', val: 'Drive conveyor perakitan part, mixer kimia cair, mesin packaging & feeder' }
+            ],
+            wa: 'Gear Motor Helical dan Reducer'
+          },
+          {
+            id: 'elektromotor',
+            tabName: 'Elektro Motor 3-Phase',
+            name: 'Motor Listrik Induksi 3-Phase Heavy Duty',
+            img: 'assets/images/product-motor-yuema-sa.png?v=38',
+            desc: 'Motor listrik industri performa tinggi untuk continuous duty (S1) pada pompa hidrolik, blower pendingin, kompresor, dan mesin manufaktur.',
+            specs: [
+              { label: 'Tegangan & Frekuensi', val: '3-Phase 380V / 660V, 50 Hz (Standar Industri Indonesia)' },
+              { label: 'Kecepatan Putar', val: '2-Pole (2900 RPM), 4-Pole (1450 RPM), 6-Pole (960 RPM)' },
+              { label: 'Proteksi & Isolasi', val: 'IP55 Dust & Water Splash Proof, Insulation Class F (Max 155°C)' },
+              { label: 'Rangka Motor', val: 'Cast Iron Frame kokoh dengan sirip pendingin kipas mandiri' },
+              { label: 'Aplikasi', val: 'Motor utama mesin bubut, blower ventilasi pabrik, mesin press & grinding' }
+            ],
+            wa: 'Elektro Motor Listrik 3 Phase'
+          }
+        ]
+      },
+      'fabrication': {
+        badge: 'DIVISI WORKSHOP FABRIKASI & RUBBER IN-HOUSE',
+        title: 'Katalog Spesifikasi Trolley, Pagar Mesin & Karet Industri',
+        items: [
+          {
+            id: 'trolley-besi',
+            tabName: 'Storage Parts Trolley',
+            name: 'Custom Parts Storage Trolley 4-Susun Heavy Duty (Slide 09 & 10 PDF)',
+            img: 'assets/images/fabrication-trolley-blue.png?v=38',
+            desc: 'Sesuai slide 09 & 10 Company Profile: Kereta dorong penyimpanan dan transfer komponen perakitan antar-stasiun kerja dengan dudukan bin plastik presisi.',
+            specs: [
+              { label: 'Material Rangka', val: 'Besi Hollow Tebal 1.8mm - 2.3mm + Siku Penguat Sudut' },
+              { label: 'Tingkat / Rak', val: '4 Susun Tray dengan Stopper Penahan Partisi Bin Plastik' },
+              { label: 'Finishing Cat', val: 'Powder Coating Industrial Blue Anti-Gores & Tahan Karat Oven' },
+              { label: 'Sistem Roda', val: '4 Unit PU Caster 4-5 Inch (2 Swivel dengan Rem Kaki + 2 Fixed Caster)' },
+              { label: 'Kapasitas Beban', val: 'Kapasitas angkut aman 250 kg s/d 400 kg total beban kerja' }
+            ],
+            wa: 'Custom Parts Storage Trolley Heavy Duty'
+          },
+          {
+            id: 'trolley-stainless',
+            tabName: 'Trolley Stainless SUS 304',
+            name: 'Rak Susun & Trolley Stainless Steel SUS 304 (Slide 10 PDF)',
+            img: 'assets/images/fabrication-trolley-stainless.png?v=38',
+            desc: 'Trolley rak susun kawat/baki stainless steel kualitas food & pharmaceutical grade, higienis, mudah disterilkan, dan tahan korosi kimia/cairan basah.',
+            specs: [
+              { label: 'Kualitas Material', val: 'Stainless Steel SUS 304 (Tahan asam ringan & bahan kimia basah)' },
+              { label: 'Konstruksi', val: 'Las TIG (Argon) full penetration, finishing poles hairline/mirror higienis' },
+              { label: 'Varian Desain', val: 'Model rak susun kawat nampan, baki solid bertingkat, & meja dorong lab' },
+              { label: 'Sistem Roda', val: 'Medical/Cleanroom Grade Caster non-marking tidak mengotori lantai epoxy' },
+              { label: 'Aplikasi', val: 'Pabrik makanan/minuman, farmasi, ruang perakitan bersih (cleanroom)' }
+            ],
+            wa: 'Trolley Stainless Steel SUS 304'
+          },
+          {
+            id: 'fence-welding',
+            tabName: 'Fence Welding (Pagar Mesin)',
+            name: 'Fence Welding & Pagar Pengaman Mesin Pabrik (Slide 09 & 10 PDF)',
+            img: 'assets/images/fabrication-welding.png?v=38',
+            desc: 'Sesuai slide 09 & 10: Pengelasan struktur pagar pelindung area mesin berputar, safety perimeter robotik welding, dan partisi zonasi keselamatan kerja pabrik.',
+            specs: [
+              { label: 'Rangka Utama', val: 'Pipa/Hollow Besi galvanis atau steel frame dengan kawat wiremesh galvanis' },
+              { label: 'Standar Safety', val: 'Ketinggian 1.8m - 2.2m dengan pintu akses interlock safety switch' },
+              { label: 'Pengelasan', val: 'Pengelasan CO2 MIG/MAG presisi tinggi, sambungan kokoh anti-getar' },
+              { label: 'Pemasangan', val: 'Baseplate angkur dynabolt beton lantai pabrik & knock-down modular' },
+              { label: 'Aplikasi', val: 'Perimeter mesin stamping press, robot welding cell, zonasi conveyor' }
+            ],
+            wa: 'Fence Welding Pagar Pengaman Mesin'
+          },
+          {
+            id: 'rubber-parts',
+            tabName: 'Karet Industri & Rubber Foot',
+            name: 'Fabrication Synthetic Rubber, Rubber Molded & Rubber Foot (Slide 04 PDF)',
+            img: 'assets/images/studio-tape-rubber.png?v=38',
+            desc: 'Sesuai dokumen resmi Halaman 04: Pembuatan aneka cetakan karet sintetis, chloroprene rubber, karet bantalan anti-getar, dan karet kaki meja/mesin pabrik.',
+            specs: [
+              { label: 'Jenis Karet', val: 'Synthetic Rubber, Chloroprene Rubber (Neoprene), NBR (Oil Resistant), EPDM' },
+              { label: 'Produk Unggulan', val: 'Rubber Foot (Kaki karet mesin/rak), Rubber Pad (Peredam getaran pondasi)' },
+              { label: 'Cetakan Karet', val: 'Rubber Molded custom sesuai cetakan cetak drawing pembeli' },
+              { label: 'Kekerasan (Hardness)', val: 'Shore A 50, 60, 70, hingga 85 Durometer' },
+              { label: 'Aplikasi', val: 'Gasket karet penyekat, stopper pintu mesin, peredam getaran kompresor' }
+            ],
+            wa: 'Fabrication Synthetic Rubber dan Rubber Foot'
+          }
+        ]
+      },
+      'safety': {
+        badge: 'DIVISI CLEANING, APD K3 & CONSUMABLES PABRIK',
+        title: 'Katalog Spesifikasi Cleaning Supplies, APD K3 & Lakban',
+        items: [
+          {
+            id: 'cleaning-supplies',
+            tabName: 'Cleaning Supplies & Tisu Industri',
+            name: 'Cleaning Supplies, Chemical Pembersih & Tisu Industri',
+            img: 'assets/images/trading-cleaning-k3.png?v=38',
+            desc: 'Sesuai slide 07 Company Profile: Pengadaan bahan kimia pembersih lantai pabrik, tisu toilet jumbo & lap industri, sabun cuci tangan, pest control, dan alat kebersihan.',
+            specs: [
+              { label: 'Tisu Industri', val: 'Tisu JRT (Jumbo Roll Toilet), Multifold Hand Towel, Centrefeed Wipes' },
+              { label: 'Chemical Pembersih', val: 'Floor cleaner konsentrat jerigen 4L, Handsoap pump, Heavy-Duty Machine Degreaser' },
+              { label: 'Pest Control Gudang', val: 'Rodenticide pengendali hama gudang & aerosol pengendali serangga industri' },
+              { label: 'Alat Sanitasi', val: 'Sapu lidi/ijuk tebal, tongkat pel katun heavy-duty, kain microfiber, ember peras' },
+              { label: 'Suplai', val: 'Kontrak pengadaan berkala / mingguan dengan armada pengiriman mandiri' }
+            ],
+            wa: 'Cleaning Supplies dan Tisu Industri Pabrik'
+          },
+          {
+            id: 'safety-k3',
+            tabName: 'Perlengkapan APD K3',
+            name: 'Occupational Safety and Health (Perlengkapan APD K3 SNI - Slide 07 PDF)',
+            img: 'assets/images/trading-cleaning-k3.png?v=38',
+            desc: 'Sesuai slide 07 Company Profile: Suplai perlengkapan pelindung diri standar K3 untuk operator mesin, pekerja gudang, dan tim maintenance pabrik.',
+            specs: [
+              { label: 'Pelindung Mata', val: 'Kacamata safety anti-fog bening / hitam (UV protection) & face shield perisai las' },
+              { label: 'Pelindung Tangan', val: 'Sarung tangan katun rajut bintik polkadot, karet latex kuning, nitrile tahan kimia' },
+              { label: 'Pelindung Kaki', val: 'Sepatu safety ujung besi (Steel Toe Cap) tahan tumpahan minyak & anti-paku' },
+              { label: 'Pelindung Kepala & Badan', val: 'Helm proyek SNI dengan tali dagu putar, rompi reflektif fosfor, masker debu' },
+              { label: 'Standar Legal', val: 'Memenuhi sertifikasi SNI & standar keselamatan kerja pabrik Kemenaker' }
+            ],
+            wa: 'Perlengkapan APD K3 SNI'
+          },
+          {
+            id: 'masking-tape',
+            tabName: 'Masking & OPP Tape',
+            name: 'Masking Tape Tahan Oven & Lakban OPP Packing (Slide 04 & 06 PDF)',
+            img: 'assets/images/product-masking-tape.png?v=38',
+            desc: 'Sesuai slide 04 & 06 Company Profile: Suplai aneka masking tape kertas tahan panas suhu oven (Tahan Suhu Oven Pengecatan), lakban bening OPP, serta stretch film pallet.',
+            specs: [
+              { label: 'Masking Tape', val: 'Industrial Yellow Masking Tape tahan panas oven hingga 120°C tanpa residu lem' },
+              { label: 'OPP Tape Dus', val: 'Lakban packing cokelat & bening tebal 45-50 micron panjang 90-100 yard daya rekat super' },
+              { label: 'Double Tape & Foam', val: 'Double-sided foam tape industrial grade untuk perekatan panel part otomotif' },
+              { label: 'Stretch Film', val: 'Plastik wrapping pallet 17-20 micron elastisitas tinggi anti-sobek untuk kargo kontainer' },
+              { label: 'Suplai', val: 'Tersedia ukuran 1 inch, 2 inch, 3 inch dalam kemasan karton box isi 72 roll' }
+            ],
+            wa: 'Masking Tape dan Lakban OPP Packing'
+          },
+          {
+            id: 'office-supplies',
+            tabName: 'Office Supplies (ATK Kantor)',
+            name: 'Office Supplies & Perlengkapan Administrasi Pabrik (Slide 08 & 09 PDF)',
+            img: 'assets/images/trading-office-supplies.png?v=38',
+            desc: 'Sesuai slide 08 Company Profile: Suplai satu pintu kebutuhan administrasi kantor pabrik, kertas formulir produksi, map dokumen audit, dan alat tulis operasional.',
+            specs: [
+              { label: 'Kertas Produksi', val: 'Kertas continuous form cetak surat jalan/faktur, kertas HVS A4/F4 75-80 gsm' },
+              { label: 'Arsip & Dokumen', val: 'Ordner binder tebal, map snelhechter plastik, clear holder dokumen QC mesin' },
+              { label: 'Alat Tulis Kantor', val: 'Spidol permanent marker anti-luntur untuk label karton, pulpen, correction pen' },
+              { label: 'Perkakas Meja', val: 'Gunting industri, cutter memo, stapler besar & isi staples, kalkulator gudang' },
+              { label: 'Pengiriman', val: 'Pengiriman gabungan satu PO bersama perlengkapan pabrik lainnya' }
+            ],
+            wa: 'Office Supplies dan ATK Kantor Pabrik'
+          }
+        ]
+      }
+    };
+
+    var currentDivKey = null;
+
+    function openDivisionModal(divKey, preferredItemId) {
+      var divData = modalDivisions[divKey];
+      if (!divData) return;
+      currentDivKey = divKey;
+
+      document.getElementById('modal-div-badge').innerText = divData.badge;
+      document.getElementById('modal-div-title').innerText = divData.title;
+
+      var tabsContainer = document.getElementById('modal-item-tabs');
+      var tabsHtml = '';
+      for (var i = 0; i < divData.items.length; i++) {
+        var it = divData.items[i];
+        tabsHtml += '<button type="button" onclick="selectModalItem(\'' + it.id + '\')" id="modal-tab-btn-' + it.id + '" class="modal-tab-pill px-3 py-1.5 rounded-lg text-xs font-heading font-bold whitespace-nowrap transition cursor-pointer bg-slate-200/70 text-slate-700 hover:bg-slate-300">' +
+          it.tabName +
+        '</button>';
+      }
+      tabsContainer.innerHTML = tabsHtml;
+
+      var targetId = preferredItemId || divData.items[0].id;
+      selectModalItem(targetId);
+
+      var backdrop = document.getElementById('product-modal-backdrop');
+      var card = document.getElementById('product-modal-card');
+      backdrop.classList.remove('hidden');
+      setTimeout(function() {
+        backdrop.classList.remove('opacity-0');
+        card.classList.remove('scale-95');
+        card.classList.add('scale-100');
+      }, 10);
+      document.body.style.overflow = 'hidden';
+    }
+
+    function selectModalItem(itemId) {
+      if (!currentDivKey) return;
+      var divData = modalDivisions[currentDivKey];
+      var item = null;
+      for (var i = 0; i < divData.items.length; i++) {
+        if (divData.items[i].id === itemId) {
+          item = divData.items[i];
+          break;
+        }
+      }
+      if (!item) item = divData.items[0];
+
+      var pills = document.querySelectorAll('.modal-tab-pill');
+      for (var j = 0; j < pills.length; j++) {
+        pills[j].className = 'modal-tab-pill px-3 py-1.5 rounded-lg text-xs font-heading font-bold whitespace-nowrap transition cursor-pointer bg-slate-200/70 text-slate-700 hover:bg-slate-300';
+      }
+      var activeBtn = document.getElementById('modal-tab-btn-' + item.id);
+      if (activeBtn) {
+        activeBtn.className = 'modal-tab-pill px-3 py-1.5 rounded-lg text-xs font-heading font-bold whitespace-nowrap transition cursor-pointer bg-emerald-700 text-white shadow-sm';
+      }
+
+      document.getElementById('modal-item-name').innerText = item.name;
+      document.getElementById('modal-item-desc').innerText = item.desc;
+      document.getElementById('modal-item-img').src = item.img;
+      document.getElementById('modal-item-img').alt = item.name;
+
+      var specsHtml = '';
+      for (var k = 0; k < item.specs.length; k++) {
+        var sp = item.specs[k];
+        specsHtml += '<div class="p-2.5 sm:p-3 grid grid-cols-1 sm:grid-cols-12 gap-1 bg-white hover:bg-slate-50">' +
+          '<span class="sm:col-span-4 font-mono font-bold text-slate-500 uppercase text-[10px] sm:text-[11px]">' + sp.label + ':</span>' +
+          '<span class="sm:col-span-8 font-medium text-wira-ink text-xs">' + sp.val + '</span>' +
+        '</div>';
+      }
+      document.getElementById('modal-specs-table').innerHTML = specsHtml;
+
+      var waBtn = document.getElementById('modal-wa-btn');
+      waBtn.href = 'https://wa.me/622184990200?text=' + encodeURIComponent('Halo Tim Sales PT. Wirasena, kami ingin meminta penawaran harga (RFQ) untuk: ' + item.wa);
+    }
+
+    function closeProductModal(e) {
+      if (e && e.target && e.target.id !== 'product-modal-backdrop') return;
+      var backdrop = document.getElementById('product-modal-backdrop');
+      var card = document.getElementById('product-modal-card');
+      backdrop.classList.add('opacity-0');
+      card.classList.remove('scale-100');
+      card.classList.add('scale-95');
+      setTimeout(function() {
+        backdrop.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 200);
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeProductModal();
+    });
   </script>
 </body>
 </html>
