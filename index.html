@@ -1612,7 +1612,7 @@
   </script>
 
   <!-- MULTI-PRODUCT SPECIFICATION MODAL (100% Sesuai Katalog Resmi PDF + Permintaan Om Yongki) -->
-  <div id="product-modal-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden opacity-0 transition-opacity duration-200 flex items-center justify-center p-3 sm:p-6" onclick="closeProductModal(event)">
+  <div id="product-modal-backdrop" style="display: none; opacity: 0;" class="fixed inset-0 bg-black/80 backdrop-blur-md z-[9999] transition-opacity duration-200 flex items-center justify-center p-3 sm:p-6" onclick="closeProductModal(event)">
     <div id="product-modal-card" class="bg-white rounded-2xl sm:rounded-3xl shadow-2xl max-w-3xl w-full max-h-[92vh] overflow-y-auto border border-slate-200 transform scale-95 transition-transform duration-200 relative no-scrollbar" onclick="event.stopPropagation()">
       
       <!-- Modal Header -->
@@ -1965,11 +1965,13 @@
 
       var backdrop = document.getElementById('product-modal-backdrop');
       var card = document.getElementById('product-modal-card');
-      backdrop.classList.remove('hidden');
+      backdrop.style.display = 'flex';
       setTimeout(function() {
-        backdrop.classList.remove('opacity-0');
-        card.classList.remove('scale-95');
-        card.classList.add('scale-100');
+        backdrop.style.opacity = '1';
+        if (card) {
+          card.classList.remove('scale-95');
+          card.classList.add('scale-100');
+        }
       }, 10);
       document.body.style.overflow = 'hidden';
     }
@@ -2018,11 +2020,13 @@
       if (e && e.target && e.target.id !== 'product-modal-backdrop') return;
       var backdrop = document.getElementById('product-modal-backdrop');
       var card = document.getElementById('product-modal-card');
-      backdrop.classList.add('opacity-0');
-      card.classList.remove('scale-100');
-      card.classList.add('scale-95');
+      backdrop.style.opacity = '0';
+      if (card) {
+        card.classList.remove('scale-100');
+        card.classList.add('scale-95');
+      }
       setTimeout(function() {
-        backdrop.classList.add('hidden');
+        backdrop.style.display = 'none';
         document.body.style.overflow = '';
       }, 200);
     }
