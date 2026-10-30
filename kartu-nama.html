@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+  <title>Executive Business Card | PT. Wirasena Maju Bersama Rayya</title>
+  <meta name="description" content="Kartu Nama Digital & Master Cetak 300 DPI Om Yongki Kav - Sales & Business Development Director PT. Wirasena Maju Bersama Rayya Cikarang." />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
+  
+  <!-- Fonts: Plus Jakarta Sans, JetBrains Mono, & Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#004c22",
+            "primary-container": "#166534",
+            "secondary": "#006e2f",
+            "on-primary": "#ffffff",
+            "surface-studio": "#F5F4F0",
+            "paper-cotton": "#FCFCFA",
+            "paper-back": "#FAF9F5",
+            "ink-rich": "#121513",
+            "ink-subtle": "#666B64",
+            "ink-light": "#969B93",
+            "forest-foil": "#0F4624",
+            "brass-accent": "#B89658"
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Poppins', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Natural Studio & Tactile Board Aesthetics */
+    body {
+      background-color: #F8F9FA;
+      background-image: 
+        radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.85) 0%, rgba(244, 243, 238, 0) 70%),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.015) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.015) 1px, transparent 1px);
+      background-size: 100% 100%, 36px 36px, 36px 36px;
+    }
+
+    /* Real physical 90x55mm proportion */
+    .ratio-card {
+      aspect-ratio: 90 / 55;
+    }
+
+    /* Multi-layered Heavy Paper Card Shadow & Painted Forest Edge */
+    .cotton-board {
+      position: relative;
+      border-radius: 12px;
+      box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.04),
+        0 8px 16px -2px rgba(18, 25, 20, 0.06),
+        0 24px 44px -8px rgba(12, 35, 20, 0.12),
+        inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+    }
+    
+    .cotton-board:hover {
+      transform: translateY(-4px) scale(1.005);
+      box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.04),
+        0 12px 24px -2px rgba(18, 25, 20, 0.08),
+        0 32px 56px -6px rgba(12, 35, 20, 0.16),
+        inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+    }
+  </style>
+</head>
+<body class="text-ink-rich antialiased font-sans min-h-screen selection:bg-forest-foil selection:text-white pb-20">
+
+  <!-- Top Navigation & Back Link -->
+  <nav class="w-full max-w-5xl mx-auto pt-6 px-5 flex items-center justify-between text-xs text-[#6b7280]">
+    <a href="index.html" class="inline-flex items-center gap-1.5 font-medium hover:text-[#166534] transition-colors py-1 px-3 rounded-lg hover:bg-black/5">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+      </svg>
+      <span>Kembali ke Website Utama</span>
+    </a>
+    <div class="flex items-center gap-2">
+      <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      <span class="font-mono text-[11px] font-semibold text-emerald-800">Master Siap Cetak (300 DPI)</span>
+    </div>
+  </nav>
+
+  <!-- Studio Header -->
+  <header class="w-full max-w-4xl mx-auto pt-6 pb-6 px-5">
+    <div class="text-center max-w-2xl mx-auto">
+      <span class="text-[11px] font-mono uppercase tracking-widest text-[#166534] font-semibold bg-[#166534]/10 px-3 py-1 rounded-full">
+        Executive Stationery Edition
+      </span>
+      <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-[#111827] mt-3">
+        PT. Wirasena Maju Bersama Rayya
+      </h1>
+      <p class="text-sm text-[#4b5563] mt-1.5 font-medium">
+        Kartu Nama Resmi Direksi &amp; Business Development
+      </p>
+
+      <!-- View Switcher Tabs -->
+      <div class="inline-flex items-center p-1 bg-black/5 rounded-xl mt-6 text-xs font-medium border border-black/5">
+        <button id="tabAll" onclick="switchView('all')" class="view-btn px-4 py-1.5 rounded-lg text-xs transition-all bg-white text-ink-rich font-semibold shadow-xs">
+          Dua Sisi (All)
+        </button>
+        <button id="tabFront" onclick="switchView('front')" class="view-btn px-4 py-1.5 rounded-lg text-xs transition-all text-ink-subtle hover:text-ink-rich font-medium">
+          Sisi Depan
+        </button>
+        <button id="tabBack" onclick="switchView('back')" class="view-btn px-4 py-1.5 rounded-lg text-xs transition-all text-ink-subtle hover:text-ink-rich font-medium">
+          Sisi Belakang
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Visual Stage (Stitch Exact Cards) -->
+  <main class="w-full max-w-4xl mx-auto px-5">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-center max-w-4xl mx-auto">
+      
+      <!-- SISI DEPAN (FRONT) -->
+      <div id="cardFrontContainer" class="flex flex-col items-center">
+        <div class="w-full max-w-[420px] ratio-card bg-white cotton-board p-7 relative flex flex-col justify-between items-center text-center">
+          <div class="w-full flex justify-end"></div>
+          
+          <div class="flex flex-col items-center my-auto">
+            <!-- Pristine Local Logo -->
+            <div class="w-16 h-16 mb-3 flex items-center justify-center">
+              <img alt="Logo Wirasena" class="w-full h-full object-contain" src="assets/images/logo-avatar-exact-user.png" />
+            </div>
+            <h2 class="text-2xl font-bold tracking-tight text-[#111827]">Wirasena</h2>
+            <p class="text-[11px] font-semibold tracking-wider uppercase text-[#166534] mt-0.5">Maju Bersama Rayya</p>
+            <div class="w-16 h-[1.5px] bg-[#166534]/30 my-3.5"></div>
+            <p class="text-[8.5px] font-medium tracking-wider text-[#4b5563] uppercase">
+              SUPPLIER KEBUTUHAN PABRIK • CARTON BOX • JASA FABRIKASI
+            </p>
+          </div>
+
+          <div class="w-full pt-2 border-t border-black/5">
+            <p class="text-[10px] font-medium text-[#166534] tracking-wide">www.wirasenaraya.com</p>
+          </div>
+        </div>
+        <span class="text-[11px] font-mono text-[#9ca3af] mt-2.5">SISI DEPAN (FRONT) • 90 x 55 mm</span>
+      </div>
+
+      <!-- SISI BELAKANG (BACK) -->
+      <div id="cardBackContainer" class="flex flex-col items-center">
+        <div class="w-full max-w-[420px] ratio-card bg-white cotton-board p-7 relative flex flex-col justify-between">
+          <div class="flex items-center justify-between gap-5 my-auto">
+            
+            <!-- Contact Details -->
+            <div class="flex-1 min-w-0">
+              <h3 class="text-xl font-bold tracking-tight text-[#111827]">Yongki Kav</h3>
+              <p class="text-xs font-semibold text-[#166534] mt-0.5">Sales &amp; Business Development Director</p>
+              <p class="text-[10px] font-medium text-[#6b7280] mt-0.5 truncate">PT. Wirasena Maju Bersama Rayya</p>
+              
+              <div class="space-y-1 text-[10.5px] mt-3.5">
+                <div class="flex items-center gap-1.5">
+                  <span class="text-[#166534]">📱</span>
+                  <a class="font-medium text-[#111827] hover:text-[#166534] transition-colors" href="https://wa.me/6285221060766" target="_blank">
+                    0852-2106-0766
+                  </a>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-[#166534]">✉️</span>
+                  <a class="text-[#4b5563] hover:text-[#111827] transition-colors truncate" href="mailto:wirasenamajubersama@gmail.com">
+                    wirasenamajubersama@gmail.com
+                  </a>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-[#166534]">🌐</span>
+                  <a class="text-[#166534] font-medium hover:underline truncate" href="https://wirasenaraya.com" target="_blank">
+                    www.wirasenaraya.com
+                  </a>
+                </div>
+                <div class="flex items-baseline gap-1.5 pt-0.5">
+                  <span class="text-[#166534]">📍</span>
+                  <span class="text-[#6b7280] text-[9.5px] leading-tight">Sukadami, Cikarang Selatan, Bekasi 17530</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- WhatsApp QR Code -->
+            <div class="shrink-0 flex flex-col items-center">
+              <div class="p-1.5 bg-white border border-black/10 rounded-xl shadow-xs">
+                <svg class="w-14 h-14 text-[#111827]" fill="currentColor" viewBox="0 0 100 100">
+                  <path d="M0,0 h28 v28 h-28 z M5,5 v18 h18 v-18 z M9,9 h10 v10 h-10 z"></path>
+                  <path d="M72,0 h28 v28 h-28 z M77,5 v18 h18 v-18 z M81,9 h10 v10 h-10 z"></path>
+                  <path d="M0,72 h28 v28 h-28 z M5,77 v18 h18 v-18 z M9,81 h10 v10 h-10 z"></path>
+                  <rect height="6" width="6" x="36" y="6"></rect>
+                  <rect height="6" width="8" x="46" y="6"></rect>
+                  <rect height="6" width="6" x="58" y="10"></rect>
+                  <rect height="8" width="6" x="36" y="18"></rect>
+                  <rect height="6" width="6" x="48" y="20"></rect>
+                  <rect height="6" width="8" x="6" y="38"></rect>
+                  <rect height="6" width="8" x="18" y="38"></rect>
+                  <rect height="8" width="6" x="10" y="48"></rect>
+                  <rect height="6" width="6" x="22" y="52"></rect>
+                  <rect fill="#166534" height="14" rx="2" width="14" x="43" y="43"></rect>
+                  <rect height="6" width="12" x="68" y="38"></rect>
+                  <rect height="6" width="8" x="86" y="38"></rect>
+                  <rect height="6" width="8" x="64" y="48"></rect>
+                  <rect height="6" width="16" x="78" y="48"></rect>
+                  <rect height="8" width="6" x="70" y="60"></rect>
+                  <rect height="6" width="10" x="84" y="60"></rect>
+                  <rect height="8" width="8" x="36" y="68"></rect>
+                  <rect height="6" width="6" x="48" y="72"></rect>
+                  <rect height="12" width="6" x="36" y="82"></rect>
+                  <rect height="6" width="8" x="46" y="84"></rect>
+                  <rect height="6" width="8" x="60" y="74"></rect>
+                  <rect height="8" width="8" x="72" y="74"></rect>
+                  <rect height="6" width="10" x="84" y="76"></rect>
+                  <rect height="6" width="14" x="64" y="86"></rect>
+                  <rect height="6" width="12" x="82" y="86"></rect>
+                </svg>
+              </div>
+              <span class="text-[8px] font-semibold text-[#166534] uppercase tracking-wider mt-1.5">Direct WA</span>
+            </div>
+
+          </div>
+          <div></div>
+        </div>
+        <span class="text-[11px] font-mono text-[#9ca3af] mt-2.5">SISI BELAKANG (BACK) • 90 x 55 mm</span>
+      </div>
+
+    </div>
+
+    <!-- ACTION BUTTONS -->
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+      <a class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#166534] hover:bg-[#14532d] text-white text-xs font-semibold shadow-sm transition-all" 
+         href="https://wa.me/6285221060766?text=Halo%20Pak%20Yongki%2C%20saya%20ingin%20berdiskusi%20mengenai%20kebutuhan%20pabrik%20dan%20karton%20box." target="_blank">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+        <span>Chat WhatsApp Langsung</span>
+      </a>
+
+      <button id="btnCopyPhone" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white hover:bg-gray-50 border border-black/10 text-[#111827] text-xs font-medium shadow-xs transition-all" onclick="copyContactPhone()">
+        <svg class="w-4 h-4 text-[#4b5563]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+        <span id="copyPhoneText">Salin Nomor Kontak</span>
+      </button>
+
+      <!-- Print Master Download -->
+      <a class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#111827] hover:bg-black text-white text-xs font-medium shadow-xs transition-all" 
+         href="assets/business-card/master-cetak/MASTER-CETAK-KARTU-NAMA-YONGKI-KAV-300DPI.pdf" download="MASTER-CETAK-KARTU-NAMA-YONGKI-KAV-300DPI.pdf">
+        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+        </svg>
+        <span>Download PDF Master Cetak (300 DPI)</span>
+      </a>
+    </div>
+
+    <!-- Production Specs Info -->
+    <div class="mt-12 max-w-xl mx-auto p-4 rounded-xl bg-white border border-black/5 text-center text-xs text-[#6b7280]">
+      <p class="font-semibold text-[#111827]">Spesifikasi Standar Percetakan:</p>
+      <p class="mt-1">Ukuran Standar: <strong class="text-[#166534]">90 x 55 mm</strong> • Resolusi: <strong class="text-[#166534]">300 DPI High-Definition</strong> • Kertas Rekomendasi: <strong class="text-[#111827]">Art Carton 260/310 gsm Laminasi Doff (Matte)</strong></p>
+    </div>
+  </main>
+
+  <script>
+    function switchView(mode) {
+      const front = document.getElementById('cardFrontContainer');
+      const back = document.getElementById('cardBackContainer');
+      const btnAll = document.getElementById('tabAll');
+      const btnFront = document.getElementById('tabFront');
+      const btnBack = document.getElementById('tabBack');
+
+      const activeClass = 'bg-white text-ink-rich font-semibold shadow-xs';
+      const inactiveClass = 'text-ink-subtle hover:text-ink-rich font-medium';
+
+      [btnAll, btnFront, btnBack].forEach(btn => {
+        btn.className = `view-btn px-4 py-1.5 rounded-lg text-xs transition-all ${inactiveClass}`;
+      });
+
+      if (mode === 'all') {
+        front.classList.remove('hidden');
+        back.classList.remove('hidden');
+        btnAll.className = `view-btn px-4 py-1.5 rounded-lg text-xs transition-all ${activeClass}`;
+      } else if (mode === 'front') {
+        front.classList.remove('hidden');
+        back.classList.add('hidden');
+        btnFront.className = `view-btn px-4 py-1.5 rounded-lg text-xs transition-all ${activeClass}`;
+      } else if (mode === 'back') {
+        front.classList.add('hidden');
+        back.classList.remove('hidden');
+        btnBack.className = `view-btn px-4 py-1.5 rounded-lg text-xs transition-all ${activeClass}`;
+      }
+    }
+
+    function copyContactPhone() {
+      const phone = "085221060766";
+      navigator.clipboard.writeText(phone).then(() => {
+        const textLabel = document.getElementById('copyPhoneText');
+        const oldText = textLabel.innerText;
+        textLabel.innerText = "✓ Nomor Berhasil Disalin (0852-2106-0766)";
+        setTimeout(() => {
+          textLabel.innerText = oldText;
+        }, 2200);
+      }).catch(err => {
+        alert("Nomor WhatsApp: 0852-2106-0766");
+      });
+    }
+  </script>
+</body>
+</html>
