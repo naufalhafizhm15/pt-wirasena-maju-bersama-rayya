@@ -1247,76 +1247,61 @@ def build_index():
           </p>
         </div>
 
-        <!-- 1-Row Unified Products Strip (Om Yongki: Tampilkan bareng2 dlm 1 row tanpa brand & tanpa desc) -->
+        <!-- 1-Row Unified Products Strip (Clean, Big Images, Zero Box/Border Container) -->
         <div class="mb-12 sm:mb-16">
-          <div class="flex items-center justify-between mb-4">
+          <div class="mb-4 sm:mb-6">
             <span class="text-xs font-heading font-bold text-wira-accent uppercase tracking-wider">Item Produk &amp; Sparepart Siap Suplai:</span>
-            <span class="text-[11px] font-mono text-emerald-800 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full font-semibold">
-              1 Pintu Pengadaan Pabrik
-            </span>
           </div>
 
-          <!-- 1 Row Grid (6 Kolom Samping-Sampingan, 1 Row) -->
-          <div class="grid grid-cols-3 lg:grid-cols-6 gap-2.5 sm:gap-4">
+          <!-- 1 Row Grid (6 Kolom Samping-Sampingan, Gambar Besar & Bersih Tanpa Box/Border) -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 items-end">
             
             <!-- Item 1: Carton Box -->
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-2 sm:p-3 text-center flex flex-col justify-between hover:border-emerald-500 hover:shadow-md transition group">
-              <div class="h-24 sm:h-32 bg-white rounded-xl flex items-center justify-center p-2 overflow-hidden border border-slate-100 shadow-xs">
-                <img src="assets/images/product-carton-box.png?v=38" alt="Carton Box" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300" />
+            <div class="text-center group flex flex-col items-center">
+              <div class="h-36 sm:h-44 w-full flex items-center justify-center p-1">
+                <img src="assets/images/product-carton-box.png?v=38" alt="Carton Box" class="max-h-full w-auto object-contain group-hover:scale-105 transition duration-300 drop-shadow-sm" />
               </div>
-              <div class="pt-2">
-                <span class="text-[11px] sm:text-xs font-heading font-bold text-wira-ink block">Carton Box</span>
-              </div>
+              <span class="text-xs sm:text-sm font-heading font-bold text-wira-ink mt-3 block group-hover:text-emerald-700 transition">Carton Box</span>
             </div>
 
             <!-- Item 2: Impraboard Box -->
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-2 sm:p-3 text-center flex flex-col justify-between hover:border-emerald-500 hover:shadow-md transition group">
-              <div class="h-24 sm:h-32 bg-white rounded-xl flex items-center justify-center p-2 overflow-hidden border border-slate-100 shadow-xs">
-                <img src="assets/images/product-impraboard-box.png?v=38" alt="Box Impraboard" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300" />
+            <div class="text-center group flex flex-col items-center">
+              <div class="h-36 sm:h-44 w-full flex items-center justify-center p-1">
+                <img src="assets/images/product-impraboard-box.png?v=38" alt="Box Impraboard" class="max-h-full w-auto object-contain group-hover:scale-105 transition duration-300 drop-shadow-sm" />
               </div>
-              <div class="pt-2">
-                <span class="text-[11px] sm:text-xs font-heading font-bold text-wira-ink block">Box Impraboard</span>
-              </div>
+              <span class="text-xs sm:text-sm font-heading font-bold text-wira-ink mt-3 block group-hover:text-emerald-700 transition">Box Impraboard</span>
             </div>
 
             <!-- Item 3: Storage Trolley -->
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-2 sm:p-3 text-center flex flex-col justify-between hover:border-emerald-500 hover:shadow-md transition group">
-              <div class="h-24 sm:h-32 bg-white rounded-xl flex items-center justify-center p-2 overflow-hidden border border-slate-100 shadow-xs">
-                <img src="assets/images/fabrication-trolley-blue.png?v=38" alt="Storage Trolley" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300" />
+            <div class="text-center group flex flex-col items-center">
+              <div class="h-36 sm:h-44 w-full flex items-center justify-center p-1">
+                <img src="assets/images/fabrication-trolley-blue.png?v=38" alt="Storage Trolley" class="max-h-full w-auto object-contain group-hover:scale-105 transition duration-300 drop-shadow-sm" />
               </div>
-              <div class="pt-2">
-                <span class="text-[11px] sm:text-xs font-heading font-bold text-wira-ink block">Storage Trolley</span>
-              </div>
+              <span class="text-xs sm:text-sm font-heading font-bold text-wira-ink mt-3 block group-hover:text-emerald-700 transition">Storage Trolley</span>
             </div>
 
             <!-- Item 4: Gear Pump -->
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-2 sm:p-3 text-center flex flex-col justify-between hover:border-emerald-500 hover:shadow-md transition group">
-              <div class="h-24 sm:h-32 bg-white rounded-xl flex items-center justify-center p-2 overflow-hidden border border-slate-100 shadow-xs">
-                <img src="assets/images/product-gearpump-gc20.png?v=38" alt="Gear Pump" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300" />
+            <div class="text-center group flex flex-col items-center">
+              <div class="h-36 sm:h-44 w-full flex items-center justify-center p-1">
+                <img src="assets/images/product-gearpump-gc20.png?v=38" alt="Gear Pump" class="max-h-full w-auto object-contain group-hover:scale-105 transition duration-300 drop-shadow-sm" />
               </div>
-              <div class="pt-2">
-                <span class="text-[11px] sm:text-xs font-heading font-bold text-wira-ink block">Gear Pump</span>
-              </div>
+              <span class="text-xs sm:text-sm font-heading font-bold text-wira-ink mt-3 block group-hover:text-emerald-700 transition">Gear Pump</span>
             </div>
 
             <!-- Item 5: Gear Motor -->
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-2 sm:p-3 text-center flex flex-col justify-between hover:border-emerald-500 hover:shadow-md transition group">
-              <div class="h-24 sm:h-32 bg-white rounded-xl flex items-center justify-center p-2 overflow-hidden border border-slate-100 shadow-xs">
-                <img src="assets/images/product-motor-gearlm.png?v=38" alt="Mini Helical Gear Motor" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300" />
+            <div class="text-center group flex flex-col items-center">
+              <div class="h-36 sm:h-44 w-full flex items-center justify-center p-1">
+                <img src="assets/images/product-motor-gearlm.png?v=38" alt="Gear Motor" class="max-h-full w-auto object-contain group-hover:scale-105 transition duration-300 drop-shadow-sm" />
               </div>
-              <div class="pt-2">
-                <span class="text-[11px] sm:text-xs font-heading font-bold text-wira-ink block">Gear Motor</span>
-              </div>
+              <span class="text-xs sm:text-sm font-heading font-bold text-wira-ink mt-3 block group-hover:text-emerald-700 transition">Gear Motor</span>
             </div>
 
             <!-- Item 6: Elektro Motor -->
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-2 sm:p-3 text-center flex flex-col justify-between hover:border-emerald-500 hover:shadow-md transition group">
-              <div class="h-24 sm:h-32 bg-white rounded-xl flex items-center justify-center p-2 overflow-hidden border border-slate-100 shadow-xs">
-                <img src="assets/images/product-motor-yuema-sa.png?v=38" alt="Elektro Motor 3 Phase" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300" />
+            <div class="text-center group flex flex-col items-center">
+              <div class="h-36 sm:h-44 w-full flex items-center justify-center p-1">
+                <img src="assets/images/product-motor-yuema-sa.png?v=38" alt="Elektro Motor" class="max-h-full w-auto object-contain group-hover:scale-105 transition duration-300 drop-shadow-sm" />
               </div>
-              <div class="pt-2">
-                <span class="text-[11px] sm:text-xs font-heading font-bold text-wira-ink block">Elektro Motor</span>
-              </div>
+              <span class="text-xs sm:text-sm font-heading font-bold text-wira-ink mt-3 block group-hover:text-emerald-700 transition">Elektro Motor</span>
             </div>
 
           </div>

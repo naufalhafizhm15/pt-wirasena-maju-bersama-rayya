@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kartu Nama &amp; Template Penawaran Harga (SPH) — PT. Wirasena Maju Bersama Rayya</title>
+  <link rel="icon" type="image/png" href="assets/images/logo-avatar-full.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Montserrat', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          colors: {
+            brand: {
+              emerald: '#102A25',
+              emeraldDark: '#0A1C18',
+              accent: '#237B35',
+              green: '#2E9E44',
+              mint: '#34D399',
+              lightBg: '#F8FAFC'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* 3D Card Flip styling */
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transform-style: preserve-3d;
+    }
+    .card-flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 1.25rem;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+    }
+
+    /* Print styles for A4 SPH Document */
+    @media print {
+      body {
+        background: white !important;
+        color: black !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-page {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      @page {
+        size: A4 portrait;
+        margin: 1.5cm;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-800 font-sans antialiased min-h-screen flex flex-col">
+
+  <!-- Top Navigation Bar -->
+  <header class="no-print w-full sticky top-0 z-50 bg-brand-emerald text-white border-b border-white/10 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="assets/images/logo-avatar-full.png" alt="Logo PT" class="w-9 h-9 rounded-lg bg-white p-0.5 object-contain" />
+        <div>
+          <span class="font-heading font-extrabold text-sm sm:text-base leading-tight block">Executive Sales Suite</span>
+          <span class="text-[11px] text-brand-mint font-medium block">PT. Wirasena Maju Bersama Rayya</span>
+        </div>
+      </div>
+
+      <!-- Tab Switcher -->
+      <div class="flex items-center bg-brand-emeraldDark/80 p-1 rounded-xl border border-white/10">
+        <button id="tab-card-btn" onclick="switchTab('card')" class="px-3.5 py-1.5 text-xs font-heading font-bold rounded-lg bg-brand-green text-white shadow transition">
+          📇 Kartu Nama Bisnis
+        </button>
+        <button id="tab-sph-btn" onclick="switchTab('sph')" class="px-3.5 py-1.5 text-xs font-heading font-bold rounded-lg text-slate-300 hover:text-white transition">
+          📄 Surat Penawaran (SPH)
+        </button>
+      </div>
+
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="index.html" class="text-xs font-semibold text-slate-300 hover:text-white transition">
+          ← Kembali ke Website
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN WRAPPER -->
+  <main class="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+
+    <!-- ========================================== -->
+    <!-- SECTION 1: KARTU NAMA BISNIS ELEGAN (GEN Z) -->
+    <!-- ========================================== -->
+    <section id="section-card" class="space-y-8">
+      
+      <!-- Heading Intro -->
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-100 text-brand-accent">
+          Desain Standar Cetak 90 x 55 mm • 300 DPI
+        </span>
+        <h1 class="font-heading text-2xl sm:text-3xl font-black text-slate-900">
+          Kartu Nama Eksekutif &amp; Smart QR B2B
+        </h1>
+        <p class="text-xs sm:text-sm text-slate-600">
+          Dirancang khusus untuk <strong>Om Yongki Kav</strong> dengan sentuhan mewah, modern, dan fitur <strong>Smart QR Code</strong> yang langsung membuka WhatsApp saat di-scan oleh tim purchasing pabrik.
+        </p>
+      </div>
+
+      <!-- Interactive 3D Card Preview -->
+      <div class="flex flex-col items-center justify-center">
+        
+        <div class="text-xs text-slate-500 font-semibold mb-3 flex items-center gap-2">
+          <span>💡 Klik atau Hover kartu untuk membalik (Depan / Belakang):</span>
+          <button onclick="toggleFlip()" class="bg-white border border-slate-300 px-3 py-1 rounded-lg text-[11px] font-bold text-slate-700 hover:bg-slate-50 shadow-sm transition">
+            🔄 Balik Kartu
+          </button>
+        </div>
+
+        <!-- 3D Card Container (Ratio 1.636:1 -> 540x330 on mobile/desktop) -->
+        <div id="flipCard" onclick="toggleFlip()" class="perspective-1000 w-full max-w-[560px] h-[340px] cursor-pointer select-none">
+          <div class="card-inner shadow-2xl rounded-2xl">
+            
+            <!-- SISI DEPAN (FRONT - DARK EMERALD LUXE) -->
+            <div class="card-face bg-gradient-to-br from-[#0B1C18] via-[#102A25] to-[#153831] border border-emerald-500/30 p-8 flex flex-col justify-between overflow-hidden relative text-white">
+              <!-- Decorative subtle background watermarks -->
+              <div class="absolute -right-20 -bottom-20 w-72 h-72 rounded-full border border-emerald-500/10 pointer-events-none"></div>
+              <div class="absolute -right-10 -bottom-10 w-52 h-52 rounded-full border border-emerald-500/15 pointer-events-none"></div>
+              <div class="absolute left-0 top-0 w-full h-1 bg-gradient-to-r from-emerald-500 via-brand-mint to-brand-green"></div>
+
+              <div class="flex items-center justify-between relative z-10">
+                <span class="text-[10px] font-mono tracking-widest uppercase text-emerald-400 font-semibold">B2B Industrial Presence</span>
+                <span class="text-[10px] font-bold bg-emerald-950/80 border border-emerald-700/50 px-2.5 py-0.5 rounded-full text-brand-mint">PKP Terverifikasi</span>
+              </div>
+
+              <!-- Center Logo & Branding -->
+              <div class="text-center space-y-3 my-auto relative z-10">
+                <div class="inline-block p-2 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 shadow-inner">
+                  <img src="assets/images/logo-avatar-full.png" alt="Logo PT" class="w-16 h-16 sm:w-20 sm:h-20 object-contain mx-auto" />
+                </div>
+                <div>
+                  <h2 class="font-heading font-black text-lg sm:text-xl tracking-tight text-white leading-tight">
+                    PT. WIRASENA MAJU BERSAMA RAYYA
+                  </h2>
+                  <p class="text-[11px] sm:text-xs text-emerald-300 font-medium mt-1">
+                    General Supplier Pabrik • Manufaktur Kemasan • Jasa Fabrikasi
+                  </p>
+                </div>
+              </div>
+
+              <!-- Bottom Bar -->
+              <div class="pt-3 border-t border-emerald-800/60 flex items-center justify-between text-[10px] text-emerald-400 font-medium relative z-10">
+                <span>Sukadami, Cikarang Selatan, Bekasi</span>
+                <span>www.wirasenaraya.com</span>
+              </div>
+            </div>
+
+            <!-- SISI BELAKANG (BACK - EXECUTIVE & SMART QR CODE) -->
+            <div class="card-face card-back bg-white border border-slate-200 p-6 sm:p-7 flex flex-col justify-between overflow-hidden relative shadow-lg">
+              <!-- Top accent stripe -->
+              <div class="absolute left-0 top-0 w-full h-2 bg-brand-emerald"></div>
+              <div class="absolute left-0 top-2 w-full h-0.5 bg-brand-mint"></div>
+
+              <!-- Top: Name & Title -->
+              <div class="flex items-start justify-between border-b border-slate-100 pb-4 pt-1">
+                <div>
+                  <h3 class="font-heading font-black text-xl sm:text-2xl text-slate-900 leading-none">
+                    Yongki Kav
+                  </h3>
+                  <span class="inline-block text-xs font-bold text-brand-accent mt-1 tracking-wide uppercase">
+                    Sales &amp; Business Development Director
+                  </span>
+                  <span class="block text-[11px] font-semibold text-slate-400">
+                    PT. Wirasena Maju Bersama Rayya
+                  </span>
+                </div>
+                <img src="assets/images/logo-avatar-full.png" alt="Logo" class="w-11 h-11 object-contain p-0.5 bg-slate-50 border border-slate-200 rounded-lg shrink-0" />
+              </div>
+
+              <!-- Middle: Contact Details + Smart QR Code -->
+              <div class="grid grid-cols-12 gap-4 items-center my-auto">
+                <!-- Left Details (7 cols) -->
+                <div class="col-span-7 space-y-2 text-[11px] sm:text-xs text-slate-700">
+                  <div class="flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-md bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 font-bold text-[10px]">WA</span>
+                    <div class="min-w-0">
+                      <span class="text-[9px] text-slate-400 block leading-none">WhatsApp / Telepon</span>
+                      <strong class="text-slate-900 text-xs sm:text-sm font-mono leading-tight">0852-2106-0766</strong>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-md bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 font-bold text-[10px]">✉</span>
+                    <div class="min-w-0">
+                      <span class="text-[9px] text-slate-400 block leading-none">Email Resmi</span>
+                      <span class="text-slate-800 font-mono text-[11px] truncate block">marketing@wirasenaraya.com</span>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-md bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 font-bold text-[10px]">🌐</span>
+                    <div class="min-w-0">
+                      <span class="text-[9px] text-slate-400 block leading-none">Website Resmi</span>
+                      <span class="text-slate-800 font-semibold text-[11px] truncate block">wirasenaraya.com</span>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-2">
+                    <span class="w-6 h-6 rounded-md bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 font-bold text-[10px] mt-0.5">📍</span>
+                    <div class="min-w-0">
+                      <span class="text-[9px] text-slate-400 block leading-none">Workshop &amp; Gudang</span>
+                      <span class="text-slate-600 text-[10px] leading-snug block">Jl. Bah Kilong Kp. Kandang, Sukadami, Cikarang Selatan, Bekasi</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right QR Code (5 cols) -->
+                <div class="col-span-5 bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-center flex flex-col items-center justify-center shadow-sm">
+                  <span class="text-[9px] font-heading font-black tracking-wider uppercase text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full mb-1">
+                    Smart Contact
+                  </span>
+                  <img src="assets/images/qr-code-wa-yongki.png" alt="QR Code WA" class="w-24 h-24 sm:w-28 sm:h-28 object-contain bg-white p-1 rounded-lg border border-slate-200" />
+                  <span class="text-[9px] text-slate-500 font-medium mt-1 leading-tight">
+                    Scan via Kamera HP<br /><strong class="text-emerald-700">Chat WA Om Yongki</strong>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Bottom Accent -->
+              <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-400">
+                <span>NPWP: 96.434.539.2-447.000 (PKP)</span>
+                <span class="font-semibold text-brand-accent">Official B2B Card</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Download Buttons -->
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <a href="assets/business-card/kartu-nama-depan.png" download="Kartu-Nama-Depan-PT-Wirasena.png" class="px-4 py-2.5 rounded-xl bg-brand-emerald hover:bg-brand-emeraldDark text-white text-xs font-heading font-bold shadow-sm transition flex items-center gap-2">
+            <span>📥 Unduh Sisi Depan (PNG 300 DPI)</span>
+          </a>
+          <a href="assets/business-card/kartu-nama-belakang.png" download="Kartu-Nama-Belakang-Yongki-Kav.png" class="px-4 py-2.5 rounded-xl bg-white border border-slate-300 hover:bg-slate-50 text-slate-800 text-xs font-heading font-bold shadow-sm transition flex items-center gap-2">
+            <span>📥 Unduh Sisi Belakang + QR (PNG 300 DPI)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 2: TEMPLATE SURAT PENAWARAN (SPH)  -->
+    <!-- ========================================== -->
+    <section id="section-sph" class="hidden space-y-6">
+      
+      <!-- Top Actions Bar -->
+      <div class="no-print bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <span class="text-xs font-heading font-bold uppercase tracking-wider text-brand-green">Template Dokumen Resmi B2B</span>
+          <h2 class="font-heading text-lg sm:text-xl font-black text-slate-900 mt-0.5">
+            Surat Penawaran Harga (SPH / Quotation)
+          </h2>
+          <p class="text-xs text-slate-500 mt-0.5">
+            💡 <strong>Bisa Langsung Diedit di Layar:</strong> Klik teks atau angka di bawah untuk mengubah data, lalu klik <strong>Cetak / Simpan PDF</strong>.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-2.5 shrink-0">
+          <button onclick="window.print()" class="px-4 py-2.5 rounded-xl bg-brand-green hover:bg-brand-accent text-white font-heading font-bold text-xs shadow-md transition flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+            <span>Cetak / Simpan PDF (A4)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- A4 PRINTABLE DOCUMENT CONTAINER -->
+      <div class="print-page bg-white border border-slate-300 rounded-2xl shadow-xl max-w-[850px] mx-auto p-8 sm:p-12 text-slate-900 font-sans leading-relaxed text-xs sm:text-sm">
+        
+        <!-- KOP SURAT RESMI PT -->
+        <div class="flex items-center justify-between pb-4 border-b-2 border-slate-900 gap-4">
+          <div class="flex items-center gap-4">
+            <img src="assets/images/logo-avatar-full.png" alt="Logo PT" class="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0" />
+            <div>
+              <h1 class="font-heading font-black text-base sm:text-xl tracking-tight text-slate-900 uppercase">
+                PT. WIRASENA MAJU BERSAMA RAYYA
+              </h1>
+              <p class="text-[11px] sm:text-xs text-slate-600 font-medium">
+                General Supplier Kebutuhan Pabrik, Manufaktur Kemasan &amp; Jasa Fabrikasi
+              </p>
+              <p class="text-[10px] sm:text-[11px] text-slate-500 mt-1">
+                Jl. Bah Kilong Kp. Kandang RT.004/RW.002, Sukadami, Cikarang Selatan, Bekasi 17530<br />
+                <strong>Telp/WA:</strong> 0852-2106-0766 | <strong>Email:</strong> marketing@wirasenaraya.com | <strong>Web:</strong> www.wirasenaraya.com
+              </p>
+            </div>
+          </div>
+          <div class="text-right shrink-0 hidden sm:block">
+            <span class="inline-block px-2.5 py-1 bg-emerald-50 border border-emerald-300 text-emerald-900 font-mono font-bold text-[10px] rounded">
+              NPWP: 96.434.539.2-447.000
+            </span>
+            <span class="block text-[10px] text-slate-400 mt-1 font-semibold uppercase tracking-wider">Pengusaha Kena Pajak (PKP)</span>
+          </div>
+        </div>
+
+        <!-- HEADER INFO SURAT PENAWARAN (EDITABLE) -->
+        <div class="grid grid-cols-2 gap-4 py-5 border-b border-slate-200 text-xs">
+          <div class="space-y-1">
+            <p><strong>Nomor Surat :</strong> <span contenteditable="true" class="bg-amber-50/50 px-1 rounded">SPH/WMBR/2026/X/001</span></p>
+            <p><strong>Perihal      :</strong> <span contenteditable="true" class="bg-amber-50/50 px-1 rounded font-bold text-slate-900">Penawaran Harga Kebutuhan Pabrik (Quotation)</span></p>
+            <p><strong>Lampiran     :</strong> <span contenteditable="true" class="bg-amber-50/50 px-1 rounded">1 (Satu) Berkas Lembar Spesifikasi</span></p>
+          </div>
+          <div class="space-y-1 text-right sm:text-left sm:pl-10">
+            <p><strong>Bekasi,</strong> <span contenteditable="true" class="bg-amber-50/50 px-1 rounded">30 Oktober 2026</span></p>
+            <p><strong>Kepada Yth :</strong></p>
+            <p><strong contenteditable="true" class="bg-amber-50/50 px-1 rounded text-slate-900">Tim Purchasing / Procurement</strong></p>
+            <p contenteditable="true" class="bg-amber-50/50 px-1 rounded font-semibold text-slate-800">PT. Manufaktur Industri Cikarang</p>
+            <p contenteditable="true" class="bg-amber-50/50 px-1 rounded text-slate-500 text-[11px]">Kawasan Industri MM2100 / Jababeka, Bekasi</p>
+          </div>
+        </div>
+
+        <!-- OPENING GREETING -->
+        <div class="py-4 space-y-2 text-slate-700 leading-relaxed">
+          <p>Dengan hormat,</p>
+          <p>
+            Sehubungan dengan permohonan <em>Request for Quotation (RFQ)</em> pengadaan kebutuhan operasional dan produksi di perusahaan Bapak/Ibu, bersama ini kami dari <strong>PT. Wirasena Maju Bersama Rayya</strong> menyampaikan rincian penawaran harga terbaik sebagai berikut:
+          </p>
+        </div>
+
+        <!-- TABEL RINCIAN HARGA (EDITABLE TABLE) -->
+        <div class="overflow-x-auto my-3">
+          <table class="w-full text-left border-collapse border border-slate-300 text-[11px] sm:text-xs">
+            <thead>
+              <tr class="bg-slate-100 text-slate-900 font-heading font-bold text-center border-b border-slate-300">
+                <th class="p-2.5 border-r border-slate-300 w-10">No</th>
+                <th class="p-2.5 border-r border-slate-300 text-left">Nama Barang &amp; Spesifikasi Teknis</th>
+                <th class="p-2.5 border-r border-slate-300 w-16">Qty</th>
+                <th class="p-2.5 border-r border-slate-300 w-16">Satuan</th>
+                <th class="p-2.5 border-r border-slate-300 text-right w-28">Harga Satuan (Rp)</th>
+                <th class="p-2.5 text-right w-32">Total Harga (Rp)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr class="hover:bg-slate-50/50">
+                <td class="p-2.5 border-r border-slate-300 text-center font-bold">1</td>
+                <td class="p-2.5 border-r border-slate-300">
+                  <strong contenteditable="true">Carton Box Custom Double Wall (K/M/K)</strong>
+                  <span contenteditable="true" class="block text-[10px] text-slate-500">Ukuran: 400 x 300 x 250 mm, Cetak 1 Warna, Flute CB, Standard Export</span>
+                </td>
+                <td contenteditable="true" class="p-2.5 border-r border-slate-300 text-center font-mono">1.000</td>
+                <td contenteditable="true" class="p-2.5 border-r border-slate-300 text-center">Pcs</td>
+                <td contenteditable="true" class="p-2.5 border-r border-slate-300 text-right font-mono">12.500</td>
+                <td contenteditable="true" class="p-2.5 text-right font-mono font-bold">12.500.000</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="p-2.5 border-r border-slate-300 text-center font-bold">2</td>
+                <td class="p-2.5 border-r border-slate-300">
+                  <strong contenteditable="true">Komponen Pneumatik Silinder Presisi Standard Industri</strong>
+                  <span contenteditable="true" class="block text-[10px] text-slate-500">Standard ISO, Bore 32mm x Stroke 100mm, Double Acting, Sensor Ready</span>
+                </td>
+                <td contenteditable="true" class="p-2.5 border-r border-slate-300 text-center font-mono">10</td>
+                <td contenteditable="true" class="p-2.5 border-r border-slate-300 text-center">Unit</td>
+                <td contenteditable="true" class="p-2.5 border-r border-slate-300 text-right font-mono">450.000</td>
+                <td contenteditable="true" class="p-2.5 text-right font-mono font-bold">4.500.000</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="p-2.5 border-r border-slate-300 text-center font-bold">3</td>
+                <td class="p-2.5 border-r border-slate-300">
+                  <strong contenteditable="true">Custom Storage Trolley Stainless Steel 304 Heavy Duty</strong>
+                  <span contenteditable="true" class="block text-[10px] text-slate-500">Dimensi: 1200 x 800 x 900 mm, 3 Tingkat, Roda PU 4" Swivel Brake Cap. 500kg</span>
+                </td>
+                <td contenteditable="true" class="p-2.5 border-r border-slate-300 text-center font-mono">2</td>
+                <td contenteditable="true" class="p-2.5 border-r border-slate-300 text-center">Unit</td>
+                <td contenteditable="true" class="p-2.5 border-r border-slate-300 text-right font-mono">3.850.000</td>
+                <td contenteditable="true" class="p-2.5 text-right font-mono font-bold">7.700.000</td>
+              </tr>
+            </tbody>
+            <tfoot class="border-t-2 border-slate-900 bg-slate-50 font-bold">
+              <tr>
+                <td colspan="5" class="p-2.5 text-right border-r border-slate-300 uppercase">Subtotal</td>
+                <td contenteditable="true" class="p-2.5 text-right font-mono">24.700.000</td>
+              </tr>
+              <tr>
+                <td colspan="5" class="p-2.5 text-right border-r border-slate-300 uppercase">PPN 11%</td>
+                <td contenteditable="true" class="p-2.5 text-right font-mono">2.717.000</td>
+              </tr>
+              <tr class="bg-emerald-50 text-emerald-950 text-xs sm:text-sm">
+                <td colspan="5" class="p-2.5 text-right border-r border-slate-300 font-extrabold uppercase text-slate-900">Total Penawaran (IDR)</td>
+                <td contenteditable="true" class="p-2.5 text-right font-mono font-black text-brand-accent">27.417.000</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <!-- SYARAT & KETENTUAN (TERMS & CONDITIONS) -->
+        <div class="mt-4 pt-3 border-t border-slate-200">
+          <h4 class="font-heading font-bold text-xs uppercase tracking-wider text-slate-800 mb-1.5">
+            Syarat &amp; Ketentuan Kerjasama (Terms &amp; Conditions):
+          </h4>
+          <ol class="list-decimal pl-4 space-y-1 text-[11px] text-slate-600 leading-relaxed" contenteditable="true">
+            <li><strong>Masa Berlaku Harga:</strong> Penawaran ini berlaku selama 14 (empat belas) hari kalender sejak tanggal diterbitkan.</li>
+            <li><strong>Syarat Pembayaran:</strong> Pembayaran dilakukan via transfer bank dengan sistem TOP 30 (tiga puluh) hari setelah Invoice &amp; Surat Jalan (SJ) resmi diterima lengkap.</li>
+            <li><strong>Waktu Pengiriman (Lead Time):</strong> Pengiriman barang dilaksanakan 3 – 5 hari kerja setelah <em>Purchase Order (PO)</em> resmi kami terima.</li>
+            <li><strong>Lokasi Penyerahan:</strong> Harga di atas sudah termasuk ongkos kirim (Franko Pabrik/Gudang Pemesan di area Cikarang &amp; Karawang).</li>
+            <li><strong>Rekening Resmi Perusahaan:</strong> Pembayaran ditransfer ke rekening resmi a.n. <strong>PT. WIRASENA MAJU BERSAMA RAYYA</strong> (Bank Mandiri / BCA).</li>
+          </ol>
+        </div>
+
+        <!-- SIGNATURES (TANDA TANGAN RESMI) -->
+        <div class="grid grid-cols-2 gap-8 pt-8 mt-4 text-center text-xs">
+          <div class="space-y-16">
+            <p class="font-semibold text-slate-700">Disetujui Oleh (Pihak Pembeli),<br /><span class="font-normal text-slate-500">[PT. Manufaktur Industri Cikarang]</span></p>
+            <div class="border-t border-slate-400 w-44 mx-auto pt-1">
+              <p class="font-bold text-slate-900">( ............................................ )</p>
+              <p class="text-[10px] text-slate-500">Purchasing / Procurement Dept</p>
+            </div>
+          </div>
+
+          <div class="space-y-16">
+            <p class="font-semibold text-slate-700">Hormat Kami,<br /><strong>PT. WIRASENA MAJU BERSAMA RAYYA</strong></p>
+            <div class="border-t border-slate-400 w-44 mx-auto pt-1 relative">
+              <p class="font-bold text-slate-900 font-heading">Yongki Kav</p>
+              <p class="text-[10px] text-brand-accent font-semibold">Sales &amp; Business Development Director</p>
+              <span class="text-[9px] text-slate-400 block font-mono">WA: 0852-2106-0766</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Interactive JavaScript logic -->
+  <script>
+    function toggleFlip() {
+      const card = document.getElementById('flipCard');
+      card.classList.toggle('card-flipped');
+    }
+
+    function switchTab(tab) {
+      const cardSec = document.getElementById('section-card');
+      const sphSec = document.getElementById('section-sph');
+      const cardBtn = document.getElementById('tab-card-btn');
+      const sphBtn = document.getElementById('tab-sph-btn');
+
+      if (tab === 'card') {
+        cardSec.classList.remove('hidden');
+        sphSec.classList.add('hidden');
+        cardBtn.className = "px-3.5 py-1.5 text-xs font-heading font-bold rounded-lg bg-brand-green text-white shadow transition";
+        sphBtn.className = "px-3.5 py-1.5 text-xs font-heading font-bold rounded-lg text-slate-300 hover:text-white transition";
+      } else {
+        cardSec.classList.add('hidden');
+        sphSec.classList.remove('hidden');
+        sphBtn.className = "px-3.5 py-1.5 text-xs font-heading font-bold rounded-lg bg-brand-green text-white shadow transition";
+        cardBtn.className = "px-3.5 py-1.5 text-xs font-heading font-bold rounded-lg text-slate-300 hover:text-white transition";
+      }
+    }
+  </script>
+</body>
+</html>
