@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wirasenasupplier.com/sitemap.xml
-
+Sitemap: https://wirasenaraya.com/sitemap.xml
