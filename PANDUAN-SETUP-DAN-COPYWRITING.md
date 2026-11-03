@@ -25,11 +25,11 @@ Semua file website multi-halaman (5 halaman SEO Powerhouse), dashboard preview, 
 ---
 
 ## 1. Setup 4 Email Resmi Perusahaan (Domain `.com`)
-Menggunakan domain resmi **`wirasenamajubersama.com`** (via Zoho Mail Free Workspace + Cloudflare DNS `MX`, `SPF`, `DKIM`):
-1. **Email Utama / Admin:** `info@wirasenamajubersama.com` (atau `admin@wirasenamajubersama.com`)
-2. **Divisi Marketing & RFQ:** `marketing@wirasenamajubersama.com`
-3. **Divisi Quality Control (QC/QA):** `quality@wirasenamajubersama.com`
-4. **Divisi Delivery & Logistik (PPIC/SJ):** `delivery@wirasenamajubersama.com`
+Menggunakan domain resmi **`wirasenaraya.com`** (via Zoho Mail Free Workspace + Cloudflare DNS `MX`, `SPF`, `DKIM`):
+1. **Email Utama / Admin:** `info@wirasenaraya.com` (atau `admin@wirasenaraya.com`)
+2. **Divisi Marketing & RFQ:** `marketing@wirasenaraya.com`
+3. **Divisi Quality Control (QC/QA):** `quality@wirasenaraya.com`
+4. **Divisi Delivery & Logistik (PPIC/SJ):** `delivery@wirasenaraya.com`
 - *Email Cadangan / Gmail:* `wiramajubersama@gmail.com`
 
 ---
@@ -40,8 +40,8 @@ Menggunakan domain resmi **`wirasenamajubersama.com`** (via Zoho Mail Free Works
 - **Deskripsi Bisnis WA:**
   `General Supplier Kebutuhan Pabrik (Electrical, Mechanical, Sparepart, Pneumatics & K3), Pabrik Carton Box & Impraboard Custom, serta Jasa Fabrikasi Trolley & Welding Industri di Cikarang Selatan, Bekasi.`
 - **Alamat:** `Jl. Bah Kilong Kp. Kandang, RT.004 RW.002, Sukadami, Cikarang Selatan, Kabupaten Bekasi, Jawa Barat 17530`
-- **Email:** `marketing@wirasenamajubersama.com`
-- **Website:** `https://wirasenamajubersama.com`
+- **Email:** `marketing@wirasenaraya.com`
+- **Website:** `https://wirasenaraya.com`
 - **Pesan Salam Otomatis (Greeting Message):**
   > Halo! Terima kasih telah menghubungi **PT. Wirasena Maju Bersama Rayya** (General Supplier Pabrik, Manufaktur Carton Box/Impraboard & Fabrikasi Trolley Industri Cikarang - Bekasi).
   >
@@ -79,7 +79,7 @@ Menggunakan domain resmi **`wirasenamajubersama.com`** (via Zoho Mail Free Works
   >
   > 📍 **Alamat:** Jl. Bah Kilong Kp. Kandang, RT.004 RW.002, Sukadami, Cikarang Selatan, Kabupaten Bekasi, Jawa Barat 17530
   > 📞 **Telp/Fax:** (021) 8499 0200
-  > ✉️ **Email:** info@wirasenamajubersama.com | marketing@wirasenamajubersama.com
+  > ✉️ **Email:** info@wirasenaraya.com | marketing@wirasenaraya.com
 
 ---
 
@@ -93,7 +93,7 @@ Menggunakan domain resmi **`wirasenamajubersama.com`** (via Zoho Mail Free Works
   📦 Pabrik Carton Box Custom, Impraboard & Plastik Industri
   🛠️ Jasa Fabrikasi Storage Trolley, Rak FIFO & Welding
   📍 Cikarang Selatan, Bekasi | 📞 (021) 8499 0200
-  ✉️ marketing@wirasenamajubersama.com
+  ✉️ marketing@wirasenaraya.com
   ```
 
 ---
@@ -105,7 +105,7 @@ Menggunakan domain resmi **`wirasenamajubersama.com`** (via Zoho Mail Free Works
   `Supplier Kebutuhan Pabrik Terdekat di Cikarang & Bekasi: Electrical & Mechanical, Pneumatics, Safety K3, Pabrik Carton Box & Impraboard Custom, serta Jasa Fabrikasi Storage Trolley.`
 - **Alamat:** `Jl. Bah Kilong Kp. Kandang, RT.004 RW.002, Sukadami, Cikarang Selatan, Kabupaten Bekasi, Jawa Barat 17530`
 - **Telepon:** `(021) 8499 0200`
-- **Email:** `marketing@wirasenamajubersama.com`
+- **Email:** `marketing@wirasenaraya.com`
 
 ---
 
@@ -123,7 +123,7 @@ Menggunakan domain resmi **`wirasenamajubersama.com`** (via Zoho Mail Free Works
 > ✅ Customer Satisfaction
 >
 > 📍 Jl. Bah Kilong Kp. Kandang, RT.004/RW.002, Sukadami, Cikarang Selatan, Kab. Bekasi 17530
-> 📞 (021) 8499 0200 | ✉️ marketing@wirasenamajubersama.com
+> 📞 (021) 8499 0200 | ✉️ marketing@wirasenaraya.com
 >
 > #SupplierPabrik #SupplierPabrikCikarang #SupplierBekasi #GeneralSupplierIndustri #PTWirasenaMajuBersamaRayya #PackagingCikarang #FabrikasiBekasi
 
@@ -138,7 +138,7 @@ Menggunakan domain resmi **`wirasenamajubersama.com`** (via Zoho Mail Free Works
 > • Carton Box Safety Glass & Tempered Glass
 > • Fabrication Synthetic Rubber, Chloroprene Rubber & Rubber Molded
 >
-> Hubungi tim marketing kami di (021) 8499 0200 atau email marketing@wirasenamajubersama.com untuk konsultasi spesifikasi & permintaan penawaran harga (RFQ).
+> Hubungi tim marketing kami di (021) 8499 0200 atau email marketing@wirasenaraya.com untuk konsultasi spesifikasi & permintaan penawaran harga (RFQ).
 >
 > #PabrikCartonBoxCikarang #SupplierKardusPabrik #ImpraboardBekasi #PackagingIndustri #PTWirasenaMajuBersamaRayya
 
@@ -194,10 +194,10 @@ Menggunakan domain resmi **`wirasenamajubersama.com`** (via Zoho Mail Free Works
 > Mari berkolaborasi untuk efisiensi pengadaan dan manufaktur perusahaan Anda!
 > 📞 Telp/Fax: (021) 8499 0200
 > ✉️ Email:
-> • info@wirasenamajubersama.com
-> • marketing@wirasenamajubersama.com
-> • quality@wirasenamajubersama.com
-> • delivery@wirasenamajubersama.com
+> • info@wirasenaraya.com
+> • marketing@wirasenaraya.com
+> • quality@wirasenaraya.com
+> • delivery@wirasenaraya.com
 > 📍 Cikarang Selatan, Kabupaten Bekasi, Jawa Barat 17530
 >
 > #PTWirasenaMajuBersamaRayya #MitraIndustri #SupplierPabrikTerdekat #CikarangIndustrial

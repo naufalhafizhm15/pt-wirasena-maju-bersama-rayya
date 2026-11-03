@@ -3,7 +3,7 @@
 > **Status Proyek:** Tahap 1 Selesai (Fondasi Web & Branding), Tahap 2–4 Dalam Perencanaan  
 > **Domain Utama:** `wirasenaraya.com`  
 > **Repository:** [github.com/naufalhafizhm15/pt-wirasena-maju-bersama-rayya](https://github.com/naufalhafizhm15/pt-wirasena-maju-bersama-rayya)  
-> **Live Staging:** [naufalhafizhm15.github.io/pt-wirasena-maju-bersama-rayya](https://naufalhafizhm15.github.io/pt-wirasena-maju-bersama-rayya/)  
+> **Live Staging:** [wirasenaraya.com](https://wirasenaraya.com/)  
 > **Spreadsheet Tracking:** [wirasena_project_tracking.xls](file:///home/naufalhzh/.gemini/antigravity/scratch/pt-wirasena-maju-bersama-rayya/wirasena_project_tracking.xls) | [wirasena_project_tracking.csv](file:///home/naufalhzh/.gemini/antigravity/scratch/pt-wirasena-maju-bersama-rayya/wirasena_project_tracking.csv)
 
 ---
