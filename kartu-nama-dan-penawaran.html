@@ -83,6 +83,65 @@
       }
     }
   </style>
+
+  <!-- PT Wirasena Maju Bersama Rayya - Security & Integrity Shield -->
+  <script>
+    (function() {
+      'use strict';
+      // Disable Right-Click Context Menu
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        return false;
+      }, { capture: true });
+
+      // Disable DevTools & Source Keyboard Shortcuts
+      document.addEventListener('keydown', function(e) {
+        // F12
+        if (e.key === 'F12' || e.keyCode === 123) {
+          e.preventDefault();
+          return false;
+        }
+        // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C (Inspect, Console, Element Picker)
+        if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) {
+          e.preventDefault();
+          return false;
+        }
+        // Ctrl+U (View Page Source)
+        if ((e.ctrlKey || e.metaKey) && (e.key === 'U' || e.key === 'u')) {
+          e.preventDefault();
+          return false;
+        }
+        // Ctrl+S (Save Page As)
+        if ((e.ctrlKey || e.metaKey) && (e.key === 'S' || e.key === 's')) {
+          e.preventDefault();
+          return false;
+        }
+      }, { capture: true });
+
+      // Prevent dragging images to desktop
+      document.addEventListener('dragstart', function(e) {
+        if (e.target && e.target.nodeName === 'IMG') {
+          e.preventDefault();
+          return false;
+        }
+      }, { capture: true });
+
+      // Corporate Console Warning & Auto-Clear
+      try {
+        var shieldNotice = function() {
+          console.clear();
+          console.log(
+            '%cPT. WIRASENA MAJU BERSAMA RAYYA%c\nPartner Pengadaan Suku Cadang, MRO & Manufaktur Kemasan Industri.\nSeluruh aset, tata letak dan hak cipta dilindungi undang-undang.\nKemitraan Resmi: https://wirasenaraya.com | Email: marketing@wirasenaraya.com',
+            'color:#166534;font-size:18px;font-weight:bold;font-family:sans-serif;',
+            'color:#4b5563;font-size:12px;font-family:sans-serif;'
+          );
+        };
+        shieldNotice();
+        setInterval(shieldNotice, 3000);
+      } catch(err) {}
+    })();
+  </script>
+
 </head>
 <body class="bg-slate-100 text-slate-800 font-sans antialiased min-h-screen flex flex-col">
 
